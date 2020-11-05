@@ -40,8 +40,8 @@
     "cactiPerChunk": 0,
     "rainingPossibility": 0.0,
     "temperature": 0.0,
-    "baseHeight": 2.8000000000000003,
-    "heightVariation": 1.5,
+    "baseHeight": 0.0,
+    "heightVariation": 0.0,
     "spawnBiome": false,
     "biomeWeight": 10,
     "biomeType": "COOL",
@@ -49,7 +49,9 @@
     "parent": {
       "value": "desert"
     },
-    "biomeDictionaryTypes": [],
+    "biomeDictionaryTypes": [
+      "SNOWY"
+    ],
     "spawnEntries": [
       {
         "entity": {

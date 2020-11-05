@@ -3,6 +3,7 @@ package net.mcreator.worldsmod.world.biome;
 
 import net.minecraftforge.registries.ObjectHolder;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
+import net.minecraftforge.common.BiomeDictionary;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.api.distmarker.Dist;
 
@@ -41,13 +42,13 @@ public class MoonbBiome extends WorldsModModElements.ModElement {
 
 	@Override
 	public void init(FMLCommonSetupEvent event) {
+		BiomeDictionary.addTypes(biome, BiomeDictionary.Type.SNOWY);
 	}
 	static class CustomBiome extends Biome {
 		public CustomBiome() {
-			super(new Biome.Builder().downfall(0f).depth(2.8000000000000003f).scale(1.5f).temperature(0f).precipitation(Biome.RainType.NONE)
-					.category(Biome.Category.ICY).waterColor(4159204).waterFogColor(329011).parent("desert")
-					.surfaceBuilder(SurfaceBuilder.DEFAULT, new SurfaceBuilderConfig(MoongruntBlock.block.getDefaultState(),
-							Blocks.STONE.getDefaultState(), Blocks.STONE.getDefaultState())));
+			super(new Biome.Builder().downfall(0f).depth(0f).scale(0f).temperature(0f).precipitation(Biome.RainType.NONE).category(Biome.Category.ICY)
+					.waterColor(4159204).waterFogColor(329011).parent("desert").surfaceBuilder(SurfaceBuilder.DEFAULT, new SurfaceBuilderConfig(
+							MoongruntBlock.block.getDefaultState(), Blocks.STONE.getDefaultState(), Blocks.STONE.getDefaultState())));
 			setRegistryName("moonb");
 			DefaultBiomeFeatures.addCarvers(this);
 			DefaultBiomeFeatures.addStructures(this);
