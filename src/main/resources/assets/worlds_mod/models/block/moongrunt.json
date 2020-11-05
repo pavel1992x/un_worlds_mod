@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "worlds_mod:blocks/moon_grunt",
+    "up": "worlds_mod:blocks/moon_grunt",
+    "north": "worlds_mod:blocks/moon_grunt",
+    "east": "worlds_mod:blocks/moon_grunt",
+    "south": "worlds_mod:blocks/moon_grunt",
+    "west": "worlds_mod:blocks/moon_grunt",
+    "particle": "worlds_mod:blocks/moon_grunt"
+  }
+}

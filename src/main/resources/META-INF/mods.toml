@@ -1,0 +1,21 @@
+modLoader="javafml"
+loaderVersion="[28,)"
+
+[[mods]]
+modId="worlds_mod"
+version="1.0.0"
+displayName="worlds mod"
+credits="Created using mod maker MCreator - https://mcreator.net/about"
+displayURL="https://mcreator.net"
+authors="теомир, MCreator"
+
+[[dependencies.worlds_mod]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.14.4]"
+    ordering="NONE"
+    side="BOTH"
+
+
+
+

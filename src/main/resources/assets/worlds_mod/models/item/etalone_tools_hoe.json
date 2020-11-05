@@ -1,0 +1,6 @@
+{
+  "parent": "item/handheld",
+  "textures": {
+    "layer0": "worlds_mod:items/etalone_tools_hoe"
+  }
+}

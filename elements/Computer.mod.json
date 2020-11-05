@@ -1,0 +1,27 @@
+{
+  "_fv": 10,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 569,
+    "height": 464,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "button",
+        "data": {
+          "text": "откл дождь",
+          "onClick": {
+            "name": "Woff"
+          },
+          "width": 200,
+          "height": 40,
+          "name": "откл дождь",
+          "x": 153,
+          "y": 20
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "_fv": 10,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 627,
+    "height": 435,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "button",
+        "data": {
+          "text": "луна",
+          "onClick": {
+            "name": "Moonteleport"
+          },
+          "width": 80,
+          "height": 40,
+          "name": "луна",
+          "x": 124,
+          "y": 33
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "земля",
+          "onClick": {
+            "name": "Overteleport"
+          },
+          "width": 100,
+          "height": 40,
+          "name": "земля",
+          "x": 217,
+          "y": 33
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "получить ядро базы",
+          "onClick": {
+            "name": "Bazacorecreat"
+          },
+          "width": 360,
+          "height": 40,
+          "name": "получить ядро базы",
+          "x": 258,
+          "y": 401
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "активировать базу",
+          "onClick": {
+            "name": "Setspawn"
+          },
+          "width": 340,
+          "height": 40,
+          "name": "активировать базу",
+          "x": 265,
+          "y": 318
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "старт os",
+          "onClick": {
+            "name": "Computerstart"
+          },
+          "width": 160,
+          "height": 40,
+          "name": "старт os",
+          "x": 333,
+          "y": 240
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "worlds_mod:block/teleportblock"
+    },
+    "facing=east": {
+      "model": "worlds_mod:block/teleportblock",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "worlds_mod:block/teleportblock",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "worlds_mod:block/teleportblock",
+      "y": 270
+    }
+  }
+}

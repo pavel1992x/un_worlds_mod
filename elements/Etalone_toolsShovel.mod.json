@@ -1,0 +1,26 @@
+{
+  "_fv": 10,
+  "_type": "tool",
+  "definition": {
+    "renderType": 0,
+    "texture": "etalone_tools_shovel",
+    "customModelName": "Normal",
+    "name": "этолонная лопата ",
+    "specialInfo": [],
+    "creativeTab": {
+      "value": "TOOLS"
+    },
+    "toolType": "Spade",
+    "harvestLevel": 16,
+    "efficiency": 2.0,
+    "attackSpeed": 3.0,
+    "enchantability": 0,
+    "damageVsEntity": 0.0,
+    "usageCount": 0,
+    "blocksAffected": [],
+    "hasGlow": true,
+    "repairItems": [],
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false
+  }
+}

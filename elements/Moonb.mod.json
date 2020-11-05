@@ -1,0 +1,74 @@
+{
+  "_fv": 10,
+  "_type": "biome",
+  "definition": {
+    "groundBlock": {
+      "value": "CUSTOM:Moongrunt"
+    },
+    "undergroundBlock": {
+      "value": "Blocks.STONE#0"
+    },
+    "generateLakes": false,
+    "treeType": 0,
+    "vanillaTreeType": "Default",
+    "minHeight": 7,
+    "spawnVines": false,
+    "treeVines": {
+      "value": ""
+    },
+    "treeStem": {
+      "value": ""
+    },
+    "treeBranch": {
+      "value": ""
+    },
+    "treeFruits": {
+      "value": ""
+    },
+    "airColor": {
+      "value": -16777216,
+      "falpha": 0.0
+    },
+    "treesPerChunk": 0,
+    "grassPerChunk": 0,
+    "flowersPerChunk": 0,
+    "mushroomsPerChunk": 0,
+    "bigMushroomsChunk": 1,
+    "sandPathcesPerChunk": 14,
+    "gravelPatchesPerChunk": 15,
+    "reedsPerChunk": 0,
+    "cactiPerChunk": 0,
+    "rainingPossibility": 0.0,
+    "temperature": 0.0,
+    "baseHeight": 2.8000000000000003,
+    "heightVariation": 1.5,
+    "spawnBiome": false,
+    "biomeWeight": 10,
+    "biomeType": "COOL",
+    "biomeCategory": "ICY",
+    "parent": {
+      "value": "desert"
+    },
+    "biomeDictionaryTypes": [],
+    "spawnEntries": [
+      {
+        "entity": {
+          "value": "EntityShulker"
+        },
+        "minGroup": 4,
+        "maxGroup": 4,
+        "weight": 20,
+        "spawnType": "monster"
+      },
+      {
+        "entity": {
+          "value": "EntityEnderman"
+        },
+        "minGroup": 4,
+        "maxGroup": 4,
+        "weight": 20,
+        "spawnType": "monster"
+      }
+    ]
+  }
+}

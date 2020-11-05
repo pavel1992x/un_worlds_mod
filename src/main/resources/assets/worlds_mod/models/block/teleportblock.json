@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "worlds_mod:blocks/teleport_block",
+    "up": "worlds_mod:blocks/teleport_block",
+    "north": "worlds_mod:blocks/teleport_block",
+    "east": "worlds_mod:blocks/teleport_block",
+    "south": "worlds_mod:blocks/teleport_block",
+    "west": "worlds_mod:blocks/teleport_block",
+    "particle": "worlds_mod:blocks/teleport_block"
+  }
+}
