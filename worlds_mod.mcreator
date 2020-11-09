@@ -323,6 +323,18 @@
           }
         ]
       }
+    },
+    {
+      "name": "Test",
+      "type": "procedure",
+      "sortid": 22,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "term",
+      "metadata": {
+        "dependencies": []
+      }
     }
   ],
   "variable_elements": [

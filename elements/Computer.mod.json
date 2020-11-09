@@ -21,6 +21,31 @@
           "x": 153,
           "y": 20
         }
+      },
+      {
+        "type": "textfield",
+        "data": {
+          "placeholder": "",
+          "width": 240,
+          "height": 40,
+          "name": "term",
+          "x": 308,
+          "y": 151
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "ок",
+          "onClick": {
+            "name": "Test"
+          },
+          "width": 40,
+          "height": 40,
+          "name": "ок",
+          "x": 310,
+          "y": 200
+        }
       }
     ]
   }

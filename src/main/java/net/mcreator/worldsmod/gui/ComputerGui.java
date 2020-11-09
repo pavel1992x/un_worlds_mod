@@ -25,11 +25,13 @@ import net.minecraft.inventory.container.Container;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.client.gui.widget.button.Button;
+import net.minecraft.client.gui.widget.TextFieldWidget;
 import net.minecraft.client.gui.screen.inventory.ContainerScreen;
 import net.minecraft.client.gui.ScreenManager;
 import net.minecraft.client.Minecraft;
 
 import net.mcreator.worldsmod.procedures.WoffProcedure;
+import net.mcreator.worldsmod.procedures.TestProcedure;
 import net.mcreator.worldsmod.WorldsModModElements;
 import net.mcreator.worldsmod.WorldsModMod;
 
@@ -102,6 +104,7 @@ public class ComputerGui extends WorldsModModElements.ModElement {
 		private World world;
 		private int x, y, z;
 		private PlayerEntity entity;
+		TextFieldWidget term;
 		public GuiWindow(GuiContainerMod container, PlayerInventory inventory, ITextComponent text) {
 			super(container, inventory, text);
 			this.world = container.world;
@@ -118,6 +121,7 @@ public class ComputerGui extends WorldsModModElements.ModElement {
 			this.renderBackground();
 			super.render(mouseX, mouseY, partialTicks);
 			this.renderHoveredToolTip(mouseX, mouseY);
+			term.render(mouseX, mouseY, partialTicks);
 		}
 
 		@Override
@@ -132,6 +136,7 @@ public class ComputerGui extends WorldsModModElements.ModElement {
 		@Override
 		public void tick() {
 			super.tick();
+			term.tick();
 		}
 
 		@Override
@@ -144,6 +149,8 @@ public class ComputerGui extends WorldsModModElements.ModElement {
 				this.minecraft.player.closeScreen();
 				return true;
 			}
+			if (term.isFocused())
+				return term.keyPressed(key, b, c);
 			return super.keyPressed(key, b, c);
 		}
 
@@ -160,6 +167,14 @@ public class ComputerGui extends WorldsModModElements.ModElement {
 			this.addButton(new Button(this.guiLeft + 6, this.guiTop + 6, 100, 20, "откл дождь", e -> {
 				WorldsModMod.PACKET_HANDLER.sendToServer(new ButtonPressedMessage(0, x, y, z));
 				handleButtonAction(entity, 0, x, y, z);
+			}));
+			term = new TextFieldWidget(this.font, this.guiLeft + 83, this.guiTop + 72, 120, 20, "");
+			guistate.put("text:term", term);
+			term.setMaxStringLength(32767);
+			this.children.add(this.term);
+			this.addButton(new Button(this.guiLeft + 84, this.guiTop + 96, 20, 20, "ок", e -> {
+				WorldsModMod.PACKET_HANDLER.sendToServer(new ButtonPressedMessage(1, x, y, z));
+				handleButtonAction(entity, 1, x, y, z);
 			}));
 		}
 	}
@@ -255,6 +270,12 @@ public class ComputerGui extends WorldsModModElements.ModElement {
 				Map<String, Object> $_dependencies = new HashMap<>();
 				$_dependencies.put("world", world);
 				WoffProcedure.executeProcedure($_dependencies);
+			}
+		}
+		if (buttonID == 1) {
+			{
+				Map<String, Object> $_dependencies = new HashMap<>();
+				TestProcedure.executeProcedure($_dependencies);
 			}
 		}
 	}
