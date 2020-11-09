@@ -333,7 +333,16 @@
       "ids": {},
       "registry_name": "term",
       "metadata": {
-        "dependencies": []
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "guistate",
+            "type": "map"
+          }
+        ]
       }
     }
   ],

@@ -275,6 +275,8 @@ public class ComputerGui extends WorldsModModElements.ModElement {
 		if (buttonID == 1) {
 			{
 				Map<String, Object> $_dependencies = new HashMap<>();
+				$_dependencies.put("entity", entity);
+				$_dependencies.put("guistate", guistate);
 				TestProcedure.executeProcedure($_dependencies);
 			}
 		}
