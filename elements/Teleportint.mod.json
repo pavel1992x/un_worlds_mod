@@ -41,20 +41,6 @@
       {
         "type": "button",
         "data": {
-          "text": "получить ядро базы",
-          "onClick": {
-            "name": "Bazacorecreat"
-          },
-          "width": 180,
-          "height": 20,
-          "name": "получить ядро базы",
-          "x": 129,
-          "y": 201
-        }
-      },
-      {
-        "type": "button",
-        "data": {
           "text": "активировать базу",
           "onClick": {
             "name": "Setspawn"

@@ -33,7 +33,6 @@ import net.mcreator.worldsmod.procedures.SetspawnProcedure;
 import net.mcreator.worldsmod.procedures.OverteleportProcedure;
 import net.mcreator.worldsmod.procedures.MoonteleportProcedure;
 import net.mcreator.worldsmod.procedures.ComputerstartProcedure;
-import net.mcreator.worldsmod.procedures.BazacorecreatProcedure;
 import net.mcreator.worldsmod.WorldsModModElements;
 import net.mcreator.worldsmod.WorldsModMod;
 
@@ -169,17 +168,13 @@ public class TeleportintGui extends WorldsModModElements.ModElement {
 				WorldsModMod.PACKET_HANDLER.sendToServer(new ButtonPressedMessage(1, x, y, z));
 				handleButtonAction(entity, 1, x, y, z);
 			}));
-			this.addButton(new Button(this.guiLeft + 72, this.guiTop + 190, 180, 20, "получить ядро базы", e -> {
+			this.addButton(new Button(this.guiLeft + 76, this.guiTop + 148, 170, 20, "активировать базу", e -> {
 				WorldsModMod.PACKET_HANDLER.sendToServer(new ButtonPressedMessage(2, x, y, z));
 				handleButtonAction(entity, 2, x, y, z);
 			}));
-			this.addButton(new Button(this.guiLeft + 76, this.guiTop + 148, 170, 20, "активировать базу", e -> {
+			this.addButton(new Button(this.guiLeft + 110, this.guiTop + 109, 80, 20, "старт os", e -> {
 				WorldsModMod.PACKET_HANDLER.sendToServer(new ButtonPressedMessage(3, x, y, z));
 				handleButtonAction(entity, 3, x, y, z);
-			}));
-			this.addButton(new Button(this.guiLeft + 110, this.guiTop + 109, 80, 20, "старт os", e -> {
-				WorldsModMod.PACKET_HANDLER.sendToServer(new ButtonPressedMessage(4, x, y, z));
-				handleButtonAction(entity, 4, x, y, z);
 			}));
 		}
 	}
@@ -287,17 +282,6 @@ public class TeleportintGui extends WorldsModModElements.ModElement {
 		if (buttonID == 2) {
 			{
 				Map<String, Object> $_dependencies = new HashMap<>();
-				$_dependencies.put("entity", entity);
-				$_dependencies.put("x", x);
-				$_dependencies.put("y", y);
-				$_dependencies.put("z", z);
-				$_dependencies.put("world", world);
-				BazacorecreatProcedure.executeProcedure($_dependencies);
-			}
-		}
-		if (buttonID == 3) {
-			{
-				Map<String, Object> $_dependencies = new HashMap<>();
 				$_dependencies.put("x", x);
 				$_dependencies.put("y", y);
 				$_dependencies.put("z", z);
@@ -305,7 +289,7 @@ public class TeleportintGui extends WorldsModModElements.ModElement {
 				SetspawnProcedure.executeProcedure($_dependencies);
 			}
 		}
-		if (buttonID == 4) {
+		if (buttonID == 3) {
 			{
 				Map<String, Object> $_dependencies = new HashMap<>();
 				$_dependencies.put("entity", entity);

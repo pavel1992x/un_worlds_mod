@@ -335,6 +335,10 @@
       "metadata": {
         "dependencies": [
           {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
             "name": "guistate",
             "type": "map"
           },
@@ -356,6 +360,36 @@
           }
         ]
       }
+    },
+    {
+      "name": "Lblock",
+      "type": "block",
+      "sortid": 23,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "lblock"
+    },
+    {
+      "name": "St11",
+      "type": "gui",
+      "sortid": 24,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "st_11"
+    },
+    {
+      "name": "St11meh",
+      "type": "procedure",
+      "sortid": 25,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "st_11meh",
+      "metadata": {
+        "dependencies": []
+      }
     }
   ],
   "variable_elements": [
@@ -372,9 +406,10 @@
       "item.worlds_mod.etalone_tools_sword": "этолонный мечь",
       "item.worlds_mod.etalone_tools_shovel": "этолонная лопата ",
       "block.worlds_mod.teleportblock": "телепорт",
-      "item.worlds_mod.etalone_tools_hoe": "Etalone_tools Hoe",
       "item.worlds_mod.starter": "стартавый жезл",
+      "item.worlds_mod.etalone_tools_hoe": "Etalone_tools Hoe",
       "block.worlds_mod.moongrunt": "лунный грунт",
+      "block.worlds_mod.lblock": "источник света ",
       "key.mcreator.givecore": "получить ядро",
       "biome.worlds_mod.moonb": "Moonb",
       "item.worlds_mod.bazaakt": "артефакт развёртки базы",
