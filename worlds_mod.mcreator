@@ -335,12 +335,24 @@
       "metadata": {
         "dependencies": [
           {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
             "name": "guistate",
             "type": "map"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       }
@@ -360,13 +372,14 @@
       "item.worlds_mod.etalone_tools_sword": "этолонный мечь",
       "item.worlds_mod.etalone_tools_shovel": "этолонная лопата ",
       "block.worlds_mod.teleportblock": "телепорт",
-      "key.mcreator.givecore": "получить ядро",
-      "item.worlds_mod.bazaakt": "артефакт развёртки базы",
       "item.worlds_mod.etalone_tools_hoe": "Etalone_tools Hoe",
-      "item.worlds_mod.etalone_tools_pickaxe": "эталонная кирка",
-      "item.worlds_mod.etalone_tools_axe": "эталонный топор",
       "item.worlds_mod.starter": "стартавый жезл",
       "block.worlds_mod.moongrunt": "лунный грунт",
+      "key.mcreator.givecore": "получить ядро",
+      "biome.worlds_mod.moonb": "Moonb",
+      "item.worlds_mod.bazaakt": "артефакт развёртки базы",
+      "item.worlds_mod.etalone_tools_axe": "эталонный топор",
+      "item.worlds_mod.etalone_tools_pickaxe": "эталонная кирка",
       "item.worlds_mod.moon": "Moonworld Portal Igniter"
     }
   },
@@ -387,5 +400,5 @@
     "modElementsPackage": "net.mcreator.worldsmod",
     "lockBaseModFiles": true
   },
-  "mcreatorVersion": 202000432115
+  "mcreatorVersion": 202000546519
 }

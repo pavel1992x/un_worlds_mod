@@ -57,7 +57,7 @@ public class BazasaktStructure extends WorldsModModElements.ModElement {
 						j -= 1;
 						Rotation rotation = Rotation.NONE;
 						Mirror mirror = Mirror.NONE;
-						BlockPos spawnTo = new BlockPos(i, j + 0, k);
+						BlockPos spawnTo = new BlockPos(i + 0, j + 0, k + 0);
 						int x = spawnTo.getX();
 						int y = spawnTo.getY();
 						int z = spawnTo.getZ();
