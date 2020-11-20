@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "worlds_mod:block/deranor_slab"
+    },
+    "type=top": {
+      "model": "worlds_mod:block/deranor_slab_top"
+    },
+    "type=double": {
+      "model": "worlds_mod:block/deranor_slab_full"
+    }
+  }
+}

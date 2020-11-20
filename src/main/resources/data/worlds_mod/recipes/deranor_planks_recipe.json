@@ -1,0 +1,13 @@
+{
+  "group": "worlds_mod",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "tag": "forge:deranor_log"
+    }
+  ],
+  "result": {
+    "item": "worlds_mod:deranor_planks",
+    "count": 4
+  }
+}

@@ -392,199 +392,148 @@
       }
     },
     {
-      "name": "MifrilIngot",
-      "type": "item",
+      "name": "DeranorWood",
+      "type": "block",
       "sortid": 26,
       "compiles": true,
       "locked_code": false,
       "ids": {},
-      "registry_name": "mifril_ingot"
+      "registry_name": "deranor_wood"
     },
     {
-      "name": "MifrilOre",
+      "name": "DeranorLog",
       "type": "block",
       "sortid": 27,
       "compiles": true,
       "locked_code": false,
       "ids": {},
-      "registry_name": "mifril_ore"
+      "registry_name": "deranor_log"
     },
     {
-      "name": "MifrilBlock",
+      "name": "DeranorPlanks",
       "type": "block",
       "sortid": 28,
       "compiles": true,
       "locked_code": false,
       "ids": {},
-      "registry_name": "mifril_block"
+      "registry_name": "deranor_planks"
     },
     {
-      "name": "MifrilOreBlockRecipe",
-      "type": "recipe",
+      "name": "DeranorLeaves",
+      "type": "block",
       "sortid": 29,
       "compiles": true,
       "locked_code": false,
       "ids": {},
-      "registry_name": "mifril_ore_block_recipe"
+      "registry_name": "deranor_leaves"
     },
     {
-      "name": "MifrilBlockOreRecipe",
-      "type": "recipe",
+      "name": "DeranorStairs",
+      "type": "block",
       "sortid": 30,
       "compiles": true,
       "locked_code": false,
       "ids": {},
-      "registry_name": "mifril_block_ore_recipe"
+      "registry_name": "deranor_stairs"
     },
     {
-      "name": "MifrilOreSmelting",
-      "type": "recipe",
+      "name": "DeranorSlab",
+      "type": "block",
       "sortid": 31,
       "compiles": true,
       "locked_code": false,
       "ids": {},
-      "registry_name": "mifril_ore_smelting"
+      "registry_name": "deranor_slab"
     },
     {
-      "name": "MifrilPickaxe",
-      "type": "tool",
+      "name": "DeranorFence",
+      "type": "block",
       "sortid": 32,
       "compiles": true,
       "locked_code": false,
       "ids": {},
-      "registry_name": "mifril_pickaxe"
+      "registry_name": "deranor_fence"
     },
     {
-      "name": "MifrilAxe",
-      "type": "tool",
+      "name": "DeranorFenceGate",
+      "type": "block",
       "sortid": 33,
       "compiles": true,
       "locked_code": false,
       "ids": {},
-      "registry_name": "mifril_axe"
+      "registry_name": "deranor_fence_gate"
     },
     {
-      "name": "MifrilSword",
-      "type": "tool",
+      "name": "DeranorItemsTag",
+      "type": "tag",
       "sortid": 34,
       "compiles": true,
       "locked_code": false,
       "ids": {},
-      "registry_name": "mifril_sword"
+      "registry_name": "deranor_items_tag"
     },
     {
-      "name": "MifrilShovel",
-      "type": "tool",
+      "name": "DeranorWoodRecipe",
+      "type": "recipe",
       "sortid": 35,
       "compiles": true,
       "locked_code": false,
       "ids": {},
-      "registry_name": "mifril_shovel"
+      "registry_name": "deranor_wood_recipe"
     },
     {
-      "name": "MifrilHoe",
-      "type": "tool",
+      "name": "DeranorPlanksRecipe",
+      "type": "recipe",
       "sortid": 36,
       "compiles": true,
       "locked_code": false,
       "ids": {},
-      "registry_name": "mifril_hoe"
+      "registry_name": "deranor_planks_recipe"
     },
     {
-      "name": "MifrilPickaxeRecipe",
+      "name": "DeranorStairsRecipe",
       "type": "recipe",
       "sortid": 37,
       "compiles": true,
       "locked_code": false,
       "ids": {},
-      "registry_name": "mifril_pickaxe_recipe"
+      "registry_name": "deranor_stairs_recipe"
     },
     {
-      "name": "MifrilAxeRecipe",
+      "name": "DeranorSlabRecipe",
       "type": "recipe",
       "sortid": 38,
       "compiles": true,
       "locked_code": false,
       "ids": {},
-      "registry_name": "mifril_axe_recipe"
+      "registry_name": "deranor_slab_recipe"
     },
     {
-      "name": "MifrilSwordRecipe",
+      "name": "DeranorFenceRecipe",
       "type": "recipe",
       "sortid": 39,
       "compiles": true,
       "locked_code": false,
       "ids": {},
-      "registry_name": "mifril_sword_recipe"
+      "registry_name": "deranor_fence_recipe"
     },
     {
-      "name": "MifrilShovelRecipe",
+      "name": "DeranorFenceGateRecipe",
       "type": "recipe",
       "sortid": 40,
       "compiles": true,
       "locked_code": false,
       "ids": {},
-      "registry_name": "mifril_shovel_recipe"
+      "registry_name": "deranor_fence_gate_recipe"
     },
     {
-      "name": "MifrilHoeRecipe",
+      "name": "DeranorStickRecipe",
       "type": "recipe",
       "sortid": 41,
       "compiles": true,
       "locked_code": false,
       "ids": {},
-      "registry_name": "mifril_hoe_recipe"
-    },
-    {
-      "name": "MifrilArmor",
-      "type": "armor",
-      "sortid": 42,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "mifril_armor",
-      "metadata": {
-        "eh": true,
-        "el": true,
-        "eb": true,
-        "ec": true
-      }
-    },
-    {
-      "name": "MifrilArmorHelmetRecipe",
-      "type": "recipe",
-      "sortid": 43,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "mifril_armor_helmet_recipe"
-    },
-    {
-      "name": "MifrilArmorBodyRecipe",
-      "type": "recipe",
-      "sortid": 44,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "mifril_armor_body_recipe"
-    },
-    {
-      "name": "MifrilArmorLeggingsRecipe",
-      "type": "recipe",
-      "sortid": 45,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "mifril_armor_leggings_recipe"
-    },
-    {
-      "name": "MifrilArmorBootsRecipe",
-      "type": "recipe",
-      "sortid": 46,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "mifril_armor_boots_recipe"
+      "registry_name": "deranor_stick_recipe"
     }
   ],
   "variable_elements": [
@@ -598,31 +547,27 @@
   "sound_elements": [],
   "language_map": {
     "en_us": {
-      "block.worlds_mod.mifril_block": "Block of Mifril",
+      "block.worlds_mod.deranor_fence": "Deranor Fence",
       "item.worlds_mod.etalone_tools_sword": "этолонный мечь",
-      "item.worlds_mod.mifril_armor_boots": "Mifril Boots",
-      "block.worlds_mod.teleportblock": "телепорт",
-      "item.worlds_mod.mifril_ingot": "Mifril",
-      "item.worlds_mod.starter": "стартавый жезл",
-      "item.worlds_mod.etalone_tools_hoe": "Etalone_tools Hoe",
-      "item.worlds_mod.mifril_hoe": "Mifril Hoe",
-      "item.worlds_mod.mifril_armor_leggings": "Mifril Leggings",
-      "item.worlds_mod.etalone_tools_pickaxe": "эталонная кирка",
-      "item.worlds_mod.moon": "Moonworld Portal Igniter",
-      "item.worlds_mod.mifril_armor_helmet": "Mifril Helmet",
-      "item.worlds_mod.mifril_sword": "Mifril Sword",
-      "item.worlds_mod.mifril_shovel": "Mifril Shovel",
       "item.worlds_mod.etalone_tools_shovel": "этолонная лопата ",
-      "item.worlds_mod.mifril_axe": "Mifril Axe",
+      "block.worlds_mod.deranor_fence_gate": "Deranor Fence Gate",
+      "block.worlds_mod.teleportblock": "телепорт",
+      "block.worlds_mod.deranor_leaves": "Deranor Leaves",
+      "item.worlds_mod.etalone_tools_hoe": "Etalone_tools Hoe",
+      "item.worlds_mod.starter": "стартавый жезл",
+      "block.worlds_mod.deranor_wood": "Deranor Wood",
       "block.worlds_mod.moongrunt": "лунный грунт",
       "block.worlds_mod.lblock": "источник света ",
-      "block.worlds_mod.mifril_ore": "мифриловая руда",
       "key.mcreator.givecore": "получить ядро",
-      "item.worlds_mod.mifril_pickaxe": "Mifril Pickaxe",
-      "item.worlds_mod.mifril_armor_chestplate": "Mifril Chestplate",
+      "block.worlds_mod.deranor_planks": "Deranor Planks",
+      "block.worlds_mod.deranor_slab": "Deranor Slab",
       "biome.worlds_mod.moonb": "Moonb",
       "item.worlds_mod.bazaakt": "артефакт развёртки базы",
-      "item.worlds_mod.etalone_tools_axe": "эталонный топор"
+      "item.worlds_mod.etalone_tools_pickaxe": "эталонная кирка",
+      "item.worlds_mod.etalone_tools_axe": "эталонный топор",
+      "item.worlds_mod.moon": "Moonworld Portal Igniter",
+      "block.worlds_mod.deranor_stairs": "Deranor Stairs",
+      "block.worlds_mod.deranor_log": "деренорская древесина"
     }
   },
   "workspaceSettings": {

@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "worlds_mod:blocks/deranor_log_side",
+    "particle": "worlds_mod:blocks/deranor_log_side"
+  }
+}
