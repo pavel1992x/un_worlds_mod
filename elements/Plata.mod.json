@@ -8,7 +8,7 @@
     "name": "материнская плата планшета.",
     "rarity": "COMMON",
     "creativeTab": {
-      "value": "MISC"
+      "value": "CUSTOM:Unmodtec"
     },
     "stackSize": 64,
     "enchantability": 0,

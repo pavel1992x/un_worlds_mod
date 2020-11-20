@@ -1,0 +1,12 @@
+{
+  "group": "worlds_mod",
+  "type": "minecraft:smelting",
+  "experience": 21.7,
+  "cookingtime": 451,
+  "ingredient": {
+    "item": "worlds_mod:sins_ore"
+  },
+  "result": {
+    "item": "worlds_mod:sins_dust"
+  }
+}

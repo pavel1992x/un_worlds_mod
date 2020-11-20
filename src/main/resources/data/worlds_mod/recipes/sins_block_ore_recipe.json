@@ -1,0 +1,13 @@
+{
+  "group": "worlds_mod",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "worlds_mod:sins_block"
+    }
+  ],
+  "result": {
+    "item": "worlds_mod:sins_dust",
+    "count": 4
+  }
+}

@@ -5,10 +5,10 @@ import net.minecraftforge.registries.ObjectHolder;
 
 import net.minecraft.item.Rarity;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.ItemGroup;
 import net.minecraft.item.Item;
 import net.minecraft.block.BlockState;
 
+import net.mcreator.worldsmod.itemgroup.UnmodtecItemGroup;
 import net.mcreator.worldsmod.WorldsModModElements;
 
 @WorldsModModElements.ModElement.Tag
@@ -25,7 +25,7 @@ public class CpuItem extends WorldsModModElements.ModElement {
 	}
 	public static class ItemCustom extends Item {
 		public ItemCustom() {
-			super(new Item.Properties().group(ItemGroup.MISC).maxStackSize(1).rarity(Rarity.RARE));
+			super(new Item.Properties().group(UnmodtecItemGroup.tab).maxStackSize(1).rarity(Rarity.RARE));
 			setRegistryName("cpu");
 		}
 

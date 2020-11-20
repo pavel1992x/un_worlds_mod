@@ -8,7 +8,7 @@
     "name": "процессор",
     "rarity": "RARE",
     "creativeTab": {
-      "value": "MISC"
+      "value": "CUSTOM:Unmodtec"
     },
     "stackSize": 1,
     "enchantability": 0,

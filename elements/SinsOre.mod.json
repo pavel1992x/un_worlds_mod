@@ -2,15 +2,15 @@
   "_fv": 13,
   "_type": "block",
   "definition": {
-    "texture": "teleport_block",
-    "textureTop": "teleport_block",
-    "textureLeft": "teleport_block",
-    "textureFront": "teleport_block",
-    "textureRight": "teleport_block",
-    "textureBack": "teleport_block",
-    "renderType": 10,
-    "customModelName": "Normal",
-    "rotationMode": 1,
+    "texture": "sins_ore",
+    "textureTop": "",
+    "textureLeft": "",
+    "textureFront": "",
+    "textureRight": "",
+    "textureBack": "",
+    "renderType": 11,
+    "customModelName": "Single texture",
+    "rotationMode": 0,
     "emissiveRendering": true,
     "displayFluidOverlay": false,
     "itemTexture": "",
@@ -24,20 +24,20 @@
     "Mx": 1.0,
     "My": 1.0,
     "Mz": 1.0,
-    "name": "телепорт",
+    "name": "лунная руда",
     "specialInfo": [],
-    "hardness": 2.0,
-    "resistance": 561.5,
+    "hardness": 3.0,
+    "resistance": 5.0,
     "hasGravity": false,
     "isWaterloggable": false,
     "creativeTab": {
-      "value": "CUSTOM:Unmodtec"
+      "value": "BUILDING_BLOCKS"
     },
-    "destroyTool": "Not specified",
+    "destroyTool": "pickaxe",
     "customDrop": {
-      "value": "CUSTOM:Bazaakt"
+      "value": "CUSTOM:SinsDust"
     },
-    "dropAmount": 1,
+    "dropAmount": 3,
     "useLootTableForDrops": false,
     "isBeaconBase": false,
     "enchantPowerBonus": 0.0,
@@ -45,43 +45,39 @@
     "canProvidePower": false,
     "lightOpacity": 255,
     "material": {
-      "value": "IRON"
+      "value": "ROCK"
     },
     "tickRate": 10,
     "tickRandomly": false,
     "isReplaceable": false,
-    "colorOnMap": "GOLD",
+    "colorOnMap": "DEFAULT",
     "creativePickItem": {
       "value": ""
     },
     "offsetType": "NONE",
-    "aiPathNodeType": "BLOCKED",
-    "beaconColorModifier": {
-      "value": -3407668,
-      "falpha": 0.0
-    },
+    "aiPathNodeType": "DEFAULT",
     "flammability": 0,
     "fireSpreadSpeed": 0,
     "isLadder": false,
     "slipperiness": 0.6,
-    "reactionToPushing": "BLOCK",
+    "reactionToPushing": "NORMAL",
     "isNotColidable": false,
     "soundOnStep": {
-      "value": "METAL"
+      "value": "STONE"
     },
     "luminance": 1.0,
-    "unbreakable": true,
-    "breakHarvestLevel": 1,
-    "spawnParticles": true,
+    "unbreakable": false,
+    "breakHarvestLevel": 2,
+    "spawnParticles": false,
     "particleToSpawn": {
-      "value": "PORTAL"
+      "value": "EXPLOSION_NORMAL"
     },
-    "particleSpawningShape": "Tube",
-    "particleSpawningRadious": 0.999999998509884,
-    "particleAmount": 10,
-    "hasInventory": true,
-    "guiBoundTo": "Teleportint",
-    "openGUIOnRightClick": true,
+    "particleSpawningShape": "Spread",
+    "particleSpawningRadious": 0.5,
+    "particleAmount": 4,
+    "hasInventory": false,
+    "guiBoundTo": "<NONE>",
+    "openGUIOnRightClick": false,
     "inventorySize": 9,
     "inventoryStackSize": 64,
     "inventoryDropWhenDestroyed": true,
@@ -96,12 +92,25 @@
     "isFluidTank": false,
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
-    "spawnWorldTypes": [],
-    "restrictionBiomes": [],
-    "blocksToReplace": [],
-    "frequencyPerChunks": 10,
-    "frequencyOnChunk": 16,
-    "minGenerateHeight": 0,
-    "maxGenerateHeight": 64
+    "spawnWorldTypes": [
+      "CUSTOM:Moonworld"
+    ],
+    "restrictionBiomes": [
+      {
+        "value": "CUSTOM:Moonb"
+      }
+    ],
+    "blocksToReplace": [
+      {
+        "value": "Blocks.STONE"
+      },
+      {
+        "value": "CUSTOM:Moongrunt"
+      }
+    ],
+    "frequencyPerChunks": 20,
+    "frequencyOnChunk": 12,
+    "minGenerateHeight": 1,
+    "maxGenerateHeight": 90
   }
 }

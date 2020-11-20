@@ -5,10 +5,10 @@
     "renderType": 0,
     "texture": "termenal",
     "customModelName": "Normal",
-    "name": "терминал",
+    "name": "планшет",
     "rarity": "UNCOMMON",
     "creativeTab": {
-      "value": "MISC"
+      "value": "CUSTOM:Unmodtec"
     },
     "stackSize": 1,
     "enchantability": 0,

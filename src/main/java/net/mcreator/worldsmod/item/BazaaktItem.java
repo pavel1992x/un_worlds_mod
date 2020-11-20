@@ -10,12 +10,12 @@ import net.minecraft.util.Hand;
 import net.minecraft.util.ActionResult;
 import net.minecraft.item.Rarity;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.ItemGroup;
 import net.minecraft.item.Item;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.block.BlockState;
 
 import net.mcreator.worldsmod.procedures.BazacreatProcedure;
+import net.mcreator.worldsmod.itemgroup.UnmodtecItemGroup;
 import net.mcreator.worldsmod.WorldsModModElements;
 
 import java.util.Map;
@@ -35,7 +35,7 @@ public class BazaaktItem extends WorldsModModElements.ModElement {
 	}
 	public static class ItemCustom extends Item {
 		public ItemCustom() {
-			super(new Item.Properties().group(ItemGroup.TOOLS).maxStackSize(1).rarity(Rarity.COMMON));
+			super(new Item.Properties().group(UnmodtecItemGroup.tab).maxStackSize(1).rarity(Rarity.COMMON));
 			setRegistryName("bazaakt");
 		}
 

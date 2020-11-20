@@ -3,9 +3,9 @@
   "_type": "item",
   "definition": {
     "renderType": 0,
-    "texture": "korpus_computer",
+    "texture": "display",
     "customModelName": "Normal",
-    "name": "корпус планшента",
+    "name": "дисплей планшета",
     "rarity": "COMMON",
     "creativeTab": {
       "value": "CUSTOM:Unmodtec"

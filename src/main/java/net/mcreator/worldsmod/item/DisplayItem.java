@@ -12,11 +12,11 @@ import net.mcreator.worldsmod.itemgroup.UnmodtecItemGroup;
 import net.mcreator.worldsmod.WorldsModModElements;
 
 @WorldsModModElements.ModElement.Tag
-public class KorpusItem extends WorldsModModElements.ModElement {
-	@ObjectHolder("worlds_mod:korpus")
+public class DisplayItem extends WorldsModModElements.ModElement {
+	@ObjectHolder("worlds_mod:display")
 	public static final Item block = null;
-	public KorpusItem(WorldsModModElements instance) {
-		super(instance, 43);
+	public DisplayItem(WorldsModModElements instance) {
+		super(instance, 46);
 	}
 
 	@Override
@@ -26,7 +26,7 @@ public class KorpusItem extends WorldsModModElements.ModElement {
 	public static class ItemCustom extends Item {
 		public ItemCustom() {
 			super(new Item.Properties().group(UnmodtecItemGroup.tab).maxStackSize(64).rarity(Rarity.COMMON));
-			setRegistryName("korpus");
+			setRegistryName("display");
 		}
 
 		@Override

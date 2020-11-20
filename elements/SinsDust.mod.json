@@ -3,12 +3,12 @@
   "_type": "item",
   "definition": {
     "renderType": 0,
-    "texture": "korpus_computer",
+    "texture": "sins_dust",
     "customModelName": "Normal",
-    "name": "корпус планшента",
+    "name": "лунная пыль",
     "rarity": "COMMON",
     "creativeTab": {
-      "value": "CUSTOM:Unmodtec"
+      "value": "MATERIALS"
     },
     "stackSize": 64,
     "enchantability": 0,

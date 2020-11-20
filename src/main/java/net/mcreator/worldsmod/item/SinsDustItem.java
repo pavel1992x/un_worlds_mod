@@ -5,18 +5,18 @@ import net.minecraftforge.registries.ObjectHolder;
 
 import net.minecraft.item.Rarity;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.ItemGroup;
 import net.minecraft.item.Item;
 import net.minecraft.block.BlockState;
 
-import net.mcreator.worldsmod.itemgroup.UnmodtecItemGroup;
 import net.mcreator.worldsmod.WorldsModModElements;
 
 @WorldsModModElements.ModElement.Tag
-public class KorpusItem extends WorldsModModElements.ModElement {
-	@ObjectHolder("worlds_mod:korpus")
+public class SinsDustItem extends WorldsModModElements.ModElement {
+	@ObjectHolder("worlds_mod:sins_dust")
 	public static final Item block = null;
-	public KorpusItem(WorldsModModElements instance) {
-		super(instance, 43);
+	public SinsDustItem(WorldsModModElements instance) {
+		super(instance, 49);
 	}
 
 	@Override
@@ -25,8 +25,8 @@ public class KorpusItem extends WorldsModModElements.ModElement {
 	}
 	public static class ItemCustom extends Item {
 		public ItemCustom() {
-			super(new Item.Properties().group(UnmodtecItemGroup.tab).maxStackSize(64).rarity(Rarity.COMMON));
-			setRegistryName("korpus");
+			super(new Item.Properties().group(ItemGroup.MATERIALS).maxStackSize(64).rarity(Rarity.COMMON));
+			setRegistryName("sins_dust");
 		}
 
 		@Override

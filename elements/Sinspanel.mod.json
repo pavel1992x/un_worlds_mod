@@ -3,12 +3,12 @@
   "_type": "item",
   "definition": {
     "renderType": 0,
-    "texture": "korpus_computer",
+    "texture": "sins_panel",
     "customModelName": "Normal",
-    "name": "корпус планшента",
+    "name": "пластина из лунного пластика",
     "rarity": "COMMON",
     "creativeTab": {
-      "value": "CUSTOM:Unmodtec"
+      "value": "MISC"
     },
     "stackSize": 64,
     "enchantability": 0,
