@@ -390,6 +390,201 @@
       "metadata": {
         "dependencies": []
       }
+    },
+    {
+      "name": "MifrilIngot",
+      "type": "item",
+      "sortid": 26,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "mifril_ingot"
+    },
+    {
+      "name": "MifrilOre",
+      "type": "block",
+      "sortid": 27,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "mifril_ore"
+    },
+    {
+      "name": "MifrilBlock",
+      "type": "block",
+      "sortid": 28,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "mifril_block"
+    },
+    {
+      "name": "MifrilOreBlockRecipe",
+      "type": "recipe",
+      "sortid": 29,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "mifril_ore_block_recipe"
+    },
+    {
+      "name": "MifrilBlockOreRecipe",
+      "type": "recipe",
+      "sortid": 30,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "mifril_block_ore_recipe"
+    },
+    {
+      "name": "MifrilOreSmelting",
+      "type": "recipe",
+      "sortid": 31,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "mifril_ore_smelting"
+    },
+    {
+      "name": "MifrilPickaxe",
+      "type": "tool",
+      "sortid": 32,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "mifril_pickaxe"
+    },
+    {
+      "name": "MifrilAxe",
+      "type": "tool",
+      "sortid": 33,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "mifril_axe"
+    },
+    {
+      "name": "MifrilSword",
+      "type": "tool",
+      "sortid": 34,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "mifril_sword"
+    },
+    {
+      "name": "MifrilShovel",
+      "type": "tool",
+      "sortid": 35,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "mifril_shovel"
+    },
+    {
+      "name": "MifrilHoe",
+      "type": "tool",
+      "sortid": 36,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "mifril_hoe"
+    },
+    {
+      "name": "MifrilPickaxeRecipe",
+      "type": "recipe",
+      "sortid": 37,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "mifril_pickaxe_recipe"
+    },
+    {
+      "name": "MifrilAxeRecipe",
+      "type": "recipe",
+      "sortid": 38,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "mifril_axe_recipe"
+    },
+    {
+      "name": "MifrilSwordRecipe",
+      "type": "recipe",
+      "sortid": 39,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "mifril_sword_recipe"
+    },
+    {
+      "name": "MifrilShovelRecipe",
+      "type": "recipe",
+      "sortid": 40,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "mifril_shovel_recipe"
+    },
+    {
+      "name": "MifrilHoeRecipe",
+      "type": "recipe",
+      "sortid": 41,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "mifril_hoe_recipe"
+    },
+    {
+      "name": "MifrilArmor",
+      "type": "armor",
+      "sortid": 42,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "mifril_armor",
+      "metadata": {
+        "eh": true,
+        "el": true,
+        "eb": true,
+        "ec": true
+      }
+    },
+    {
+      "name": "MifrilArmorHelmetRecipe",
+      "type": "recipe",
+      "sortid": 43,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "mifril_armor_helmet_recipe"
+    },
+    {
+      "name": "MifrilArmorBodyRecipe",
+      "type": "recipe",
+      "sortid": 44,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "mifril_armor_body_recipe"
+    },
+    {
+      "name": "MifrilArmorLeggingsRecipe",
+      "type": "recipe",
+      "sortid": 45,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "mifril_armor_leggings_recipe"
+    },
+    {
+      "name": "MifrilArmorBootsRecipe",
+      "type": "recipe",
+      "sortid": 46,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "mifril_armor_boots_recipe"
     }
   ],
   "variable_elements": [
@@ -403,19 +598,31 @@
   "sound_elements": [],
   "language_map": {
     "en_us": {
+      "block.worlds_mod.mifril_block": "Block of Mifril",
       "item.worlds_mod.etalone_tools_sword": "этолонный мечь",
-      "item.worlds_mod.etalone_tools_shovel": "этолонная лопата ",
+      "item.worlds_mod.mifril_armor_boots": "Mifril Boots",
       "block.worlds_mod.teleportblock": "телепорт",
+      "item.worlds_mod.mifril_ingot": "Mifril",
       "item.worlds_mod.starter": "стартавый жезл",
       "item.worlds_mod.etalone_tools_hoe": "Etalone_tools Hoe",
+      "item.worlds_mod.mifril_hoe": "Mifril Hoe",
+      "item.worlds_mod.mifril_armor_leggings": "Mifril Leggings",
+      "item.worlds_mod.etalone_tools_pickaxe": "эталонная кирка",
+      "item.worlds_mod.moon": "Moonworld Portal Igniter",
+      "item.worlds_mod.mifril_armor_helmet": "Mifril Helmet",
+      "item.worlds_mod.mifril_sword": "Mifril Sword",
+      "item.worlds_mod.mifril_shovel": "Mifril Shovel",
+      "item.worlds_mod.etalone_tools_shovel": "этолонная лопата ",
+      "item.worlds_mod.mifril_axe": "Mifril Axe",
       "block.worlds_mod.moongrunt": "лунный грунт",
       "block.worlds_mod.lblock": "источник света ",
+      "block.worlds_mod.mifril_ore": "мифриловая руда",
       "key.mcreator.givecore": "получить ядро",
+      "item.worlds_mod.mifril_pickaxe": "Mifril Pickaxe",
+      "item.worlds_mod.mifril_armor_chestplate": "Mifril Chestplate",
       "biome.worlds_mod.moonb": "Moonb",
       "item.worlds_mod.bazaakt": "артефакт развёртки базы",
-      "item.worlds_mod.etalone_tools_axe": "эталонный топор",
-      "item.worlds_mod.etalone_tools_pickaxe": "эталонная кирка",
-      "item.worlds_mod.moon": "Moonworld Portal Igniter"
+      "item.worlds_mod.etalone_tools_axe": "эталонный топор"
     }
   },
   "workspaceSettings": {

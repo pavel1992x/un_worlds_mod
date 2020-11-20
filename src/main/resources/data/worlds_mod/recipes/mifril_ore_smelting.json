@@ -1,0 +1,12 @@
+{
+  "group": "worlds_mod",
+  "type": "minecraft:smelting",
+  "experience": 0.7,
+  "cookingtime": 200,
+  "ingredient": {
+    "item": "worlds_mod:mifril_ore"
+  },
+  "result": {
+    "item": "worlds_mod:mifril_ingot"
+  }
+}

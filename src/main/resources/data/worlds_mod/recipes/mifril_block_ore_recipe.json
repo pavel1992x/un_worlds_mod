@@ -1,0 +1,13 @@
+{
+  "group": "worlds_mod",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "worlds_mod:mifril_block"
+    }
+  ],
+  "result": {
+    "item": "worlds_mod:mifril_ingot",
+    "count": 9
+  }
+}
