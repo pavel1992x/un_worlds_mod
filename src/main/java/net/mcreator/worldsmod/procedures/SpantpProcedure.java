@@ -1,12 +1,14 @@
 package net.mcreator.worldsmod.procedures;
 
 import net.minecraft.world.IWorld;
+import net.minecraft.entity.player.ServerPlayerEntity;
 import net.minecraft.entity.Entity;
 
 import net.mcreator.worldsmod.WorldsModModVariables;
 import net.mcreator.worldsmod.WorldsModModElements;
 
 import java.util.Map;
+import java.util.Collections;
 
 @WorldsModModElements.ModElement.Tag
 public class SpantpProcedure extends WorldsModModElements.ModElement {
@@ -29,11 +31,12 @@ public class SpantpProcedure extends WorldsModModElements.ModElement {
 		IWorld world = (IWorld) dependencies.get("world");
 		{
 			Entity _ent = entity;
-			if (!_ent.world.isRemote && _ent.world.getServer() != null) {
-				_ent.world.getServer().getCommandManager().handleCommand(_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4),
-						(("tp @s ") + "" + ((WorldsModModVariables.WorldVariables.get(world).x)) + "" + ("") + ""
-								+ ((WorldsModModVariables.WorldVariables.get(world).y)) + "" + ("") + ""
-								+ ((WorldsModModVariables.WorldVariables.get(world).z))));
+			_ent.setPositionAndUpdate((WorldsModModVariables.WorldVariables.get(world).x), (WorldsModModVariables.WorldVariables.get(world).y),
+					(WorldsModModVariables.WorldVariables.get(world).z));
+			if (_ent instanceof ServerPlayerEntity) {
+				((ServerPlayerEntity) _ent).connection.setPlayerLocation((WorldsModModVariables.WorldVariables.get(world).x),
+						(WorldsModModVariables.WorldVariables.get(world).y), (WorldsModModVariables.WorldVariables.get(world).z), _ent.rotationYaw,
+						_ent.rotationPitch, Collections.emptySet());
 			}
 		}
 	}
