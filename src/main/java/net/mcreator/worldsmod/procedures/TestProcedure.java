@@ -1,14 +1,25 @@
 package net.mcreator.worldsmod.procedures;
 
+import net.minecraftforge.fml.network.NetworkHooks;
+
 import net.minecraft.world.World;
 import net.minecraft.world.IWorld;
+import net.minecraft.util.text.StringTextComponent;
+import net.minecraft.util.text.ITextComponent;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.network.PacketBuffer;
 import net.minecraft.item.Items;
 import net.minecraft.item.ItemStack;
+import net.minecraft.inventory.container.INamedContainerProvider;
+import net.minecraft.inventory.container.Container;
+import net.minecraft.entity.player.ServerPlayerEntity;
+import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.item.ItemEntity;
 import net.minecraft.entity.Entity;
 import net.minecraft.client.gui.widget.TextFieldWidget;
 
+import net.mcreator.worldsmod.item.TpcardItem;
 import net.mcreator.worldsmod.item.ScrudriverItem;
 import net.mcreator.worldsmod.item.Etalone_toolsSwordItem;
 import net.mcreator.worldsmod.item.Etalone_toolsShovelItem;
@@ -16,11 +27,14 @@ import net.mcreator.worldsmod.item.Etalone_toolsPickaxeItem;
 import net.mcreator.worldsmod.item.Etalone_toolsHoeItem;
 import net.mcreator.worldsmod.item.Etalone_toolsAxeItem;
 import net.mcreator.worldsmod.item.BazaaktItem;
+import net.mcreator.worldsmod.gui.TeleportintGui;
 import net.mcreator.worldsmod.block.LblockBlock;
 import net.mcreator.worldsmod.WorldsModModElements;
 
 import java.util.Map;
 import java.util.HashMap;
+
+import io.netty.buffer.Unpooled;
 
 @WorldsModModElements.ModElement.Tag
 public class TestProcedure extends WorldsModModElements.ModElement {
@@ -178,6 +192,46 @@ public class TestProcedure extends WorldsModModElements.ModElement {
 		}.getText())).equals("\u043E\u0442\u0432\u0451\u0440\u0442\u043A\u0430"))) {
 			if (world instanceof World && !world.getWorld().isRemote) {
 				ItemEntity entityToSpawn = new ItemEntity(world.getWorld(), x, y, z, new ItemStack(ScrudriverItem.block, (int) (1)));
+				entityToSpawn.setPickupDelay((int) 10);
+				world.addEntity(entityToSpawn);
+			}
+		} else if ((((new Object() {
+			public String getText() {
+				TextFieldWidget textField = (TextFieldWidget) guistate.get("text:term");
+				if (textField != null) {
+					return textField.getText();
+				}
+				return "";
+			}
+		}.getText())).equals("tp"))) {
+			{
+				Entity _ent = entity;
+				if (_ent instanceof ServerPlayerEntity) {
+					BlockPos _bpos = new BlockPos((int) x, (int) y, (int) z);
+					NetworkHooks.openGui((ServerPlayerEntity) _ent, new INamedContainerProvider() {
+						@Override
+						public ITextComponent getDisplayName() {
+							return new StringTextComponent("Teleportint");
+						}
+
+						@Override
+						public Container createMenu(int id, PlayerInventory inventory, PlayerEntity player) {
+							return new TeleportintGui.GuiContainerMod(id, inventory, new PacketBuffer(Unpooled.buffer()).writeBlockPos(_bpos));
+						}
+					}, _bpos);
+				}
+			}
+		} else if ((((new Object() {
+			public String getText() {
+				TextFieldWidget textField = (TextFieldWidget) guistate.get("text:term");
+				if (textField != null) {
+					return textField.getText();
+				}
+				return "";
+			}
+		}.getText())).equals("\u0442\u043F \u043A\u0430\u0440\u0442\u0430"))) {
+			if (world instanceof World && !world.getWorld().isRemote) {
+				ItemEntity entityToSpawn = new ItemEntity(world.getWorld(), x, y, z, new ItemStack(TpcardItem.block, (int) (1)));
 				entityToSpawn.setPickupDelay((int) 10);
 				world.addEntity(entityToSpawn);
 			}

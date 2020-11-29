@@ -29,6 +29,7 @@ import net.minecraft.client.gui.screen.inventory.ContainerScreen;
 import net.minecraft.client.gui.ScreenManager;
 import net.minecraft.client.Minecraft;
 
+import net.mcreator.worldsmod.procedures.SpantpProcedure;
 import net.mcreator.worldsmod.procedures.SetspawnProcedure;
 import net.mcreator.worldsmod.procedures.OverteleportProcedure;
 import net.mcreator.worldsmod.procedures.MoonteleportProcedure;
@@ -176,6 +177,10 @@ public class TeleportintGui extends WorldsModModElements.ModElement {
 				WorldsModMod.PACKET_HANDLER.sendToServer(new ButtonPressedMessage(3, x, y, z));
 				handleButtonAction(entity, 3, x, y, z);
 			}));
+			this.addButton(new Button(this.guiLeft + 122, this.guiTop + 187, 50, 20, "òï", e -> {
+				WorldsModMod.PACKET_HANDLER.sendToServer(new ButtonPressedMessage(4, x, y, z));
+				handleButtonAction(entity, 4, x, y, z);
+			}));
 		}
 	}
 
@@ -298,6 +303,14 @@ public class TeleportintGui extends WorldsModModElements.ModElement {
 				$_dependencies.put("z", z);
 				$_dependencies.put("world", world);
 				ComputerstartProcedure.executeProcedure($_dependencies);
+			}
+		}
+		if (buttonID == 4) {
+			{
+				Map<String, Object> $_dependencies = new HashMap<>();
+				$_dependencies.put("entity", entity);
+				$_dependencies.put("world", world);
+				SpantpProcedure.executeProcedure($_dependencies);
 			}
 		}
 	}
