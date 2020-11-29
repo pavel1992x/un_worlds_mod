@@ -9,6 +9,7 @@ import net.minecraft.entity.item.ItemEntity;
 import net.minecraft.entity.Entity;
 import net.minecraft.client.gui.widget.TextFieldWidget;
 
+import net.mcreator.worldsmod.item.ScrudriverItem;
 import net.mcreator.worldsmod.item.Etalone_toolsSwordItem;
 import net.mcreator.worldsmod.item.Etalone_toolsShovelItem;
 import net.mcreator.worldsmod.item.Etalone_toolsPickaxeItem;
@@ -163,6 +164,20 @@ public class TestProcedure extends WorldsModModElements.ModElement {
 		}.getText())).equals("\u044F\u0434\u0440\u043E"))) {
 			if (world instanceof World && !world.getWorld().isRemote) {
 				ItemEntity entityToSpawn = new ItemEntity(world.getWorld(), x, y, z, new ItemStack(BazaaktItem.block, (int) (1)));
+				entityToSpawn.setPickupDelay((int) 10);
+				world.addEntity(entityToSpawn);
+			}
+		} else if ((((new Object() {
+			public String getText() {
+				TextFieldWidget textField = (TextFieldWidget) guistate.get("text:term");
+				if (textField != null) {
+					return textField.getText();
+				}
+				return "";
+			}
+		}.getText())).equals("\u043E\u0442\u0432\u0451\u0440\u0442\u043A\u0430"))) {
+			if (world instanceof World && !world.getWorld().isRemote) {
+				ItemEntity entityToSpawn = new ItemEntity(world.getWorld(), x, y, z, new ItemStack(ScrudriverItem.block, (int) (1)));
 				entityToSpawn.setPickupDelay((int) 10);
 				world.addEntity(entityToSpawn);
 			}

@@ -1,0 +1,46 @@
+{
+  "_fv": 13,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "recipeRetstackSize": 1,
+    "group": "",
+    "recipeShapeless": false,
+    "recipeSlots": [
+      {
+        "value": ""
+      },
+      {
+        "value": "CUSTOM:Cpu"
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "CUSTOM:Korpus"
+      },
+      {
+        "value": "CUSTOM:Plata"
+      },
+      {
+        "value": "CUSTOM:Display"
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "CUSTOM:Scrudriver"
+      },
+      {
+        "value": ""
+      }
+    ],
+    "recipeReturnStack": {
+      "value": "CUSTOM:Smartmod"
+    },
+    "name": "tabletcraft",
+    "namespace": "mod"
+  }
+}

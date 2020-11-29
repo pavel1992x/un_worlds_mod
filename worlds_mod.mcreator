@@ -669,14 +669,80 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "panelcraft"
+    },
+    {
+      "name": "Platacraft",
+      "type": "recipe",
+      "sortid": 57,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "platacraft"
+    },
+    {
+      "name": "Displaycraft",
+      "type": "recipe",
+      "sortid": 58,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "displaycraft"
+    },
+    {
+      "name": "Scrudriver",
+      "type": "item",
+      "sortid": 59,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "scrudriver"
+    },
+    {
+      "name": "Teleport",
+      "type": "tag",
+      "sortid": 61,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "teleport"
+    },
+    {
+      "name": "Cpucraft",
+      "type": "recipe",
+      "sortid": 62,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "cpucraft"
+    },
+    {
+      "name": "Tabletcraft",
+      "type": "recipe",
+      "sortid": 63,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "tabletcraft"
     }
   ],
   "variable_elements": [
     {
-      "name": "fly",
-      "type": "logic",
-      "scope": "global",
-      "value": "true"
+      "name": "x",
+      "type": "number",
+      "scope": "world",
+      "value": "0"
+    },
+    {
+      "name": "y",
+      "type": "number",
+      "scope": "world",
+      "value": "0"
+    },
+    {
+      "name": "z",
+      "type": "number",
+      "scope": "world",
+      "value": "0"
     }
   ],
   "sound_elements": [],
@@ -707,6 +773,7 @@
       "key.mcreator.givecore": "получить ядро",
       "block.worlds_mod.deranor_planks": "Deranor Planks",
       "block.worlds_mod.deranor_slab": "Deranor Slab",
+      "item.worlds_mod.scrudriver": "звуковая отвёртка",
       "biome.worlds_mod.moonb": "Moonb",
       "item.worlds_mod.bazaakt": "артефакт развёртки базы",
       "item.worlds_mod.etalone_tools_axe": "эталонный топор",
@@ -732,5 +799,5 @@
     "modElementsPackage": "net.mcreator.worldsmod",
     "lockBaseModFiles": true
   },
-  "mcreatorVersion": 202000546519
+  "mcreatorVersion": 202000547520
 }

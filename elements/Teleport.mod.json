@@ -1,0 +1,16 @@
+{
+  "_fv": 13,
+  "_type": "tag",
+  "definition": {
+    "type": "Blocks",
+    "items": [
+      {
+        "value": "CUSTOM:Teleportblock"
+      }
+    ],
+    "blocks": [],
+    "functions": [],
+    "name": "teleport",
+    "namespace": "forge"
+  }
+}
