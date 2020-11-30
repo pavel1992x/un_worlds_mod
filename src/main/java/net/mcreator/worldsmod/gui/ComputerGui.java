@@ -30,7 +30,7 @@ import net.minecraft.client.gui.screen.inventory.ContainerScreen;
 import net.minecraft.client.gui.ScreenManager;
 import net.minecraft.client.Minecraft;
 
-import net.mcreator.worldsmod.procedures.WoffProcedure;
+import net.mcreator.worldsmod.procedures.TpintstartProcedure;
 import net.mcreator.worldsmod.procedures.TestProcedure;
 import net.mcreator.worldsmod.WorldsModModElements;
 import net.mcreator.worldsmod.WorldsModMod;
@@ -112,8 +112,8 @@ public class ComputerGui extends WorldsModModElements.ModElement {
 			this.y = container.y;
 			this.z = container.z;
 			this.entity = container.entity;
-			this.xSize = 285;
-			this.ySize = 232;
+			this.xSize = 161;
+			this.ySize = 74;
 		}
 		private static final ResourceLocation texture = new ResourceLocation("worlds_mod:textures/computer.png");
 		@Override
@@ -164,15 +164,15 @@ public class ComputerGui extends WorldsModModElements.ModElement {
 		public void init(Minecraft minecraft, int width, int height) {
 			super.init(minecraft, width, height);
 			minecraft.keyboardListener.enableRepeatEvents(true);
-			this.addButton(new Button(this.guiLeft + 6, this.guiTop + 6, 100, 20, "откл дождь", e -> {
-				WorldsModMod.PACKET_HANDLER.sendToServer(new ButtonPressedMessage(0, x, y, z));
-				handleButtonAction(entity, 0, x, y, z);
-			}));
-			term = new TextFieldWidget(this.font, this.guiLeft + 83, this.guiTop + 72, 120, 20, "");
+			term = new TextFieldWidget(this.font, this.guiLeft + 8, this.guiTop + 15, 120, 20, "");
 			guistate.put("text:term", term);
 			term.setMaxStringLength(32767);
 			this.children.add(this.term);
-			this.addButton(new Button(this.guiLeft + 84, this.guiTop + 96, 20, 20, "ок", e -> {
+			this.addButton(new Button(this.guiLeft + 134, this.guiTop + 15, 20, 20, "ок", e -> {
+				WorldsModMod.PACKET_HANDLER.sendToServer(new ButtonPressedMessage(0, x, y, z));
+				handleButtonAction(entity, 0, x, y, z);
+			}));
+			this.addButton(new Button(this.guiLeft + 53, this.guiTop + 42, 35, 20, "tp", e -> {
 				WorldsModMod.PACKET_HANDLER.sendToServer(new ButtonPressedMessage(1, x, y, z));
 				handleButtonAction(entity, 1, x, y, z);
 			}));
@@ -268,13 +268,6 @@ public class ComputerGui extends WorldsModModElements.ModElement {
 		if (buttonID == 0) {
 			{
 				Map<String, Object> $_dependencies = new HashMap<>();
-				$_dependencies.put("world", world);
-				WoffProcedure.executeProcedure($_dependencies);
-			}
-		}
-		if (buttonID == 1) {
-			{
-				Map<String, Object> $_dependencies = new HashMap<>();
 				$_dependencies.put("entity", entity);
 				$_dependencies.put("guistate", guistate);
 				$_dependencies.put("x", x);
@@ -282,6 +275,17 @@ public class ComputerGui extends WorldsModModElements.ModElement {
 				$_dependencies.put("z", z);
 				$_dependencies.put("world", world);
 				TestProcedure.executeProcedure($_dependencies);
+			}
+		}
+		if (buttonID == 1) {
+			{
+				Map<String, Object> $_dependencies = new HashMap<>();
+				$_dependencies.put("entity", entity);
+				$_dependencies.put("x", x);
+				$_dependencies.put("y", y);
+				$_dependencies.put("z", z);
+				$_dependencies.put("world", world);
+				TpintstartProcedure.executeProcedure($_dependencies);
 			}
 		}
 	}

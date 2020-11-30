@@ -43,13 +43,13 @@
         "data": {
           "text": "активировать базу",
           "onClick": {
-            "name": "Setspawn"
+            "name": "TpcardRightClickedInAir"
           },
           "width": 170,
           "height": 20,
           "name": "активировать базу",
-          "x": 133,
-          "y": 159
+          "x": 188,
+          "y": 162
         }
       },
       {
@@ -62,22 +62,22 @@
           "width": 80,
           "height": 20,
           "name": "старт os",
-          "x": 167,
-          "y": 120
+          "x": 101,
+          "y": 161
         }
       },
       {
         "type": "button",
         "data": {
-          "text": "тп",
+          "text": "локальная база",
           "onClick": {
-            "name": "Spantp"
+            "name": "Ltp"
           },
-          "width": 50,
+          "width": 95,
           "height": 20,
-          "name": "тп",
-          "x": 179,
-          "y": 198
+          "name": "локальная база",
+          "x": 62,
+          "y": 41
         }
       }
     ]

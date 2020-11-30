@@ -29,10 +29,10 @@ import net.minecraft.client.gui.screen.inventory.ContainerScreen;
 import net.minecraft.client.gui.ScreenManager;
 import net.minecraft.client.Minecraft;
 
-import net.mcreator.worldsmod.procedures.SpantpProcedure;
-import net.mcreator.worldsmod.procedures.SetspawnProcedure;
+import net.mcreator.worldsmod.procedures.TpcardRightClickedInAirProcedure;
 import net.mcreator.worldsmod.procedures.OverteleportProcedure;
 import net.mcreator.worldsmod.procedures.MoonteleportProcedure;
+import net.mcreator.worldsmod.procedures.LtpProcedure;
 import net.mcreator.worldsmod.procedures.ComputerstartProcedure;
 import net.mcreator.worldsmod.WorldsModModElements;
 import net.mcreator.worldsmod.WorldsModMod;
@@ -169,15 +169,15 @@ public class TeleportintGui extends WorldsModModElements.ModElement {
 				WorldsModMod.PACKET_HANDLER.sendToServer(new ButtonPressedMessage(1, x, y, z));
 				handleButtonAction(entity, 1, x, y, z);
 			}));
-			this.addButton(new Button(this.guiLeft + 76, this.guiTop + 148, 170, 20, "активировать базу", e -> {
+			this.addButton(new Button(this.guiLeft + 131, this.guiTop + 151, 170, 20, "активировать базу", e -> {
 				WorldsModMod.PACKET_HANDLER.sendToServer(new ButtonPressedMessage(2, x, y, z));
 				handleButtonAction(entity, 2, x, y, z);
 			}));
-			this.addButton(new Button(this.guiLeft + 110, this.guiTop + 109, 80, 20, "старт os", e -> {
+			this.addButton(new Button(this.guiLeft + 44, this.guiTop + 150, 80, 20, "старт os", e -> {
 				WorldsModMod.PACKET_HANDLER.sendToServer(new ButtonPressedMessage(3, x, y, z));
 				handleButtonAction(entity, 3, x, y, z);
 			}));
-			this.addButton(new Button(this.guiLeft + 122, this.guiTop + 187, 50, 20, "тп", e -> {
+			this.addButton(new Button(this.guiLeft + 5, this.guiTop + 30, 95, 20, "локальная база", e -> {
 				WorldsModMod.PACKET_HANDLER.sendToServer(new ButtonPressedMessage(4, x, y, z));
 				handleButtonAction(entity, 4, x, y, z);
 			}));
@@ -287,11 +287,11 @@ public class TeleportintGui extends WorldsModModElements.ModElement {
 		if (buttonID == 2) {
 			{
 				Map<String, Object> $_dependencies = new HashMap<>();
+				$_dependencies.put("entity", entity);
 				$_dependencies.put("x", x);
 				$_dependencies.put("y", y);
 				$_dependencies.put("z", z);
-				$_dependencies.put("world", world);
-				SetspawnProcedure.executeProcedure($_dependencies);
+				TpcardRightClickedInAirProcedure.executeProcedure($_dependencies);
 			}
 		}
 		if (buttonID == 3) {
@@ -309,8 +309,7 @@ public class TeleportintGui extends WorldsModModElements.ModElement {
 			{
 				Map<String, Object> $_dependencies = new HashMap<>();
 				$_dependencies.put("entity", entity);
-				$_dependencies.put("world", world);
-				SpantpProcedure.executeProcedure($_dependencies);
+				LtpProcedure.executeProcedure($_dependencies);
 			}
 		}
 	}

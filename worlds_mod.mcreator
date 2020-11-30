@@ -725,13 +725,22 @@
       "registry_name": "tabletcraft"
     },
     {
-      "name": "Spantp",
-      "type": "procedure",
-      "sortid": 64,
+      "name": "Tpcard",
+      "type": "item",
+      "sortid": 66,
       "compiles": true,
       "locked_code": false,
       "ids": {},
-      "registry_name": "spantp",
+      "registry_name": "tpcard"
+    },
+    {
+      "name": "TpcardRightClickedInAir",
+      "type": "procedure",
+      "sortid": 69,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "tpcard_right_clicked_in_air",
       "metadata": {
         "dependencies": [
           {
@@ -739,22 +748,51 @@
             "type": "entity"
           },
           {
-            "name": "world",
-            "type": "world"
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
           }
         ]
       }
     },
     {
-      "name": "SmartmodRightClickedOnBlock",
+      "name": "Ltp",
       "type": "procedure",
-      "sortid": 65,
+      "sortid": 70,
       "compiles": true,
       "locked_code": false,
       "ids": {},
-      "registry_name": "smartmod_right_clicked_on_block",
+      "registry_name": "ltp",
       "metadata": {
         "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Tpintstart",
+      "type": "procedure",
+      "sortid": 71,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "tpintstart",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
           {
             "name": "x",
             "type": "number"
@@ -773,34 +811,43 @@
           }
         ]
       }
-    },
-    {
-      "name": "Tpcard",
-      "type": "item",
-      "sortid": 66,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "tpcard"
     }
   ],
   "variable_elements": [
     {
       "name": "x",
       "type": "number",
-      "scope": "world",
+      "scope": "player_persistent",
       "value": "0"
     },
     {
       "name": "y",
       "type": "number",
-      "scope": "world",
+      "scope": "player_persistent",
       "value": "0"
     },
     {
       "name": "z",
       "type": "number",
-      "scope": "world",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "bcx",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "bcy",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "bcz",
+      "type": "number",
+      "scope": "player_persistent",
       "value": "0"
     }
   ],
@@ -811,8 +858,8 @@
       "item.worlds_mod.etalone_tools_sword": "этолонный мечь",
       "block.worlds_mod.teleportblock": "телепорт",
       "block.worlds_mod.deranor_leaves": "Deranor Leaves",
-      "item.worlds_mod.etalone_tools_hoe": "Etalone_tools Hoe",
       "item.worlds_mod.starter": "стартавый жезл",
+      "item.worlds_mod.etalone_tools_hoe": "Etalone_tools Hoe",
       "block.worlds_mod.deranor_wood": "Deranor Wood",
       "item.worlds_mod.tpcard": "tp карта",
       "item.worlds_mod.cpu": "процессор",

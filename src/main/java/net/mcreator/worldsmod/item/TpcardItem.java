@@ -17,7 +17,7 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.block.BlockState;
 
-import net.mcreator.worldsmod.procedures.SmartmodRightClickedOnBlockProcedure;
+import net.mcreator.worldsmod.procedures.TpcardRightClickedInAirProcedure;
 import net.mcreator.worldsmod.itemgroup.UnmodtecItemGroup;
 import net.mcreator.worldsmod.WorldsModModElements;
 
@@ -79,11 +79,11 @@ public class TpcardItem extends WorldsModModElements.ModElement {
 			double z = entity.posZ;
 			{
 				Map<String, Object> $_dependencies = new HashMap<>();
+				$_dependencies.put("entity", entity);
 				$_dependencies.put("x", x);
 				$_dependencies.put("y", y);
 				$_dependencies.put("z", z);
-				$_dependencies.put("world", world);
-				SmartmodRightClickedOnBlockProcedure.executeProcedure($_dependencies);
+				TpcardRightClickedInAirProcedure.executeProcedure($_dependencies);
 			}
 			return ar;
 		}

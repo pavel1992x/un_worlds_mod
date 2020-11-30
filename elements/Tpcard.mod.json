@@ -31,7 +31,7 @@
     "inventorySize": 9,
     "inventoryStackSize": 64,
     "onRightClickedInAir": {
-      "name": "SmartmodRightClickedOnBlock"
+      "name": "TpcardRightClickedInAir"
     }
   }
 }

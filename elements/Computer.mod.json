@@ -3,27 +3,13 @@
   "_type": "gui",
   "definition": {
     "type": 0,
-    "width": 285,
-    "height": 232,
+    "width": 161,
+    "height": 74,
     "inventoryOffsetX": 0,
     "inventoryOffsetY": 0,
     "renderBgLayer": true,
     "doesPauseGame": false,
     "components": [
-      {
-        "type": "button",
-        "data": {
-          "text": "откл дождь",
-          "onClick": {
-            "name": "Woff"
-          },
-          "width": 100,
-          "height": 20,
-          "name": "откл дождь",
-          "x": 77,
-          "y": 10
-        }
-      },
       {
         "type": "textfield",
         "data": {
@@ -31,8 +17,8 @@
           "width": 120,
           "height": 20,
           "name": "term",
-          "x": 154,
-          "y": 76
+          "x": 141,
+          "y": 98
         }
       },
       {
@@ -45,8 +31,22 @@
           "width": 20,
           "height": 20,
           "name": "ок",
-          "x": 155,
-          "y": 100
+          "x": 267,
+          "y": 98
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "tp",
+          "onClick": {
+            "name": "Tpintstart"
+          },
+          "width": 35,
+          "height": 20,
+          "name": "tp",
+          "x": 186,
+          "y": 125
         }
       }
     ]
