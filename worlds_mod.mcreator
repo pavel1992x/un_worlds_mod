@@ -849,6 +849,39 @@
           }
         ]
       }
+    },
+    {
+      "name": "ScrudriverRightClickedOnBlock",
+      "type": "procedure",
+      "sortid": 74,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "scrudriver_right_clicked_on_block",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [
@@ -905,8 +938,8 @@
       "item.worlds_mod.etalone_tools_sword": "этолонный мечь",
       "block.worlds_mod.teleportblock": "телепорт",
       "block.worlds_mod.deranor_leaves": "Deranor Leaves",
-      "item.worlds_mod.starter": "стартавый жезл",
       "item.worlds_mod.etalone_tools_hoe": "Etalone_tools Hoe",
+      "item.worlds_mod.starter": "стартавый жезл",
       "block.worlds_mod.deranor_wood": "Deranor Wood",
       "item.worlds_mod.tpcard": "tp карта",
       "item.worlds_mod.cpu": "процессор",
