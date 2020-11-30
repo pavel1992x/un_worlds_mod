@@ -1,1 +1,12 @@
-{}
+{
+  "scrudriver": {
+    "category": "master",
+    "subtitle": "subtitles.scrudriver",
+    "sounds": [
+      {
+        "name": "worlds_mod:sonic_generic",
+        "stream": false
+      }
+    ]
+  }
+}

@@ -811,6 +811,44 @@
           }
         ]
       }
+    },
+    {
+      "name": "Wcb",
+      "type": "block",
+      "sortid": 72,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "wcb"
+    },
+    {
+      "name": "ScrudriverItemIsCraftedsmelted",
+      "type": "procedure",
+      "sortid": 73,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "scrudriver_item_is_craftedsmelted",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [
@@ -851,7 +889,16 @@
       "value": "0"
     }
   ],
-  "sound_elements": [],
+  "sound_elements": [
+    {
+      "name": "scrudriver",
+      "files": [
+        "sonic_generic"
+      ],
+      "category": "master",
+      "subtitle": "звук звуковой отвёртки"
+    }
+  ],
   "language_map": {
     "en_us": {
       "block.worlds_mod.deranor_fence": "Deranor Fence",
@@ -876,6 +923,7 @@
       "block.worlds_mod.moongrunt": "лунный грунт",
       "block.worlds_mod.lblock": "источник света ",
       "item.worlds_mod.sinspanel": "пластина из лунного пластика",
+      "subtitles.scrudriver": "звук звуковой отвёртки",
       "item.worlds_mod.display": "дисплей планшета",
       "key.mcreator.givecore": "получить ядро",
       "block.worlds_mod.deranor_planks": "Deranor Planks",
@@ -886,7 +934,8 @@
       "item.worlds_mod.etalone_tools_axe": "эталонный топор",
       "itemGroup.tabunmodtec": "un mod приборы",
       "block.worlds_mod.deranor_stairs": "Deranor Stairs",
-      "block.worlds_mod.deranor_log": "деренорская древесина"
+      "block.worlds_mod.deranor_log": "деренорская древесина",
+      "block.worlds_mod.wcb": "концентрат воды"
     }
   },
   "workspaceSettings": {

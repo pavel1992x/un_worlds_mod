@@ -48,6 +48,8 @@ public class WorldsModModElements {
 	public final List<Supplier<Enchantment>> enchantments = new ArrayList<>();
 	public static Map<ResourceLocation, net.minecraft.util.SoundEvent> sounds = new HashMap<>();
 	public WorldsModModElements() {
+		sounds.put(new ResourceLocation("worlds_mod", "scrudriver"),
+				new net.minecraft.util.SoundEvent(new ResourceLocation("worlds_mod", "scrudriver")));
 		try {
 			ModFileScanData modFileInfo = ModList.get().getModFileById("worlds_mod").getFile().getScanResult();
 			Set<ModFileScanData.AnnotationData> annotations = modFileInfo.getAnnotations();

@@ -21,6 +21,7 @@
   "block.worlds_mod.moongrunt": "лунный грунт",
   "block.worlds_mod.lblock": "источник света ",
   "item.worlds_mod.sinspanel": "пластина из лунного пластика",
+  "subtitles.scrudriver": "звук звуковой отвёртки",
   "item.worlds_mod.display": "дисплей планшета",
   "key.mcreator.givecore": "получить ядро",
   "block.worlds_mod.deranor_planks": "Deranor Planks",
@@ -31,5 +32,6 @@
   "item.worlds_mod.etalone_tools_axe": "эталонный топор",
   "itemGroup.tabunmodtec": "un mod приборы",
   "block.worlds_mod.deranor_stairs": "Deranor Stairs",
-  "block.worlds_mod.deranor_log": "деренорская древесина"
+  "block.worlds_mod.deranor_log": "деренорская древесина",
+  "block.worlds_mod.wcb": "концентрат воды"
 }

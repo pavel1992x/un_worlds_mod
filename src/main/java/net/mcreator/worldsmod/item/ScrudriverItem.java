@@ -9,13 +9,17 @@ import net.minecraft.util.text.ITextComponent;
 import net.minecraft.item.Rarity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Item;
+import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.block.BlockState;
 
+import net.mcreator.worldsmod.procedures.ScrudriverItemIsCraftedsmeltedProcedure;
 import net.mcreator.worldsmod.itemgroup.UnmodtecItemGroup;
 import net.mcreator.worldsmod.WorldsModModElements;
 
+import java.util.Map;
 import java.util.List;
+import java.util.HashMap;
 
 @WorldsModModElements.ModElement.Tag
 public class ScrudriverItem extends WorldsModModElements.ModElement {
@@ -65,6 +69,22 @@ public class ScrudriverItem extends WorldsModModElements.ModElement {
 			super.addInformation(itemstack, world, list, flag);
 			list.add(new StringTextComponent(
 					"\u0437\u0432\u0443\u043A\u043E\u0432\u0430\u044F \u043E\u0442\u0432\u0451\u0440\u0442\u043A\u0430 \u0434\u043E\u043A\u0442\u043E\u0440\u0430"));
+		}
+
+		@Override
+		public void onCreated(ItemStack itemstack, World world, PlayerEntity entity) {
+			super.onCreated(itemstack, world, entity);
+			double x = entity.posX;
+			double y = entity.posY;
+			double z = entity.posZ;
+			{
+				Map<String, Object> $_dependencies = new HashMap<>();
+				$_dependencies.put("x", x);
+				$_dependencies.put("y", y);
+				$_dependencies.put("z", z);
+				$_dependencies.put("world", world);
+				ScrudriverItemIsCraftedsmeltedProcedure.executeProcedure($_dependencies);
+			}
 		}
 	}
 }
