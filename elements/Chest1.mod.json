@@ -3,8 +3,8 @@
   "_type": "gui",
   "definition": {
     "type": 1,
-    "width": 204,
-    "height": 166,
+    "width": 228,
+    "height": 219,
     "inventoryOffsetX": 0,
     "inventoryOffsetY": 0,
     "renderBgLayer": true,
@@ -624,6 +624,48 @@
           "name": "Slot #43",
           "x": 294,
           "y": 98
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "os",
+          "onClick": {
+            "name": "Computerstart"
+          },
+          "width": 35,
+          "height": 20,
+          "name": "os",
+          "x": 132,
+          "y": 17
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "tp",
+          "onClick": {
+            "name": "Tpintstart"
+          },
+          "width": 35,
+          "height": 20,
+          "name": "tp",
+          "x": 177,
+          "y": 17
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "id": 44,
+          "disableStackInteraction": false,
+          "dropItemsWhenNotBound": true,
+          "name": "Slot #44",
+          "x": 222,
+          "y": 17
         }
       }
     ]

@@ -18,7 +18,7 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.block.BlockState;
 
-import net.mcreator.worldsmod.procedures.BazacorecreatProcedure;
+import net.mcreator.worldsmod.procedures.StarterKoghdaNazhataPkmPoVozdukhuProcedure;
 import net.mcreator.worldsmod.WorldsModModElements;
 
 import java.util.Map;
@@ -88,8 +88,11 @@ public class StarterItem extends WorldsModModElements.ModElement {
 			{
 				Map<String, Object> $_dependencies = new HashMap<>();
 				$_dependencies.put("entity", entity);
+				$_dependencies.put("x", x);
+				$_dependencies.put("y", y);
+				$_dependencies.put("z", z);
 				$_dependencies.put("world", world);
-				BazacorecreatProcedure.executeProcedure($_dependencies);
+				StarterKoghdaNazhataPkmPoVozdukhuProcedure.executeProcedure($_dependencies);
 			}
 			return ar;
 		}
