@@ -1,17 +1,26 @@
 package net.mcreator.worldsmod.procedures;
 
-import net.minecraft.world.World;
+import net.minecraftforge.fml.network.NetworkHooks;
+
 import net.minecraft.world.IWorld;
-import net.minecraft.item.ItemStack;
+import net.minecraft.util.text.StringTextComponent;
+import net.minecraft.util.text.ITextComponent;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.network.PacketBuffer;
+import net.minecraft.inventory.container.INamedContainerProvider;
+import net.minecraft.inventory.container.Container;
+import net.minecraft.entity.player.ServerPlayerEntity;
+import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.entity.item.ItemEntity;
 import net.minecraft.entity.Entity;
 
-import net.mcreator.worldsmod.item.StarterItem;
-import net.mcreator.worldsmod.item.BazaaktItem;
+import net.mcreator.worldsmod.gui.Chest1Gui;
+import net.mcreator.worldsmod.WorldsModModVariables;
 import net.mcreator.worldsmod.WorldsModModElements;
 
 import java.util.Map;
+
+import io.netty.buffer.Unpooled;
 
 @WorldsModModElements.ModElement.Tag
 public class BazacorecreatProcedure extends WorldsModModElements.ModElement {
@@ -25,39 +34,30 @@ public class BazacorecreatProcedure extends WorldsModModElements.ModElement {
 				System.err.println("Failed to load dependency entity for procedure Bazacorecreat!");
 			return;
 		}
-		if (dependencies.get("x") == null) {
-			if (!dependencies.containsKey("x"))
-				System.err.println("Failed to load dependency x for procedure Bazacorecreat!");
-			return;
-		}
-		if (dependencies.get("y") == null) {
-			if (!dependencies.containsKey("y"))
-				System.err.println("Failed to load dependency y for procedure Bazacorecreat!");
-			return;
-		}
-		if (dependencies.get("z") == null) {
-			if (!dependencies.containsKey("z"))
-				System.err.println("Failed to load dependency z for procedure Bazacorecreat!");
-			return;
-		}
 		if (dependencies.get("world") == null) {
 			if (!dependencies.containsKey("world"))
 				System.err.println("Failed to load dependency world for procedure Bazacorecreat!");
 			return;
 		}
 		Entity entity = (Entity) dependencies.get("entity");
-		double x = dependencies.get("x") instanceof Integer ? (int) dependencies.get("x") : (double) dependencies.get("x");
-		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
-		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		IWorld world = (IWorld) dependencies.get("world");
-		if (world instanceof World && !world.getWorld().isRemote) {
-			ItemEntity entityToSpawn = new ItemEntity(world.getWorld(), x, y, z, new ItemStack(BazaaktItem.block, (int) (1)));
-			entityToSpawn.setPickupDelay((int) 10);
-			world.addEntity(entityToSpawn);
-		}
-		if (entity instanceof PlayerEntity) {
-			ItemStack _stktoremove = new ItemStack(StarterItem.block, (int) (1));
-			((PlayerEntity) entity).inventory.clearMatchingItems(p -> _stktoremove.getItem() == p.getItem(), (int) 1);
+		{
+			Entity _ent = entity;
+			if (_ent instanceof ServerPlayerEntity) {
+				BlockPos _bpos = new BlockPos((int) (WorldsModModVariables.WorldVariables.get(world).chx),
+						(int) (WorldsModModVariables.WorldVariables.get(world).chy), (int) (WorldsModModVariables.WorldVariables.get(world).chz));
+				NetworkHooks.openGui((ServerPlayerEntity) _ent, new INamedContainerProvider() {
+					@Override
+					public ITextComponent getDisplayName() {
+						return new StringTextComponent("Chest1");
+					}
+
+					@Override
+					public Container createMenu(int id, PlayerInventory inventory, PlayerEntity player) {
+						return new Chest1Gui.GuiContainerMod(id, inventory, new PacketBuffer(Unpooled.buffer()).writeBlockPos(_bpos));
+					}
+				}, _bpos);
+			}
 		}
 	}
 }

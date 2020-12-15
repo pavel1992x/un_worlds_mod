@@ -3,7 +3,7 @@
   "_type": "keybind",
   "definition": {
     "triggerKey": "INSERT",
-    "keyBindingName": "получить ядро",
+    "keyBindingName": "открыть интерфейс",
     "keyBindingCategoryKey": "gameplay",
     "onKeyReleased": {
       "name": "Bazacorecreat"

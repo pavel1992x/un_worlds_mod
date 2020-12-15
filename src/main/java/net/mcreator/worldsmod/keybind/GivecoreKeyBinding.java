@@ -40,7 +40,7 @@ public class GivecoreKeyBinding extends WorldsModModElements.ModElement {
 	@Override
 	@OnlyIn(Dist.CLIENT)
 	public void initElements() {
-		keys = new KeyBinding("key.mcreator.givecore", GLFW.GLFW_KEY_INSERT, "key.categories.gameplay");
+		keys = new KeyBinding("key.mcreator.chest_start", GLFW.GLFW_KEY_INSERT, "key.categories.gameplay");
 		ClientRegistry.registerKeyBinding(keys);
 		MinecraftForge.EVENT_BUS.register(this);
 	}
@@ -97,9 +97,6 @@ public class GivecoreKeyBinding extends WorldsModModElements.ModElement {
 			{
 				Map<String, Object> $_dependencies = new HashMap<>();
 				$_dependencies.put("entity", entity);
-				$_dependencies.put("x", x);
-				$_dependencies.put("y", y);
-				$_dependencies.put("z", z);
 				$_dependencies.put("world", world);
 				BazacorecreatProcedure.executeProcedure($_dependencies);
 			}

@@ -191,18 +191,6 @@
             "type": "entity"
           },
           {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
             "name": "world",
             "type": "world"
           }
@@ -263,7 +251,7 @@
       "compiles": true,
       "locked_code": false,
       "ids": {},
-      "registry_name": "givecore"
+      "registry_name": "chest_start"
     },
     {
       "name": "Woff",
@@ -861,9 +849,52 @@
       "metadata": {
         "dependencies": [
           {
-            "name": "entity",
-            "type": "entity"
+            "name": "x",
+            "type": "number"
           },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Chest1",
+      "type": "gui",
+      "sortid": 75,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "chest_1"
+    },
+    {
+      "name": "Chest",
+      "type": "block",
+      "sortid": 76,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "chest"
+    },
+    {
+      "name": "Chest_link",
+      "type": "procedure",
+      "sortid": 77,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "chest_link",
+      "metadata": {
+        "dependencies": [
           {
             "name": "x",
             "type": "number"
@@ -882,6 +913,15 @@
           }
         ]
       }
+    },
+    {
+      "name": "Chestlink",
+      "type": "item",
+      "sortid": 77,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "chestlink"
     }
   ],
   "variable_elements": [
@@ -920,6 +960,24 @@
       "type": "number",
       "scope": "player_persistent",
       "value": "0"
+    },
+    {
+      "name": "chx",
+      "type": "number",
+      "scope": "world",
+      "value": "0"
+    },
+    {
+      "name": "chy",
+      "type": "number",
+      "scope": "world",
+      "value": "0"
+    },
+    {
+      "name": "chz",
+      "type": "number",
+      "scope": "world",
+      "value": "0"
     }
   ],
   "sound_elements": [
@@ -935,6 +993,7 @@
   "language_map": {
     "en_us": {
       "block.worlds_mod.deranor_fence": "Deranor Fence",
+      "block.worlds_mod.chest": "пространнственный сундук",
       "item.worlds_mod.etalone_tools_sword": "этолонный мечь",
       "block.worlds_mod.teleportblock": "телепорт",
       "block.worlds_mod.deranor_leaves": "Deranor Leaves",
@@ -949,6 +1008,7 @@
       "item.worlds_mod.moon": "Moonworld Portal Igniter",
       "item.worlds_mod.smartmod": "планшет",
       "block.worlds_mod.sins_block": "Block of Sins",
+      "item.worlds_mod.chestlink": "карта привязки ",
       "item.worlds_mod.etalone_tools_shovel": "этолонная лопата ",
       "block.worlds_mod.deranor_fence_gate": "Deranor Fence Gate",
       "item.worlds_mod.korpus": "корпус планшента",
@@ -958,7 +1018,6 @@
       "item.worlds_mod.sinspanel": "пластина из лунного пластика",
       "subtitles.scrudriver": "звук звуковой отвёртки",
       "item.worlds_mod.display": "дисплей планшета",
-      "key.mcreator.givecore": "получить ядро",
       "block.worlds_mod.deranor_planks": "Deranor Planks",
       "block.worlds_mod.deranor_slab": "Deranor Slab",
       "item.worlds_mod.scrudriver": "звуковая отвёртка",
@@ -966,6 +1025,7 @@
       "item.worlds_mod.bazaakt": "артефакт развёртки базы",
       "item.worlds_mod.etalone_tools_axe": "эталонный топор",
       "itemGroup.tabunmodtec": "un mod приборы",
+      "key.mcreator.chest_start": "открыть интерфейс",
       "block.worlds_mod.deranor_stairs": "Deranor Stairs",
       "block.worlds_mod.deranor_log": "деренорская древесина",
       "block.worlds_mod.wcb": "концентрат воды"

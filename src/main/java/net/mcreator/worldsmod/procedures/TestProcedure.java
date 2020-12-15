@@ -26,9 +26,11 @@ import net.mcreator.worldsmod.item.Etalone_toolsShovelItem;
 import net.mcreator.worldsmod.item.Etalone_toolsPickaxeItem;
 import net.mcreator.worldsmod.item.Etalone_toolsHoeItem;
 import net.mcreator.worldsmod.item.Etalone_toolsAxeItem;
+import net.mcreator.worldsmod.item.ChestlinkItem;
 import net.mcreator.worldsmod.item.BazaaktItem;
 import net.mcreator.worldsmod.gui.TeleportintGui;
 import net.mcreator.worldsmod.block.LblockBlock;
+import net.mcreator.worldsmod.block.ChestBlock;
 import net.mcreator.worldsmod.WorldsModModElements;
 
 import java.util.Map;
@@ -232,6 +234,25 @@ public class TestProcedure extends WorldsModModElements.ModElement {
 		}.getText())).equals("\u0442\u043F \u043A\u0430\u0440\u0442\u0430"))) {
 			if (world instanceof World && !world.getWorld().isRemote) {
 				ItemEntity entityToSpawn = new ItemEntity(world.getWorld(), x, y, z, new ItemStack(TpcardItem.block, (int) (1)));
+				entityToSpawn.setPickupDelay((int) 10);
+				world.addEntity(entityToSpawn);
+			}
+		} else if ((((new Object() {
+			public String getText() {
+				TextFieldWidget textField = (TextFieldWidget) guistate.get("text:term");
+				if (textField != null) {
+					return textField.getText();
+				}
+				return "";
+			}
+		}.getText())).equals("\u0441\u0443\u043D\u0434\u0443\u043A"))) {
+			if (world instanceof World && !world.getWorld().isRemote) {
+				ItemEntity entityToSpawn = new ItemEntity(world.getWorld(), x, y, z, new ItemStack(ChestBlock.block, (int) (1)));
+				entityToSpawn.setPickupDelay((int) 10);
+				world.addEntity(entityToSpawn);
+			}
+			if (world instanceof World && !world.getWorld().isRemote) {
+				ItemEntity entityToSpawn = new ItemEntity(world.getWorld(), x, y, z, new ItemStack(ChestlinkItem.block, (int) (1)));
 				entityToSpawn.setPickupDelay((int) 10);
 				world.addEntity(entityToSpawn);
 			}

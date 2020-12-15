@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "worlds_mod:blocks/chest",
+    "up": "worlds_mod:blocks/chest",
+    "north": "worlds_mod:blocks/chest",
+    "east": "worlds_mod:blocks/chest",
+    "south": "worlds_mod:blocks/chest",
+    "west": "worlds_mod:blocks/chest",
+    "particle": "worlds_mod:blocks/chest"
+  }
+}
