@@ -653,20 +653,6 @@
           "x": 177,
           "y": 17
         }
-      },
-      {
-        "type": "inputslot",
-        "data": {
-          "inputLimit": {
-            "value": ""
-          },
-          "id": 44,
-          "disableStackInteraction": false,
-          "dropItemsWhenNotBound": true,
-          "name": "Slot #44",
-          "x": 222,
-          "y": 17
-        }
       }
     ]
   }

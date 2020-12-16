@@ -84,7 +84,7 @@ public class Chest1Gui extends WorldsModModElements.ModElement {
 			super(containerType, id);
 			this.entity = inv.player;
 			this.world = inv.player.world;
-			this.internal = new ItemStackHandler(45);
+			this.internal = new ItemStackHandler(44);
 			BlockPos pos = null;
 			if (extraData != null) {
 				pos = extraData.readBlockPos();
@@ -210,8 +210,6 @@ public class Chest1Gui extends WorldsModModElements.ModElement {
 			}));
 			this.customSlots.put(43, this.addSlot(new SlotItemHandler(internal, 43, 195, 88) {
 			}));
-			this.customSlots.put(44, this.addSlot(new SlotItemHandler(internal, 44, 123, 7) {
-			}));
 			int si;
 			int sj;
 			for (si = 0; si < 3; ++si)
@@ -237,18 +235,18 @@ public class Chest1Gui extends WorldsModModElements.ModElement {
 			if (slot != null && slot.getHasStack()) {
 				ItemStack itemstack1 = slot.getStack();
 				itemstack = itemstack1.copy();
-				if (index < 45) {
-					if (!this.mergeItemStack(itemstack1, 45, this.inventorySlots.size(), true)) {
+				if (index < 44) {
+					if (!this.mergeItemStack(itemstack1, 44, this.inventorySlots.size(), true)) {
 						return ItemStack.EMPTY;
 					}
 					slot.onSlotChange(itemstack1, itemstack);
-				} else if (!this.mergeItemStack(itemstack1, 0, 45, false)) {
-					if (index < 45 + 27) {
-						if (!this.mergeItemStack(itemstack1, 45 + 27, this.inventorySlots.size(), true)) {
+				} else if (!this.mergeItemStack(itemstack1, 0, 44, false)) {
+					if (index < 44 + 27) {
+						if (!this.mergeItemStack(itemstack1, 44 + 27, this.inventorySlots.size(), true)) {
 							return ItemStack.EMPTY;
 						}
 					} else {
-						if (!this.mergeItemStack(itemstack1, 45, 45 + 27, false)) {
+						if (!this.mergeItemStack(itemstack1, 44, 44 + 27, false)) {
 							return ItemStack.EMPTY;
 						}
 					}
