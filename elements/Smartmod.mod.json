@@ -27,8 +27,8 @@
       "устройство для доступа в глобальную ос"
     ],
     "hasGlow": false,
-    "guiBoundTo": "Computer",
-    "inventorySize": 0,
+    "guiBoundTo": "Chest1",
+    "inventorySize": 44,
     "inventoryStackSize": 64
   }
 }

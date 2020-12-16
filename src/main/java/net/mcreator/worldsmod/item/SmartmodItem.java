@@ -37,7 +37,7 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.block.BlockState;
 
 import net.mcreator.worldsmod.itemgroup.UnmodtecItemGroup;
-import net.mcreator.worldsmod.gui.ComputerGui;
+import net.mcreator.worldsmod.gui.Chest1Gui;
 import net.mcreator.worldsmod.WorldsModModElements;
 
 import javax.annotation.Nullable;
@@ -60,7 +60,7 @@ public class SmartmodItem extends WorldsModModElements.ModElement {
 	@OnlyIn(Dist.CLIENT)
 	public void onItemDropped(ItemTossEvent event) {
 		if (event.getEntityItem().getItem().getItem() == block) {
-			if (Minecraft.getInstance().currentScreen instanceof ComputerGui.GuiWindow) {
+			if (Minecraft.getInstance().currentScreen instanceof Chest1Gui.GuiWindow) {
 				Minecraft.getInstance().player.closeScreen();
 			}
 		}
@@ -127,7 +127,7 @@ public class SmartmodItem extends WorldsModModElements.ModElement {
 						PacketBuffer packetBuffer = new PacketBuffer(Unpooled.buffer());
 						packetBuffer.writeBlockPos(new BlockPos(x, y, z));
 						packetBuffer.writeByte(hand == Hand.MAIN_HAND ? 0 : 1);
-						return new ComputerGui.GuiContainerMod(id, inventory, packetBuffer);
+						return new Chest1Gui.GuiContainerMod(id, inventory, packetBuffer);
 					}
 				}, buf -> {
 					buf.writeBlockPos(new BlockPos(x, y, z));
@@ -178,7 +178,7 @@ public class SmartmodItem extends WorldsModModElements.ModElement {
 		}
 
 		private ItemStackHandler createItemHandler() {
-			return new ItemStackHandler(0) {
+			return new ItemStackHandler(44) {
 				@Override
 				public int getSlotLimit(int slot) {
 					return 64;

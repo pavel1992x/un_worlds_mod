@@ -946,6 +946,15 @@
           }
         ]
       }
+    },
+    {
+      "name": "Ltpakt",
+      "type": "gun",
+      "sortid": 79,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ltpakt"
     }
   ],
   "variable_elements": [
@@ -1025,6 +1034,7 @@
       "item.worlds_mod.starter": "стартавый жезл",
       "block.worlds_mod.deranor_wood": "Deranor Wood",
       "item.worlds_mod.tpcard": "tp карта",
+      "item.worlds_mod.ltpakt": "бластер",
       "item.worlds_mod.cpu": "процессор",
       "item.worlds_mod.plata": "материнская плата планшета.",
       "item.worlds_mod.sins_dust": "лунная пыль",
