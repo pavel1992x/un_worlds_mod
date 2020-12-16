@@ -32,6 +32,7 @@ import net.minecraft.client.Minecraft;
 
 import net.mcreator.worldsmod.procedures.TpintstartProcedure;
 import net.mcreator.worldsmod.procedures.TestProcedure;
+import net.mcreator.worldsmod.procedures.TabletrecawariProcedure;
 import net.mcreator.worldsmod.WorldsModModElements;
 import net.mcreator.worldsmod.WorldsModMod;
 
@@ -112,8 +113,8 @@ public class ComputerGui extends WorldsModModElements.ModElement {
 			this.y = container.y;
 			this.z = container.z;
 			this.entity = container.entity;
-			this.xSize = 161;
-			this.ySize = 74;
+			this.xSize = 176;
+			this.ySize = 166;
 		}
 		private static final ResourceLocation texture = new ResourceLocation("worlds_mod:textures/computer.png");
 		@Override
@@ -164,17 +165,42 @@ public class ComputerGui extends WorldsModModElements.ModElement {
 		public void init(Minecraft minecraft, int width, int height) {
 			super.init(minecraft, width, height);
 			minecraft.keyboardListener.enableRepeatEvents(true);
-			term = new TextFieldWidget(this.font, this.guiLeft + 8, this.guiTop + 15, 120, 20, "");
+			term = new TextFieldWidget(this.font, this.guiLeft + 6, this.guiTop + 7, 120, 20, "место для ввода команд") {
+				{
+					setSuggestion("место для ввода команд");
+				}
+				@Override
+				public void writeText(String text) {
+					super.writeText(text);
+					if (getText().isEmpty())
+						setSuggestion("место для ввода команд");
+					else
+						setSuggestion(null);
+				}
+
+				@Override
+				public void setCursorPosition(int pos) {
+					super.setCursorPosition(pos);
+					if (getText().isEmpty())
+						setSuggestion("место для ввода команд");
+					else
+						setSuggestion(null);
+				}
+			};
 			guistate.put("text:term", term);
 			term.setMaxStringLength(32767);
 			this.children.add(this.term);
-			this.addButton(new Button(this.guiLeft + 134, this.guiTop + 15, 20, 20, "ок", e -> {
+			this.addButton(new Button(this.guiLeft + 132, this.guiTop + 7, 20, 20, "ок", e -> {
 				WorldsModMod.PACKET_HANDLER.sendToServer(new ButtonPressedMessage(0, x, y, z));
 				handleButtonAction(entity, 0, x, y, z);
 			}));
-			this.addButton(new Button(this.guiLeft + 53, this.guiTop + 42, 35, 20, "tp", e -> {
+			this.addButton(new Button(this.guiLeft + 6, this.guiTop + 34, 35, 20, "tp", e -> {
 				WorldsModMod.PACKET_HANDLER.sendToServer(new ButtonPressedMessage(1, x, y, z));
 				handleButtonAction(entity, 1, x, y, z);
+			}));
+			this.addButton(new Button(this.guiLeft + 42, this.guiTop + 34, 60, 20, "планшет", e -> {
+				WorldsModMod.PACKET_HANDLER.sendToServer(new ButtonPressedMessage(2, x, y, z));
+				handleButtonAction(entity, 2, x, y, z);
 			}));
 		}
 	}
@@ -286,6 +312,13 @@ public class ComputerGui extends WorldsModModElements.ModElement {
 				$_dependencies.put("z", z);
 				$_dependencies.put("world", world);
 				TpintstartProcedure.executeProcedure($_dependencies);
+			}
+		}
+		if (buttonID == 2) {
+			{
+				Map<String, Object> $_dependencies = new HashMap<>();
+				$_dependencies.put("entity", entity);
+				TabletrecawariProcedure.executeProcedure($_dependencies);
 			}
 		}
 	}

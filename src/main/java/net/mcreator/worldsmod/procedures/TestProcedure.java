@@ -29,6 +29,7 @@ import net.mcreator.worldsmod.item.Etalone_toolsHoeItem;
 import net.mcreator.worldsmod.item.Etalone_toolsAxeItem;
 import net.mcreator.worldsmod.item.ChestlinkItem;
 import net.mcreator.worldsmod.item.BazaaktItem;
+import net.mcreator.worldsmod.item.AtalonearmerItem;
 import net.mcreator.worldsmod.gui.TeleportintGui;
 import net.mcreator.worldsmod.block.LblockBlock;
 import net.mcreator.worldsmod.block.ChestBlock;
@@ -167,6 +168,11 @@ public class TestProcedure extends WorldsModModElements.ModElement {
 			}
 			if (world instanceof World && !world.getWorld().isRemote) {
 				ItemEntity entityToSpawn = new ItemEntity(world.getWorld(), x, y, z, new ItemStack(Etalone_toolsHoeItem.block, (int) (1)));
+				entityToSpawn.setPickupDelay((int) 10);
+				world.addEntity(entityToSpawn);
+			}
+			if (world instanceof World && !world.getWorld().isRemote) {
+				ItemEntity entityToSpawn = new ItemEntity(world.getWorld(), x, y, z, new ItemStack(AtalonearmerItem.body, (int) (1)));
 				entityToSpawn.setPickupDelay((int) 10);
 				world.addEntity(entityToSpawn);
 			}

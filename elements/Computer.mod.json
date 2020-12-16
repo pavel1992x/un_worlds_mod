@@ -3,8 +3,8 @@
   "_type": "gui",
   "definition": {
     "type": 0,
-    "width": 161,
-    "height": 74,
+    "width": 176,
+    "height": 166,
     "inventoryOffsetX": 0,
     "inventoryOffsetY": 0,
     "renderBgLayer": true,
@@ -13,12 +13,12 @@
       {
         "type": "textfield",
         "data": {
-          "placeholder": "",
+          "placeholder": "место для ввода команд",
           "width": 120,
           "height": 20,
           "name": "term",
-          "x": 141,
-          "y": 98
+          "x": 132,
+          "y": 44
         }
       },
       {
@@ -31,8 +31,8 @@
           "width": 20,
           "height": 20,
           "name": "ок",
-          "x": 267,
-          "y": 98
+          "x": 258,
+          "y": 44
         }
       },
       {
@@ -45,8 +45,22 @@
           "width": 35,
           "height": 20,
           "name": "tp",
-          "x": 186,
-          "y": 125
+          "x": 132,
+          "y": 71
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "планшет",
+          "onClick": {
+            "name": "Tabletrecawari"
+          },
+          "width": 60,
+          "height": 20,
+          "name": "планшет",
+          "x": 168,
+          "y": 71
         }
       }
     ]
