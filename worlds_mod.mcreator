@@ -840,6 +840,10 @@
       "metadata": {
         "dependencies": [
           {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
             "name": "x",
             "type": "number"
           },
@@ -1013,6 +1017,15 @@
           }
         ]
       }
+    },
+    {
+      "name": "Amazonka",
+      "type": "mob",
+      "sortid": 83,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "amazonka"
     }
   ],
   "variable_elements": [
@@ -1085,8 +1098,8 @@
     "en_us": {
       "item.worlds_mod.atalonearmer_helmet": "Atalonearmer Helmet",
       "block.worlds_mod.deranor_fence": "Deranor Fence",
-      "item.worlds_mod.etalone_tools_sword": "этолонный мечь",
       "block.worlds_mod.chest": "пространнственный сундук",
+      "item.worlds_mod.etalone_tools_sword": "этолонный мечь",
       "block.worlds_mod.teleportblock": "телепорт",
       "block.worlds_mod.deranor_leaves": "Deranor Leaves",
       "item.worlds_mod.etalone_tools_hoe": "Etalone_tools Hoe",
@@ -1104,10 +1117,12 @@
       "block.worlds_mod.sins_block": "Block of Sins",
       "item.worlds_mod.chestlink": "карта привязки ",
       "item.worlds_mod.etalone_tools_shovel": "этолонная лопата ",
+      "item.worlds_mod.amazonka_spawn_egg": "амазонка Spawn Egg",
       "block.worlds_mod.deranor_fence_gate": "Deranor Fence Gate",
       "item.worlds_mod.korpus": "корпус планшента",
       "item.worlds_mod.atalonearmer_chestplate": "эталонный нагрудник",
       "block.worlds_mod.sins_ore": "лунная руда",
+      "entity.worlds_mod.amazonka": "амазонка",
       "item.worlds_mod.atalonearmer_leggings": "Atalonearmer Leggings",
       "block.worlds_mod.moongrunt": "лунный грунт",
       "block.worlds_mod.lblock": "источник света ",
