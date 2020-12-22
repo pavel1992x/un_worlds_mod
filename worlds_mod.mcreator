@@ -1098,8 +1098,8 @@
     "en_us": {
       "item.worlds_mod.atalonearmer_helmet": "Atalonearmer Helmet",
       "block.worlds_mod.deranor_fence": "Deranor Fence",
-      "block.worlds_mod.chest": "пространнственный сундук",
       "item.worlds_mod.etalone_tools_sword": "этолонный мечь",
+      "block.worlds_mod.chest": "пространнственный сундук",
       "block.worlds_mod.teleportblock": "телепорт",
       "block.worlds_mod.deranor_leaves": "Deranor Leaves",
       "item.worlds_mod.etalone_tools_hoe": "Etalone_tools Hoe",
