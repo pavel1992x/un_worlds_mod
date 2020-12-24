@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "worlds_mod:blocks/trash_box",
+    "up": "worlds_mod:blocks/trash_box",
+    "north": "worlds_mod:blocks/trash_box",
+    "east": "worlds_mod:blocks/trash_box",
+    "south": "worlds_mod:blocks/trash_box",
+    "west": "worlds_mod:blocks/trash_box",
+    "particle": "worlds_mod:blocks/trash_box"
+  }
+}

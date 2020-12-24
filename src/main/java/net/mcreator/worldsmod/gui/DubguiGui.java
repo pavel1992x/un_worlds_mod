@@ -3,8 +3,10 @@ package net.mcreator.worldsmod.gui;
 
 import org.lwjgl.opengl.GL11;
 
+import net.minecraftforge.items.SlotItemHandler;
 import net.minecraftforge.items.ItemStackHandler;
 import net.minecraftforge.items.IItemHandler;
+import net.minecraftforge.items.CapabilityItemHandler;
 import net.minecraftforge.fml.network.NetworkEvent;
 import net.minecraftforge.fml.network.IContainerFactory;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
@@ -18,22 +20,21 @@ import net.minecraft.world.World;
 import net.minecraft.util.text.ITextComponent;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.ResourceLocation;
+import net.minecraft.tileentity.TileEntity;
 import net.minecraft.network.PacketBuffer;
+import net.minecraft.item.ItemStack;
 import net.minecraft.inventory.container.Slot;
 import net.minecraft.inventory.container.ContainerType;
 import net.minecraft.inventory.container.Container;
+import net.minecraft.entity.player.ServerPlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.client.gui.widget.button.Button;
-import net.minecraft.client.gui.widget.TextFieldWidget;
+import net.minecraft.entity.Entity;
 import net.minecraft.client.gui.screen.inventory.ContainerScreen;
 import net.minecraft.client.gui.ScreenManager;
 import net.minecraft.client.Minecraft;
 
-import net.mcreator.worldsmod.procedures.TpintstartProcedure;
-import net.mcreator.worldsmod.procedures.TestProcedure;
-import net.mcreator.worldsmod.procedures.TabletrecawariProcedure;
-import net.mcreator.worldsmod.procedures.CreativeProcedure;
+import net.mcreator.worldsmod.procedures.Dubpr1Procedure;
 import net.mcreator.worldsmod.WorldsModModElements;
 import net.mcreator.worldsmod.WorldsModMod;
 
@@ -42,11 +43,11 @@ import java.util.Map;
 import java.util.HashMap;
 
 @WorldsModModElements.ModElement.Tag
-public class ComputerGui extends WorldsModModElements.ModElement {
+public class DubguiGui extends WorldsModModElements.ModElement {
 	public static HashMap guistate = new HashMap();
 	private static ContainerType<GuiContainerMod> containerType = null;
-	public ComputerGui(WorldsModModElements instance) {
-		super(instance, 20);
+	public DubguiGui(WorldsModModElements instance) {
+		super(instance, 87);
 		elements.addNetworkMessage(ButtonPressedMessage.class, ButtonPressedMessage::buffer, ButtonPressedMessage::new,
 				ButtonPressedMessage::handler);
 		elements.addNetworkMessage(GUISlotChangedMessage.class, GUISlotChangedMessage::buffer, GUISlotChangedMessage::new,
@@ -62,7 +63,7 @@ public class ComputerGui extends WorldsModModElements.ModElement {
 
 	@SubscribeEvent
 	public void registerContainer(RegistryEvent.Register<ContainerType<?>> event) {
-		event.getRegistry().register(containerType.setRegistryName("computer"));
+		event.getRegistry().register(containerType.setRegistryName("dubgui"));
 	}
 	public static class GuiContainerModFactory implements IContainerFactory {
 		public GuiContainerMod create(int id, PlayerInventory inv, PacketBuffer extraData) {
@@ -81,7 +82,7 @@ public class ComputerGui extends WorldsModModElements.ModElement {
 			super(containerType, id);
 			this.entity = inv.player;
 			this.world = inv.player.world;
-			this.internal = new ItemStackHandler(0);
+			this.internal = new ItemStackHandler(2);
 			BlockPos pos = null;
 			if (extraData != null) {
 				pos = extraData.readBlockPos();
@@ -89,6 +90,56 @@ public class ComputerGui extends WorldsModModElements.ModElement {
 				this.y = pos.getY();
 				this.z = pos.getZ();
 			}
+			if (pos != null) {
+				if (extraData.readableBytes() == 1) { // bound to item
+					byte hand = extraData.readByte();
+					ItemStack itemstack;
+					if (hand == 0)
+						itemstack = this.entity.getHeldItemMainhand();
+					else
+						itemstack = this.entity.getHeldItemOffhand();
+					itemstack.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+						this.internal = capability;
+						this.bound = true;
+					});
+				} else if (extraData.readableBytes() > 1) {
+					extraData.readByte(); // drop padding
+					Entity entity = world.getEntityByID(extraData.readVarInt());
+					if (entity != null)
+						entity.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+							this.internal = capability;
+							this.bound = true;
+						});
+				} else { // might be bound to block
+					TileEntity ent = inv.player != null ? inv.player.world.getTileEntity(pos) : null;
+					if (ent != null) {
+						ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+							this.internal = capability;
+							this.bound = true;
+						});
+					}
+				}
+			}
+			this.customSlots.put(0, this.addSlot(new SlotItemHandler(internal, 0, 43, 35) {
+				@Override
+				public void onSlotChanged() {
+					super.onSlotChanged();
+					GuiContainerMod.this.slotChanged(0, 0, 0);
+				}
+			}));
+			this.customSlots.put(1, this.addSlot(new SlotItemHandler(internal, 1, 70, 35) {
+				@Override
+				public boolean isItemValid(ItemStack stack) {
+					return false;
+				}
+			}));
+			int si;
+			int sj;
+			for (si = 0; si < 3; ++si)
+				for (sj = 0; sj < 9; ++sj)
+					this.addSlot(new Slot(inv, sj + (si + 1) * 9, 0 + 8 + sj * 18, 0 + 84 + si * 18));
+			for (si = 0; si < 9; ++si)
+				this.addSlot(new Slot(inv, si, 0 + 8 + si * 18, 0 + 142));
 		}
 
 		public Map<Integer, Slot> get() {
@@ -99,6 +150,148 @@ public class ComputerGui extends WorldsModModElements.ModElement {
 		public boolean canInteractWith(PlayerEntity player) {
 			return true;
 		}
+
+		@Override
+		public ItemStack transferStackInSlot(PlayerEntity playerIn, int index) {
+			ItemStack itemstack = ItemStack.EMPTY;
+			Slot slot = (Slot) this.inventorySlots.get(index);
+			if (slot != null && slot.getHasStack()) {
+				ItemStack itemstack1 = slot.getStack();
+				itemstack = itemstack1.copy();
+				if (index < 2) {
+					if (!this.mergeItemStack(itemstack1, 2, this.inventorySlots.size(), true)) {
+						return ItemStack.EMPTY;
+					}
+					slot.onSlotChange(itemstack1, itemstack);
+				} else if (!this.mergeItemStack(itemstack1, 0, 2, false)) {
+					if (index < 2 + 27) {
+						if (!this.mergeItemStack(itemstack1, 2 + 27, this.inventorySlots.size(), true)) {
+							return ItemStack.EMPTY;
+						}
+					} else {
+						if (!this.mergeItemStack(itemstack1, 2, 2 + 27, false)) {
+							return ItemStack.EMPTY;
+						}
+					}
+					return ItemStack.EMPTY;
+				}
+				if (itemstack1.getCount() == 0) {
+					slot.putStack(ItemStack.EMPTY);
+				} else {
+					slot.onSlotChanged();
+				}
+				if (itemstack1.getCount() == itemstack.getCount()) {
+					return ItemStack.EMPTY;
+				}
+				slot.onTake(playerIn, itemstack1);
+			}
+			return itemstack;
+		}
+
+		@Override /**
+					 * Merges provided ItemStack with the first avaliable one in the
+					 * container/player inventor between minIndex (included) and maxIndex
+					 * (excluded). Args : stack, minIndex, maxIndex, negativDirection. /!\ the
+					 * Container implementation do not check if the item is valid for the slot
+					 */
+		protected boolean mergeItemStack(ItemStack stack, int startIndex, int endIndex, boolean reverseDirection) {
+			boolean flag = false;
+			int i = startIndex;
+			if (reverseDirection) {
+				i = endIndex - 1;
+			}
+			if (stack.isStackable()) {
+				while (!stack.isEmpty()) {
+					if (reverseDirection) {
+						if (i < startIndex) {
+							break;
+						}
+					} else if (i >= endIndex) {
+						break;
+					}
+					Slot slot = this.inventorySlots.get(i);
+					ItemStack itemstack = slot.getStack();
+					if (slot.isItemValid(itemstack) && !itemstack.isEmpty() && areItemsAndTagsEqual(stack, itemstack)) {
+						int j = itemstack.getCount() + stack.getCount();
+						int maxSize = Math.min(slot.getSlotStackLimit(), stack.getMaxStackSize());
+						if (j <= maxSize) {
+							stack.setCount(0);
+							itemstack.setCount(j);
+							slot.putStack(itemstack);
+							flag = true;
+						} else if (itemstack.getCount() < maxSize) {
+							stack.shrink(maxSize - itemstack.getCount());
+							itemstack.setCount(maxSize);
+							slot.putStack(itemstack);
+							flag = true;
+						}
+					}
+					if (reverseDirection) {
+						--i;
+					} else {
+						++i;
+					}
+				}
+			}
+			if (!stack.isEmpty()) {
+				if (reverseDirection) {
+					i = endIndex - 1;
+				} else {
+					i = startIndex;
+				}
+				while (true) {
+					if (reverseDirection) {
+						if (i < startIndex) {
+							break;
+						}
+					} else if (i >= endIndex) {
+						break;
+					}
+					Slot slot1 = this.inventorySlots.get(i);
+					ItemStack itemstack1 = slot1.getStack();
+					if (itemstack1.isEmpty() && slot1.isItemValid(stack)) {
+						if (stack.getCount() > slot1.getSlotStackLimit()) {
+							slot1.putStack(stack.split(slot1.getSlotStackLimit()));
+						} else {
+							slot1.putStack(stack.split(stack.getCount()));
+						}
+						slot1.onSlotChanged();
+						flag = true;
+						break;
+					}
+					if (reverseDirection) {
+						--i;
+					} else {
+						++i;
+					}
+				}
+			}
+			return flag;
+		}
+
+		@Override
+		public void onContainerClosed(PlayerEntity playerIn) {
+			super.onContainerClosed(playerIn);
+			if (!bound && (playerIn instanceof ServerPlayerEntity)) {
+				if (!playerIn.isAlive() || playerIn instanceof ServerPlayerEntity && ((ServerPlayerEntity) playerIn).hasDisconnected()) {
+					for (int j = 0; j < internal.getSlots(); ++j) {
+						playerIn.dropItem(internal.extractItem(j, internal.getStackInSlot(j).getCount(), false), false);
+					}
+				} else {
+					for (int i = 0; i < internal.getSlots(); ++i) {
+						playerIn.inventory.placeItemBackInInventory(playerIn.world,
+								internal.extractItem(i, internal.getStackInSlot(i).getCount(), false));
+					}
+				}
+			}
+		}
+
+		private void slotChanged(int slotid, int ctype, int meta) {
+			if (this.world != null && this.world.isRemote) {
+				WorldsModMod.PACKET_HANDLER.sendToServer(new GUISlotChangedMessage(slotid, x, y, z, ctype, meta));
+				handleSlotAction(entity, slotid, ctype, meta, x, y, z);
+			}
+		}
 	}
 
 	@OnlyIn(Dist.CLIENT)
@@ -106,7 +299,6 @@ public class ComputerGui extends WorldsModModElements.ModElement {
 		private World world;
 		private int x, y, z;
 		private PlayerEntity entity;
-		TextFieldWidget term;
 		public GuiWindow(GuiContainerMod container, PlayerInventory inventory, ITextComponent text) {
 			super(container, inventory, text);
 			this.world = container.world;
@@ -117,13 +309,12 @@ public class ComputerGui extends WorldsModModElements.ModElement {
 			this.xSize = 176;
 			this.ySize = 166;
 		}
-		private static final ResourceLocation texture = new ResourceLocation("worlds_mod:textures/computer.png");
+		private static final ResourceLocation texture = new ResourceLocation("worlds_mod:textures/dubgui.png");
 		@Override
 		public void render(int mouseX, int mouseY, float partialTicks) {
 			this.renderBackground();
 			super.render(mouseX, mouseY, partialTicks);
 			this.renderHoveredToolTip(mouseX, mouseY);
-			term.render(mouseX, mouseY, partialTicks);
 		}
 
 		@Override
@@ -138,7 +329,6 @@ public class ComputerGui extends WorldsModModElements.ModElement {
 		@Override
 		public void tick() {
 			super.tick();
-			term.tick();
 		}
 
 		@Override
@@ -151,8 +341,6 @@ public class ComputerGui extends WorldsModModElements.ModElement {
 				this.minecraft.player.closeScreen();
 				return true;
 			}
-			if (term.isFocused())
-				return term.keyPressed(key, b, c);
 			return super.keyPressed(key, b, c);
 		}
 
@@ -166,47 +354,6 @@ public class ComputerGui extends WorldsModModElements.ModElement {
 		public void init(Minecraft minecraft, int width, int height) {
 			super.init(minecraft, width, height);
 			minecraft.keyboardListener.enableRepeatEvents(true);
-			term = new TextFieldWidget(this.font, this.guiLeft + 6, this.guiTop + 7, 120, 20, "место для ввода команд") {
-				{
-					setSuggestion("место для ввода команд");
-				}
-				@Override
-				public void writeText(String text) {
-					super.writeText(text);
-					if (getText().isEmpty())
-						setSuggestion("место для ввода команд");
-					else
-						setSuggestion(null);
-				}
-
-				@Override
-				public void setCursorPosition(int pos) {
-					super.setCursorPosition(pos);
-					if (getText().isEmpty())
-						setSuggestion("место для ввода команд");
-					else
-						setSuggestion(null);
-				}
-			};
-			guistate.put("text:term", term);
-			term.setMaxStringLength(32767);
-			this.children.add(this.term);
-			this.addButton(new Button(this.guiLeft + 132, this.guiTop + 7, 20, 20, "ок", e -> {
-				WorldsModMod.PACKET_HANDLER.sendToServer(new ButtonPressedMessage(0, x, y, z));
-				handleButtonAction(entity, 0, x, y, z);
-			}));
-			this.addButton(new Button(this.guiLeft + 6, this.guiTop + 34, 35, 20, "tp", e -> {
-				WorldsModMod.PACKET_HANDLER.sendToServer(new ButtonPressedMessage(1, x, y, z));
-				handleButtonAction(entity, 1, x, y, z);
-			}));
-			this.addButton(new Button(this.guiLeft + 42, this.guiTop + 34, 60, 20, "планшет", e -> {
-				WorldsModMod.PACKET_HANDLER.sendToServer(new ButtonPressedMessage(2, x, y, z));
-				handleButtonAction(entity, 2, x, y, z);
-			}));
-			this.addButton(new Button(this.guiLeft + 6, this.guiTop + 61, 60, 20, "криатив", e -> {
-				WorldsModMod.PACKET_HANDLER.sendToServer(new ButtonPressedMessage(3, x, y, z));
-				handleButtonAction(entity, 3, x, y, z);
-			}));
 		}
 	}
 
@@ -296,43 +443,6 @@ public class ComputerGui extends WorldsModModElements.ModElement {
 		// security measure to prevent arbitrary chunk generation
 		if (!world.isBlockLoaded(new BlockPos(x, y, z)))
 			return;
-		if (buttonID == 0) {
-			{
-				Map<String, Object> $_dependencies = new HashMap<>();
-				$_dependencies.put("entity", entity);
-				$_dependencies.put("guistate", guistate);
-				$_dependencies.put("x", x);
-				$_dependencies.put("y", y);
-				$_dependencies.put("z", z);
-				$_dependencies.put("world", world);
-				TestProcedure.executeProcedure($_dependencies);
-			}
-		}
-		if (buttonID == 1) {
-			{
-				Map<String, Object> $_dependencies = new HashMap<>();
-				$_dependencies.put("entity", entity);
-				$_dependencies.put("x", x);
-				$_dependencies.put("y", y);
-				$_dependencies.put("z", z);
-				$_dependencies.put("world", world);
-				TpintstartProcedure.executeProcedure($_dependencies);
-			}
-		}
-		if (buttonID == 2) {
-			{
-				Map<String, Object> $_dependencies = new HashMap<>();
-				$_dependencies.put("entity", entity);
-				TabletrecawariProcedure.executeProcedure($_dependencies);
-			}
-		}
-		if (buttonID == 3) {
-			{
-				Map<String, Object> $_dependencies = new HashMap<>();
-				$_dependencies.put("entity", entity);
-				CreativeProcedure.executeProcedure($_dependencies);
-			}
-		}
 	}
 
 	private static void handleSlotAction(PlayerEntity entity, int slotID, int changeType, int meta, int x, int y, int z) {
@@ -340,5 +450,16 @@ public class ComputerGui extends WorldsModModElements.ModElement {
 		// security measure to prevent arbitrary chunk generation
 		if (!world.isBlockLoaded(new BlockPos(x, y, z)))
 			return;
+		if (slotID == 0 && changeType == 0) {
+			{
+				Map<String, Object> $_dependencies = new HashMap<>();
+				$_dependencies.put("entity", entity);
+				$_dependencies.put("x", x);
+				$_dependencies.put("y", y);
+				$_dependencies.put("z", z);
+				$_dependencies.put("world", world);
+				Dubpr1Procedure.executeProcedure($_dependencies);
+			}
+		}
 	}
 }

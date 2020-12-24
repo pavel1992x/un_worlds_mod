@@ -23,6 +23,7 @@ import net.minecraft.util.Direction;
 import net.minecraft.network.PacketBuffer;
 import net.minecraft.nbt.INBT;
 import net.minecraft.nbt.CompoundNBT;
+import net.minecraft.item.ItemStack;
 import net.minecraft.entity.player.ServerPlayerEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.Entity;
@@ -213,6 +214,7 @@ public class WorldsModModVariables {
 			nbt.putDouble("bcx", instance.bcx);
 			nbt.putDouble("bcy", instance.bcy);
 			nbt.putDouble("bcz", instance.bcz);
+			nbt.put("dub", instance.dub.write(new CompoundNBT()));
 			return nbt;
 		}
 
@@ -225,6 +227,7 @@ public class WorldsModModVariables {
 			instance.bcx = nbt.getDouble("bcx");
 			instance.bcy = nbt.getDouble("bcy");
 			instance.bcz = nbt.getDouble("bcz");
+			instance.dub = ItemStack.read(nbt.getCompound("dub"));
 		}
 	}
 
@@ -235,6 +238,7 @@ public class WorldsModModVariables {
 		public double bcx = 0;
 		public double bcy = 0;
 		public double bcz = 0;
+		public ItemStack dub = ItemStack.EMPTY;
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayerEntity)
 				WorldsModMod.PACKET_HANDLER.send(PacketDistributor.PLAYER.with(() -> (ServerPlayerEntity) entity),
@@ -273,6 +277,7 @@ public class WorldsModModVariables {
 		clone.bcx = original.bcx;
 		clone.bcy = original.bcy;
 		clone.bcz = original.bcz;
+		clone.dub = original.dub;
 		if (!event.isWasDeath()) {
 		}
 	}
@@ -303,6 +308,7 @@ public class WorldsModModVariables {
 					variables.bcx = message.data.bcx;
 					variables.bcy = message.data.bcy;
 					variables.bcz = message.data.bcz;
+					variables.dub = message.data.dub;
 				}
 			});
 			context.setPacketHandled(true);

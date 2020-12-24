@@ -1019,13 +1019,128 @@
       }
     },
     {
-      "name": "Amazonka",
-      "type": "mob",
+      "name": "Creative",
+      "type": "procedure",
       "sortid": 83,
       "compiles": true,
       "locked_code": false,
       "ids": {},
-      "registry_name": "amazonka"
+      "registry_name": "creative",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Trashboxgui",
+      "type": "gui",
+      "sortid": 84,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "trashboxgui"
+    },
+    {
+      "name": "Trashboxpr",
+      "type": "procedure",
+      "sortid": 85,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "trashboxpr",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Trashbox",
+      "type": "block",
+      "sortid": 84,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "trashbox"
+    },
+    {
+      "name": "Trashboxcraft",
+      "type": "recipe",
+      "sortid": 86,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "trashboxcraft"
+    },
+    {
+      "name": "Dubgui",
+      "type": "gui",
+      "sortid": 87,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "dubgui"
+    },
+    {
+      "name": "Dublikator",
+      "type": "block",
+      "sortid": 88,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "dublikator"
+    },
+    {
+      "name": "Dubpr1",
+      "type": "procedure",
+      "sortid": 90,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "dubpr_1",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [
@@ -1082,6 +1197,12 @@
       "type": "number",
       "scope": "world",
       "value": "0"
+    },
+    {
+      "name": "dub",
+      "type": "itemstack",
+      "scope": "player_persistent",
+      "value": ""
     }
   ],
   "sound_elements": [
@@ -1098,8 +1219,8 @@
     "en_us": {
       "item.worlds_mod.atalonearmer_helmet": "Atalonearmer Helmet",
       "block.worlds_mod.deranor_fence": "Deranor Fence",
-      "item.worlds_mod.etalone_tools_sword": "этолонный мечь",
       "block.worlds_mod.chest": "пространнственный сундук",
+      "item.worlds_mod.etalone_tools_sword": "этолонный мечь",
       "block.worlds_mod.teleportblock": "телепорт",
       "block.worlds_mod.deranor_leaves": "Deranor Leaves",
       "item.worlds_mod.etalone_tools_hoe": "Etalone_tools Hoe",
@@ -1114,20 +1235,20 @@
       "item.worlds_mod.moon": "Moonworld Portal Igniter",
       "item.worlds_mod.smartmod": "планшет",
       "advancements.tabletcraftunlock.descr": "устройство с трудом было созданно,  теперь боги знают что у тебя есть к нему доступ.",
+      "block.worlds_mod.trashbox": "уничтожитель",
       "block.worlds_mod.sins_block": "Block of Sins",
       "item.worlds_mod.chestlink": "карта привязки ",
       "item.worlds_mod.etalone_tools_shovel": "этолонная лопата ",
-      "item.worlds_mod.amazonka_spawn_egg": "амазонка Spawn Egg",
       "block.worlds_mod.deranor_fence_gate": "Deranor Fence Gate",
       "item.worlds_mod.korpus": "корпус планшента",
       "item.worlds_mod.atalonearmer_chestplate": "эталонный нагрудник",
       "block.worlds_mod.sins_ore": "лунная руда",
-      "entity.worlds_mod.amazonka": "амазонка",
       "item.worlds_mod.atalonearmer_leggings": "Atalonearmer Leggings",
       "block.worlds_mod.moongrunt": "лунный грунт",
       "block.worlds_mod.lblock": "источник света ",
       "item.worlds_mod.sinspanel": "пластина из лунного пластика",
       "subtitles.scrudriver": "звук звуковой отвёртки",
+      "block.worlds_mod.dublikator": "дубликатор",
       "item.worlds_mod.display": "дисплей планшета",
       "advancements.tabletcraftunlock.title": "планшет",
       "block.worlds_mod.deranor_planks": "Deranor Planks",

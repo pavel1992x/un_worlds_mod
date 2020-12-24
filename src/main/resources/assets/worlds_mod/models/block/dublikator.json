@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "worlds_mod:blocks/dublikator",
+    "up": "worlds_mod:blocks/dublikator",
+    "north": "worlds_mod:blocks/dublikator",
+    "east": "worlds_mod:blocks/dublikator",
+    "south": "worlds_mod:blocks/dublikator",
+    "west": "worlds_mod:blocks/dublikator",
+    "particle": "worlds_mod:blocks/dublikator"
+  }
+}

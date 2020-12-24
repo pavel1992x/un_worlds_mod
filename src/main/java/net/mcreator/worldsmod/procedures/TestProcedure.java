@@ -7,6 +7,8 @@ import net.minecraft.world.IWorld;
 import net.minecraft.util.text.StringTextComponent;
 import net.minecraft.util.text.ITextComponent;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.potion.Effects;
+import net.minecraft.potion.EffectInstance;
 import net.minecraft.network.PacketBuffer;
 import net.minecraft.item.Items;
 import net.minecraft.item.ItemStack;
@@ -16,6 +18,7 @@ import net.minecraft.entity.player.ServerPlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.item.ItemEntity;
+import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.Entity;
 import net.minecraft.client.gui.widget.TextFieldWidget;
 
@@ -277,6 +280,29 @@ public class TestProcedure extends WorldsModModElements.ModElement {
 				entityToSpawn.setPickupDelay((int) 10);
 				world.addEntity(entityToSpawn);
 			}
+		} else if ((((new Object() {
+			public String getText() {
+				TextFieldWidget textField = (TextFieldWidget) guistate.get("text:term");
+				if (textField != null) {
+					return textField.getText();
+				}
+				return "";
+			}
+		}.getText())).equals("\u043D\u043E\u0447\u044C"))) {
+			if (entity instanceof LivingEntity)
+				((LivingEntity) entity)
+						.addPotionEffect(new EffectInstance(Effects.NIGHT_VISION, (int) Double.POSITIVE_INFINITY, (int) 1, (false), (false)));
+		} else if ((((new Object() {
+			public String getText() {
+				TextFieldWidget textField = (TextFieldWidget) guistate.get("text:term");
+				if (textField != null) {
+					return textField.getText();
+				}
+				return "";
+			}
+		}.getText())).equals("\u0434\u0435\u043D\u044C"))) {
+			if (entity instanceof LivingEntity)
+				((LivingEntity) entity).clearActivePotions();
 		}
 	}
 }
