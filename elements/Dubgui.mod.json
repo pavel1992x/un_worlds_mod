@@ -33,6 +33,9 @@
           "id": 1,
           "disableStackInteraction": false,
           "dropItemsWhenNotBound": true,
+          "onTakenFromSlot": {
+            "name": "Dubpr1"
+          },
           "name": "Slot #1",
           "x": 195,
           "y": 71

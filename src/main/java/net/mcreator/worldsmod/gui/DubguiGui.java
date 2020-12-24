@@ -129,6 +129,13 @@ public class DubguiGui extends WorldsModModElements.ModElement {
 			}));
 			this.customSlots.put(1, this.addSlot(new SlotItemHandler(internal, 1, 70, 35) {
 				@Override
+				public ItemStack onTake(PlayerEntity entity, ItemStack stack) {
+					ItemStack retval = super.onTake(entity, stack);
+					GuiContainerMod.this.slotChanged(1, 1, 0);
+					return retval;
+				}
+
+				@Override
 				public boolean isItemValid(ItemStack stack) {
 					return false;
 				}
@@ -451,6 +458,17 @@ public class DubguiGui extends WorldsModModElements.ModElement {
 		if (!world.isBlockLoaded(new BlockPos(x, y, z)))
 			return;
 		if (slotID == 0 && changeType == 0) {
+			{
+				Map<String, Object> $_dependencies = new HashMap<>();
+				$_dependencies.put("entity", entity);
+				$_dependencies.put("x", x);
+				$_dependencies.put("y", y);
+				$_dependencies.put("z", z);
+				$_dependencies.put("world", world);
+				Dubpr1Procedure.executeProcedure($_dependencies);
+			}
+		}
+		if (slotID == 1 && changeType == 1) {
 			{
 				Map<String, Object> $_dependencies = new HashMap<>();
 				$_dependencies.put("entity", entity);
