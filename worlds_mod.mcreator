@@ -359,171 +359,6 @@
       "registry_name": "lblock"
     },
     {
-      "name": "St11",
-      "type": "gui",
-      "sortid": 24,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "st_11"
-    },
-    {
-      "name": "St11meh",
-      "type": "procedure",
-      "sortid": 25,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "st_11meh",
-      "metadata": {
-        "dependencies": []
-      }
-    },
-    {
-      "name": "DeranorWood",
-      "type": "block",
-      "sortid": 26,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "deranor_wood"
-    },
-    {
-      "name": "DeranorLog",
-      "type": "block",
-      "sortid": 27,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "deranor_log"
-    },
-    {
-      "name": "DeranorPlanks",
-      "type": "block",
-      "sortid": 28,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "deranor_planks"
-    },
-    {
-      "name": "DeranorLeaves",
-      "type": "block",
-      "sortid": 29,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "deranor_leaves"
-    },
-    {
-      "name": "DeranorStairs",
-      "type": "block",
-      "sortid": 30,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "deranor_stairs"
-    },
-    {
-      "name": "DeranorSlab",
-      "type": "block",
-      "sortid": 31,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "deranor_slab"
-    },
-    {
-      "name": "DeranorFence",
-      "type": "block",
-      "sortid": 32,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "deranor_fence"
-    },
-    {
-      "name": "DeranorFenceGate",
-      "type": "block",
-      "sortid": 33,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "deranor_fence_gate"
-    },
-    {
-      "name": "DeranorItemsTag",
-      "type": "tag",
-      "sortid": 34,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "deranor_items_tag"
-    },
-    {
-      "name": "DeranorWoodRecipe",
-      "type": "recipe",
-      "sortid": 35,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "deranor_wood_recipe"
-    },
-    {
-      "name": "DeranorPlanksRecipe",
-      "type": "recipe",
-      "sortid": 36,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "deranor_planks_recipe"
-    },
-    {
-      "name": "DeranorStairsRecipe",
-      "type": "recipe",
-      "sortid": 37,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "deranor_stairs_recipe"
-    },
-    {
-      "name": "DeranorSlabRecipe",
-      "type": "recipe",
-      "sortid": 38,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "deranor_slab_recipe"
-    },
-    {
-      "name": "DeranorFenceRecipe",
-      "type": "recipe",
-      "sortid": 39,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "deranor_fence_recipe"
-    },
-    {
-      "name": "DeranorFenceGateRecipe",
-      "type": "recipe",
-      "sortid": 40,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "deranor_fence_gate_recipe"
-    },
-    {
-      "name": "DeranorStickRecipe",
-      "type": "recipe",
-      "sortid": 41,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "deranor_stick_recipe"
-    },
-    {
       "name": "Smartmod",
       "type": "item",
       "sortid": 42,
@@ -1145,6 +980,24 @@
           }
         ]
       }
+    },
+    {
+      "name": "Etalonium",
+      "type": "item",
+      "sortid": 91,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "etalonium"
+    },
+    {
+      "name": "EtaloniumFlu",
+      "type": "fuel",
+      "sortid": 92,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "etalonium_flu"
     }
   ],
   "variable_elements": [
@@ -1222,17 +1075,15 @@
   "language_map": {
     "en_us": {
       "item.worlds_mod.atalonearmer_helmet": "Atalonearmer Helmet",
-      "block.worlds_mod.deranor_fence": "Deranor Fence",
-      "block.worlds_mod.chest": "пространнственный сундук",
       "item.worlds_mod.etalone_tools_sword": "этолонный мечь",
+      "block.worlds_mod.chest": "пространнственный сундук",
       "block.worlds_mod.teleportblock": "телепорт",
-      "block.worlds_mod.deranor_leaves": "Deranor Leaves",
       "item.worlds_mod.etalone_tools_hoe": "Etalone_tools Hoe",
       "item.worlds_mod.starter": "стартавый жезл",
-      "block.worlds_mod.deranor_wood": "Deranor Wood",
       "item.worlds_mod.tpcard": "tp карта",
       "item.worlds_mod.ltpakt": "бластер",
       "item.worlds_mod.cpu": "процессор",
+      "item.worlds_mod.etalonium": "эталониум",
       "item.worlds_mod.plata": "материнская плата планшета.",
       "item.worlds_mod.sins_dust": "лунная пыль",
       "item.worlds_mod.etalone_tools_pickaxe": "эталонная кирка",
@@ -1243,7 +1094,6 @@
       "block.worlds_mod.sins_block": "Block of Sins",
       "item.worlds_mod.chestlink": "карта привязки ",
       "item.worlds_mod.etalone_tools_shovel": "этолонная лопата ",
-      "block.worlds_mod.deranor_fence_gate": "Deranor Fence Gate",
       "item.worlds_mod.korpus": "корпус планшента",
       "item.worlds_mod.atalonearmer_chestplate": "эталонный нагрудник",
       "block.worlds_mod.sins_ore": "лунная руда",
@@ -1255,17 +1105,13 @@
       "block.worlds_mod.dublikator": "дубликатор",
       "item.worlds_mod.display": "дисплей планшета",
       "advancements.tabletcraftunlock.title": "планшет",
-      "block.worlds_mod.deranor_planks": "Deranor Planks",
-      "block.worlds_mod.deranor_slab": "Deranor Slab",
       "item.worlds_mod.scrudriver": "звуковая отвёртка",
       "biome.worlds_mod.moonb": "Moonb",
       "item.worlds_mod.bazaakt": "артефакт развёртки базы",
       "item.worlds_mod.atalonearmer_boots": "Atalonearmer Boots",
       "item.worlds_mod.etalone_tools_axe": "эталонный топор",
       "itemGroup.tabunmodtec": "un mod приборы",
-      "key.mcreator.chest_start": "открыть интерфейс",
-      "block.worlds_mod.deranor_stairs": "Deranor Stairs",
-      "block.worlds_mod.deranor_log": "деренорская древесина"
+      "key.mcreator.chest_start": "открыть интерфейс"
     }
   },
   "workspaceSettings": {

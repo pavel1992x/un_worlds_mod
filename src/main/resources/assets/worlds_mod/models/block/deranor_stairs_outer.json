@@ -1,8 +1,0 @@
-{
-  "parent": "block/outer_stairs",
-  "textures": {
-    "bottom": "worlds_mod:blocks/deranor_planks",
-    "top": "worlds_mod:blocks/deranor_planks",
-    "side": "worlds_mod:blocks/deranor_planks"
-  }
-}
