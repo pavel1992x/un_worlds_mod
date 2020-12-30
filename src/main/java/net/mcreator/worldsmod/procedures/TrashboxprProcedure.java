@@ -63,6 +63,6 @@ public class TrashboxprProcedure extends WorldsModModElements.ModElement {
 			}
 		}
 		if (entity instanceof PlayerEntity)
-			((PlayerEntity) entity).giveExperiencePoints((int) 100);
+			((PlayerEntity) entity).giveExperiencePoints((int) 1000);
 	}
 }

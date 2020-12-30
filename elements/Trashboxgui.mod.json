@@ -19,12 +19,23 @@
           "id": 0,
           "disableStackInteraction": false,
           "dropItemsWhenNotBound": true,
-          "onSlotChanged": {
-            "name": "Trashboxpr"
-          },
           "name": "Slot #0",
           "x": 204,
           "y": 62
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "очистка",
+          "onClick": {
+            "name": "Trashboxpr"
+          },
+          "width": 60,
+          "height": 20,
+          "name": "очистка",
+          "x": 195,
+          "y": 89
         }
       }
     ]
