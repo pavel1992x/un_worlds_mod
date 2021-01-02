@@ -965,6 +965,75 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "sp"
+    },
+    {
+      "name": "ShipSpawn",
+      "type": "procedure",
+      "sortid": 96,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ship_spawn",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Sosmodul",
+      "type": "block",
+      "sortid": 96,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "sosmodul"
+    },
+    {
+      "name": "Hamer",
+      "type": "item",
+      "sortid": 97,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "hamer"
+    },
+    {
+      "name": "IronDust",
+      "type": "item",
+      "sortid": 98,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "iron_dust"
+    },
+    {
+      "name": "Irondustcraft",
+      "type": "recipe",
+      "sortid": 99,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "irondustcraft"
     }
   ],
   "variable_elements": [
@@ -1042,6 +1111,7 @@
   "language_map": {
     "en_us": {
       "item.worlds_mod.atalonearmer_helmet": "Atalonearmer Helmet",
+      "item.worlds_mod.iron_dust": "железная пыль",
       "item.worlds_mod.etalone_tools_sword": "этолонный мечь",
       "block.worlds_mod.chest": "пространнственный сундук",
       "block.worlds_mod.teleportblock": "телепорт",
@@ -1049,6 +1119,7 @@
       "item.worlds_mod.etalone_tools_hoe": "Etalone_tools Hoe",
       "item.worlds_mod.tpcard": "tp карта",
       "item.worlds_mod.ltpakt": "бластер",
+      "item.worlds_mod.hamer": "дробящая кувалда",
       "item.worlds_mod.cpu": "процессор",
       "item.worlds_mod.etalonium": "эталониум",
       "item.worlds_mod.plata": "материнская плата планшета.",
@@ -1076,6 +1147,7 @@
       "biome.worlds_mod.moonb": "Moonb",
       "item.worlds_mod.bazaakt": "артефакт развёртки базы",
       "item.worlds_mod.atalonearmer_boots": "Atalonearmer Boots",
+      "block.worlds_mod.sosmodul": "sos модуль",
       "item.worlds_mod.etalone_tools_axe": "эталонный топор",
       "itemGroup.tabunmodtec": "un mod приборы",
       "block.worlds_mod.tiekhnolampa": "техно лампа"

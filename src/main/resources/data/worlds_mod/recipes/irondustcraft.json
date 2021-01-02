@@ -1,0 +1,16 @@
+{
+  "group": "worlds_mod",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "worlds_mod:hamer"
+    },
+    {
+      "item": "minecraft:iron_ingot"
+    }
+  ],
+  "result": {
+    "item": "worlds_mod:iron_dust",
+    "count": 3
+  }
+}

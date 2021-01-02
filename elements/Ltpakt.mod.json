@@ -17,7 +17,7 @@
       "value": ""
     },
     "shootConstantly": true,
-    "usageCount": 100,
+    "usageCount": 0,
     "actionSound": {
       "value": "block.anvil.destroy"
     },
@@ -31,7 +31,7 @@
     "bulletParticles": true,
     "bulletIgnitesFire": true,
     "bulletItemTexture": {
-      "value": "CUSTOM:Lblock"
+      "value": "Items.FIRE_CHARGE"
     },
     "bulletModel": "Default",
     "customBulletModelTexture": ""

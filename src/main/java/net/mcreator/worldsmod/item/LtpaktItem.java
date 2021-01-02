@@ -21,6 +21,7 @@ import net.minecraft.util.ActionResultType;
 import net.minecraft.util.ActionResult;
 import net.minecraft.network.IPacket;
 import net.minecraft.item.UseAction;
+import net.minecraft.item.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Item;
 import net.minecraft.inventory.EquipmentSlotType;
@@ -39,7 +40,6 @@ import net.minecraft.client.renderer.entity.SpriteRenderer;
 import net.minecraft.client.Minecraft;
 
 import net.mcreator.worldsmod.itemgroup.UnmodtecItemGroup;
-import net.mcreator.worldsmod.block.LblockBlock;
 import net.mcreator.worldsmod.WorldsModModElements;
 
 import java.util.Random;
@@ -73,7 +73,7 @@ public class LtpaktItem extends WorldsModModElements.ModElement {
 	}
 	public static class ItemRanged extends Item {
 		public ItemRanged() {
-			super(new Item.Properties().group(UnmodtecItemGroup.tab).maxDamage(100));
+			super(new Item.Properties().group(UnmodtecItemGroup.tab).maxStackSize(1));
 			setRegistryName("ltpakt");
 		}
 
@@ -155,7 +155,7 @@ public class LtpaktItem extends WorldsModModElements.ModElement {
 		@Override
 		@OnlyIn(Dist.CLIENT)
 		public ItemStack getItem() {
-			return new ItemStack(LblockBlock.block, (int) (1));
+			return new ItemStack(Items.FIRE_CHARGE, (int) (1));
 		}
 
 		@Override
