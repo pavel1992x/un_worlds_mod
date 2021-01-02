@@ -727,39 +727,6 @@
       "registry_name": "chestlink"
     },
     {
-      "name": "StarterKoghdaNazhataPkmPoVozdukhu",
-      "type": "procedure",
-      "sortid": 78,
-      "compiles": false,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "starter_koghda_nazhata_pkm_po_vozdukhu",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      }
-    },
-    {
       "name": "Ltpakt",
       "type": "gun",
       "sortid": 79,
@@ -1066,8 +1033,8 @@
   "language_map": {
     "en_us": {
       "item.worlds_mod.atalonearmer_helmet": "Atalonearmer Helmet",
-      "block.worlds_mod.chest": "пространнственный сундук",
       "item.worlds_mod.etalone_tools_sword": "этолонный мечь",
+      "block.worlds_mod.chest": "пространнственный сундук",
       "block.worlds_mod.teleportblock": "телепорт",
       "block.worlds_mod.stil_block": "стальной блок",
       "item.worlds_mod.etalone_tools_hoe": "Etalone_tools Hoe",
