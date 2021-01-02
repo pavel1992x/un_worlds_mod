@@ -227,33 +227,6 @@
       }
     },
     {
-      "name": "Starter",
-      "type": "item",
-      "sortid": 17,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "starter"
-    },
-    {
-      "name": "Startercraft",
-      "type": "recipe",
-      "sortid": 18,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "startercraft"
-    },
-    {
-      "name": "Givecore",
-      "type": "keybind",
-      "sortid": 19,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "chest_start"
-    },
-    {
       "name": "Woff",
       "type": "procedure",
       "sortid": 20,
@@ -757,7 +730,7 @@
       "name": "StarterKoghdaNazhataPkmPoVozdukhu",
       "type": "procedure",
       "sortid": 78,
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "ids": {},
       "registry_name": "starter_koghda_nazhata_pkm_po_vozdukhu",
@@ -998,6 +971,24 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "etalonium_flu"
+    },
+    {
+      "name": "StilBlock",
+      "type": "block",
+      "sortid": 93,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "stil_block"
+    },
+    {
+      "name": "Tiekhnolampa",
+      "type": "block",
+      "sortid": 94,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "tiekhnolampa"
     }
   ],
   "variable_elements": [
@@ -1075,11 +1066,11 @@
   "language_map": {
     "en_us": {
       "item.worlds_mod.atalonearmer_helmet": "Atalonearmer Helmet",
-      "item.worlds_mod.etalone_tools_sword": "этолонный мечь",
       "block.worlds_mod.chest": "пространнственный сундук",
+      "item.worlds_mod.etalone_tools_sword": "этолонный мечь",
       "block.worlds_mod.teleportblock": "телепорт",
+      "block.worlds_mod.stil_block": "стальной блок",
       "item.worlds_mod.etalone_tools_hoe": "Etalone_tools Hoe",
-      "item.worlds_mod.starter": "стартавый жезл",
       "item.worlds_mod.tpcard": "tp карта",
       "item.worlds_mod.ltpakt": "бластер",
       "item.worlds_mod.cpu": "процессор",
@@ -1111,7 +1102,7 @@
       "item.worlds_mod.atalonearmer_boots": "Atalonearmer Boots",
       "item.worlds_mod.etalone_tools_axe": "эталонный топор",
       "itemGroup.tabunmodtec": "un mod приборы",
-      "key.mcreator.chest_start": "открыть интерфейс"
+      "block.worlds_mod.tiekhnolampa": "техно лампа"
     }
   },
   "workspaceSettings": {

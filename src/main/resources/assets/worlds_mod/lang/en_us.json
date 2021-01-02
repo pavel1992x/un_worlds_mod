@@ -1,10 +1,10 @@
 {
   "item.worlds_mod.atalonearmer_helmet": "Atalonearmer Helmet",
-  "item.worlds_mod.etalone_tools_sword": "этолонный мечь",
   "block.worlds_mod.chest": "пространнственный сундук",
+  "item.worlds_mod.etalone_tools_sword": "этолонный мечь",
   "block.worlds_mod.teleportblock": "телепорт",
+  "block.worlds_mod.stil_block": "стальной блок",
   "item.worlds_mod.etalone_tools_hoe": "Etalone_tools Hoe",
-  "item.worlds_mod.starter": "стартавый жезл",
   "item.worlds_mod.tpcard": "tp карта",
   "item.worlds_mod.ltpakt": "бластер",
   "item.worlds_mod.cpu": "процессор",
@@ -36,5 +36,5 @@
   "item.worlds_mod.atalonearmer_boots": "Atalonearmer Boots",
   "item.worlds_mod.etalone_tools_axe": "эталонный топор",
   "itemGroup.tabunmodtec": "un mod приборы",
-  "key.mcreator.chest_start": "открыть интерфейс"
+  "block.worlds_mod.tiekhnolampa": "техно лампа"
 }
