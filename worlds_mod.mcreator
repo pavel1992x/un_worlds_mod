@@ -956,6 +956,15 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "tiekhnolampa"
+    },
+    {
+      "name": "Sp",
+      "type": "structure",
+      "sortid": 95,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "sp"
     }
   ],
   "variable_elements": [
