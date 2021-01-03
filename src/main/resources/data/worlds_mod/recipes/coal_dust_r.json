@@ -1,0 +1,16 @@
+{
+  "group": "worlds_mod",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "worlds_mod:hamer"
+    },
+    {
+      "tag": "minecraft:coals"
+    }
+  ],
+  "result": {
+    "item": "worlds_mod:coal_dust",
+    "count": 1
+  }
+}

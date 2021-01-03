@@ -1,0 +1,20 @@
+{
+  "_fv": 13,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Smoking",
+    "xpReward": 1.0,
+    "cookingTime": 100,
+    "recipeRetstackSize": 1,
+    "group": "",
+    "recipeShapeless": false,
+    "smokingInputStack": {
+      "value": "CUSTOM:CoalIronDust"
+    },
+    "smokingReturnStack": {
+      "value": "CUSTOM:StillIng"
+    },
+    "name": "still_ing_r",
+    "namespace": "mod"
+  }
+}

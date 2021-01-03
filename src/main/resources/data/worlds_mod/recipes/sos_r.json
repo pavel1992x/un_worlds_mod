@@ -1,0 +1,42 @@
+{
+  "group": "worlds_mod",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "345",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "minecraft:ender_pearl"
+    },
+    "1": {
+      "item": "minecraft:ender_pearl"
+    },
+    "2": {
+      "item": "minecraft:ender_pearl"
+    },
+    "3": {
+      "item": "worlds_mod:still_ing"
+    },
+    "4": {
+      "item": "minecraft:diamond"
+    },
+    "5": {
+      "item": "worlds_mod:still_ing"
+    },
+    "6": {
+      "item": "worlds_mod:still_ing"
+    },
+    "7": {
+      "item": "worlds_mod:still_ing"
+    },
+    "8": {
+      "item": "worlds_mod:still_ing"
+    }
+  },
+  "result": {
+    "item": "worlds_mod:sosmodul",
+    "count": 1
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "group": "worlds_mod",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "worlds_mod:coal_dust"
+    },
+    {
+      "item": "worlds_mod:iron_dust"
+    }
+  ],
+  "result": {
+    "item": "worlds_mod:coal_iron_dust",
+    "count": 1
+  }
+}

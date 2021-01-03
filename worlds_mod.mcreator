@@ -1034,6 +1034,87 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "irondustcraft"
+    },
+    {
+      "name": "CoalDust",
+      "type": "item",
+      "sortid": 100,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "coal_dust"
+    },
+    {
+      "name": "CoalIronDust",
+      "type": "item",
+      "sortid": 101,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "coal_iron_dust"
+    },
+    {
+      "name": "CoalDustR",
+      "type": "recipe",
+      "sortid": 102,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "coal_dust_r"
+    },
+    {
+      "name": "ColaIronDustr",
+      "type": "recipe",
+      "sortid": 103,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "cola_iron_dustr"
+    },
+    {
+      "name": "StillIng",
+      "type": "item",
+      "sortid": 104,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "still_ing"
+    },
+    {
+      "name": "StillIngR",
+      "type": "recipe",
+      "sortid": 105,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "still_ing_r"
+    },
+    {
+      "name": "HR",
+      "type": "recipe",
+      "sortid": 106,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "hr"
+    },
+    {
+      "name": "StillBlockR",
+      "type": "recipe",
+      "sortid": 107,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "still_block_r"
+    },
+    {
+      "name": "SosR",
+      "type": "recipe",
+      "sortid": 108,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "sos_r"
     }
   ],
   "variable_elements": [
@@ -1132,6 +1213,7 @@
       "block.worlds_mod.sins_block": "Block of Sins",
       "item.worlds_mod.chestlink": "карта привязки ",
       "item.worlds_mod.etalone_tools_shovel": "этолонная лопата ",
+      "item.worlds_mod.coal_iron_dust": "железноугольная пыль",
       "item.worlds_mod.korpus": "корпус планшента",
       "item.worlds_mod.atalonearmer_chestplate": "эталонный нагрудник",
       "block.worlds_mod.sins_ore": "лунная руда",
@@ -1139,6 +1221,8 @@
       "block.worlds_mod.moongrunt": "лунный грунт",
       "block.worlds_mod.lblock": "источник света ",
       "item.worlds_mod.sinspanel": "пластина из лунного пластика",
+      "item.worlds_mod.coal_dust": "угольная пыль",
+      "item.worlds_mod.still_ing": "стальной слиток",
       "subtitles.scrudriver": "звук звуковой отвёртки",
       "block.worlds_mod.dublikator": "дубликатор",
       "item.worlds_mod.display": "дисплей планшета",
