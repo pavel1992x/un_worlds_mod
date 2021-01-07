@@ -1,6 +1,6 @@
 {
   "group": "worlds_mod",
-  "type": "minecraft:smoking",
+  "type": "minecraft:smelting",
   "experience": 1,
   "cookingtime": 100,
   "ingredient": {

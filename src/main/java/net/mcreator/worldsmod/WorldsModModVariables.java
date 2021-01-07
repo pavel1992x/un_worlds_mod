@@ -215,6 +215,7 @@ public class WorldsModModVariables {
 			nbt.putDouble("bcy", instance.bcy);
 			nbt.putDouble("bcz", instance.bcz);
 			nbt.put("dub", instance.dub.write(new CompoundNBT()));
+			nbt.put("transmut", instance.transmut.write(new CompoundNBT()));
 			return nbt;
 		}
 
@@ -228,6 +229,7 @@ public class WorldsModModVariables {
 			instance.bcy = nbt.getDouble("bcy");
 			instance.bcz = nbt.getDouble("bcz");
 			instance.dub = ItemStack.read(nbt.getCompound("dub"));
+			instance.transmut = ItemStack.read(nbt.getCompound("transmut"));
 		}
 	}
 
@@ -239,6 +241,7 @@ public class WorldsModModVariables {
 		public double bcy = 0;
 		public double bcz = 0;
 		public ItemStack dub = ItemStack.EMPTY;
+		public ItemStack transmut = ItemStack.EMPTY;
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayerEntity)
 				WorldsModMod.PACKET_HANDLER.send(PacketDistributor.PLAYER.with(() -> (ServerPlayerEntity) entity),
@@ -278,6 +281,7 @@ public class WorldsModModVariables {
 		clone.bcy = original.bcy;
 		clone.bcz = original.bcz;
 		clone.dub = original.dub;
+		clone.transmut = original.transmut;
 		if (!event.isWasDeath()) {
 		}
 	}
@@ -309,6 +313,7 @@ public class WorldsModModVariables {
 					variables.bcy = message.data.bcy;
 					variables.bcz = message.data.bcz;
 					variables.dub = message.data.dub;
+					variables.transmut = message.data.transmut;
 				}
 			});
 			context.setPacketHandled(true);

@@ -76,7 +76,7 @@ public class Dubpr1Procedure extends WorldsModModElements.ModElement {
 				final int _sltid = (int) (1);
 				final ItemStack _setstack = ((entity.getCapability(WorldsModModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 						.orElse(new WorldsModModVariables.PlayerVariables())).dub);
-				_setstack.setCount((int) 1);
+				_setstack.setCount((int) 2);
 				_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 					if (capability instanceof IItemHandlerModifiable) {
 						((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);

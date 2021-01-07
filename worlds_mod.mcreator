@@ -1115,6 +1115,161 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "sos_r"
+    },
+    {
+      "name": "DubCraft",
+      "type": "recipe",
+      "sortid": 109,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "dub_craft"
+    },
+    {
+      "name": "StillPickaxe",
+      "type": "tool",
+      "sortid": 110,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "still_pickaxe"
+    },
+    {
+      "name": "StillAxe",
+      "type": "tool",
+      "sortid": 111,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "still_axe"
+    },
+    {
+      "name": "StillSword",
+      "type": "tool",
+      "sortid": 112,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "still_sword"
+    },
+    {
+      "name": "StillShovel",
+      "type": "tool",
+      "sortid": 113,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "still_shovel"
+    },
+    {
+      "name": "StillHoe",
+      "type": "tool",
+      "sortid": 114,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "still_hoe"
+    },
+    {
+      "name": "StillPickaxeRecipe",
+      "type": "recipe",
+      "sortid": 115,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "still_pickaxe_recipe"
+    },
+    {
+      "name": "StillAxeRecipe",
+      "type": "recipe",
+      "sortid": 116,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "still_axe_recipe"
+    },
+    {
+      "name": "StillSwordRecipe",
+      "type": "recipe",
+      "sortid": 117,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "still_sword_recipe"
+    },
+    {
+      "name": "StillShovelRecipe",
+      "type": "recipe",
+      "sortid": 118,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "still_shovel_recipe"
+    },
+    {
+      "name": "StillHoeRecipe",
+      "type": "recipe",
+      "sortid": 119,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "still_hoe_recipe"
+    },
+    {
+      "name": "TransmootPr",
+      "type": "procedure",
+      "sortid": 120,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "transmoot_pr",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "TransmootInt",
+      "type": "gui",
+      "sortid": 121,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "transmoot_int"
+    },
+    {
+      "name": "Transmutatar",
+      "type": "block",
+      "sortid": 122,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "transmutatar"
+    },
+    {
+      "name": "TransmutR",
+      "type": "recipe",
+      "sortid": 123,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "transmut_r"
     }
   ],
   "variable_elements": [
@@ -1177,6 +1332,12 @@
       "type": "itemstack",
       "scope": "player_persistent",
       "value": ""
+    },
+    {
+      "name": "transmut",
+      "type": "itemstack",
+      "scope": "player_persistent",
+      "value": ""
     }
   ],
   "sound_elements": [
@@ -1194,32 +1355,24 @@
       "item.worlds_mod.atalonearmer_helmet": "Atalonearmer Helmet",
       "item.worlds_mod.iron_dust": "железная пыль",
       "item.worlds_mod.etalone_tools_sword": "этолонный мечь",
-      "block.worlds_mod.chest": "пространнственный сундук",
-      "block.worlds_mod.teleportblock": "телепорт",
+      "item.worlds_mod.still_pickaxe": "стальная кирка",
+      "item.worlds_mod.still_shovel": "стальная лопата",
       "block.worlds_mod.stil_block": "стальной блок",
       "item.worlds_mod.etalone_tools_hoe": "Etalone_tools Hoe",
       "item.worlds_mod.tpcard": "tp карта",
+      "item.worlds_mod.still_sword": "стальной меч",
       "item.worlds_mod.ltpakt": "бластер",
-      "item.worlds_mod.hamer": "дробящая кувалда",
-      "item.worlds_mod.cpu": "процессор",
-      "item.worlds_mod.etalonium": "эталониум",
-      "item.worlds_mod.plata": "материнская плата планшета.",
-      "item.worlds_mod.sins_dust": "лунная пыль",
+      "item.worlds_mod.still_hoe": "стальная матыга",
       "item.worlds_mod.etalone_tools_pickaxe": "эталонная кирка",
       "item.worlds_mod.moon": "Moonworld Portal Igniter",
       "item.worlds_mod.smartmod": "планшет",
-      "advancements.tabletcraftunlock.descr": "устройство с трудом было созданно,  теперь боги знают что у тебя есть к нему доступ.",
       "block.worlds_mod.trashbox": "уничтожитель",
       "block.worlds_mod.sins_block": "Block of Sins",
-      "item.worlds_mod.chestlink": "карта привязки ",
       "item.worlds_mod.etalone_tools_shovel": "этолонная лопата ",
       "item.worlds_mod.coal_iron_dust": "железноугольная пыль",
       "item.worlds_mod.korpus": "корпус планшента",
       "item.worlds_mod.atalonearmer_chestplate": "эталонный нагрудник",
       "block.worlds_mod.sins_ore": "лунная руда",
-      "item.worlds_mod.atalonearmer_leggings": "Atalonearmer Leggings",
-      "block.worlds_mod.moongrunt": "лунный грунт",
-      "block.worlds_mod.lblock": "источник света ",
       "item.worlds_mod.sinspanel": "пластина из лунного пластика",
       "item.worlds_mod.coal_dust": "угольная пыль",
       "item.worlds_mod.still_ing": "стальной слиток",
@@ -1228,6 +1381,20 @@
       "item.worlds_mod.display": "дисплей планшета",
       "advancements.tabletcraftunlock.title": "планшет",
       "item.worlds_mod.scrudriver": "звуковая отвёртка",
+      "block.worlds_mod.chest": "пространнственный сундук",
+      "block.worlds_mod.teleportblock": "телепорт",
+      "block.worlds_mod.transmutatar": "трансмутатор",
+      "item.worlds_mod.hamer": "дробящая кувалда",
+      "item.worlds_mod.cpu": "процессор",
+      "item.worlds_mod.etalonium": "эталониум",
+      "item.worlds_mod.plata": "материнская плата планшета.",
+      "item.worlds_mod.sins_dust": "лунная пыль",
+      "advancements.tabletcraftunlock.descr": "устройство с трудом было созданно,  теперь боги знают что у тебя есть к нему доступ.",
+      "item.worlds_mod.chestlink": "карта привязки ",
+      "item.worlds_mod.still_axe": "стальной топор",
+      "item.worlds_mod.atalonearmer_leggings": "Atalonearmer Leggings",
+      "block.worlds_mod.moongrunt": "лунный грунт",
+      "block.worlds_mod.lblock": "источник света ",
       "biome.worlds_mod.moonb": "Moonb",
       "item.worlds_mod.bazaakt": "артефакт развёртки базы",
       "item.worlds_mod.atalonearmer_boots": "Atalonearmer Boots",
