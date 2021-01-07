@@ -35,7 +35,6 @@ import net.minecraft.client.gui.ScreenManager;
 import net.minecraft.client.Minecraft;
 
 import net.mcreator.worldsmod.procedures.TransmootPrProcedure;
-import net.mcreator.worldsmod.procedures.Dubpr1Procedure;
 import net.mcreator.worldsmod.WorldsModModElements;
 import net.mcreator.worldsmod.WorldsModMod;
 
@@ -121,21 +120,14 @@ public class TransmootIntGui extends WorldsModModElements.ModElement {
 					}
 				}
 			}
-			this.customSlots.put(0, this.addSlot(new SlotItemHandler(internal, 0, 43, 35) {
+			this.customSlots.put(0, this.addSlot(new SlotItemHandler(internal, 0, 70, 26) {
 				@Override
 				public void onSlotChanged() {
 					super.onSlotChanged();
 					GuiContainerMod.this.slotChanged(0, 0, 0);
 				}
 			}));
-			this.customSlots.put(1, this.addSlot(new SlotItemHandler(internal, 1, 124, 35) {
-				@Override
-				public ItemStack onTake(PlayerEntity entity, ItemStack stack) {
-					ItemStack retval = super.onTake(entity, stack);
-					GuiContainerMod.this.slotChanged(1, 1, 0);
-					return retval;
-				}
-
+			this.customSlots.put(1, this.addSlot(new SlotItemHandler(internal, 1, 70, 53) {
 				@Override
 				public boolean isItemValid(ItemStack stack) {
 					return false;
@@ -466,17 +458,6 @@ public class TransmootIntGui extends WorldsModModElements.ModElement {
 				$_dependencies.put("z", z);
 				$_dependencies.put("world", world);
 				TransmootPrProcedure.executeProcedure($_dependencies);
-			}
-		}
-		if (slotID == 1 && changeType == 1) {
-			{
-				Map<String, Object> $_dependencies = new HashMap<>();
-				$_dependencies.put("entity", entity);
-				$_dependencies.put("x", x);
-				$_dependencies.put("y", y);
-				$_dependencies.put("z", z);
-				$_dependencies.put("world", world);
-				Dubpr1Procedure.executeProcedure($_dependencies);
 			}
 		}
 	}

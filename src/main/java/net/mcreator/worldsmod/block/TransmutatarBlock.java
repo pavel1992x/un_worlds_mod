@@ -149,20 +149,6 @@ public class TransmutatarBlock extends WorldsModModElements.ModElement {
 				super.onReplaced(state, world, pos, newState, isMoving);
 			}
 		}
-
-		@Override
-		public boolean hasComparatorInputOverride(BlockState state) {
-			return true;
-		}
-
-		@Override
-		public int getComparatorInputOverride(BlockState blockState, World world, BlockPos pos) {
-			TileEntity tileentity = world.getTileEntity(pos);
-			if (tileentity instanceof CustomTileEntity)
-				return Container.calcRedstoneFromInventory((CustomTileEntity) tileentity);
-			else
-				return 0;
-		}
 	}
 
 	public static class CustomTileEntity extends LockableLootTileEntity implements ISidedInventory {

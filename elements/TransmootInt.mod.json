@@ -23,8 +23,8 @@
             "name": "TransmootPr"
           },
           "name": "Slot #0",
-          "x": 168,
-          "y": 71
+          "x": 195,
+          "y": 62
         }
       },
       {
@@ -33,12 +33,9 @@
           "id": 1,
           "disableStackInteraction": false,
           "dropItemsWhenNotBound": true,
-          "onTakenFromSlot": {
-            "name": "Dubpr1"
-          },
           "name": "Slot #1",
-          "x": 249,
-          "y": 71
+          "x": 195,
+          "y": 89
         }
       }
     ]
