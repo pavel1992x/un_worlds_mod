@@ -1253,6 +1253,32 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "transmut_r"
+    },
+    {
+      "name": "P1dw",
+      "type": "dimension",
+      "sortid": 124,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "p_1dw"
+    },
+    {
+      "name": "TpP1dw",
+      "type": "procedure",
+      "sortid": 125,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "tp_p_1dw",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [
@@ -1356,8 +1382,8 @@
       "item.worlds_mod.korpus": "корпус планшента",
       "item.worlds_mod.atalonearmer_chestplate": "эталонный нагрудник",
       "block.worlds_mod.sins_ore": "лунная руда",
-      "item.worlds_mod.sinspanel": "пластина из лунного пластика",
       "item.worlds_mod.coal_dust": "угольная пыль",
+      "item.worlds_mod.sinspanel": "пластина из лунного пластика",
       "item.worlds_mod.still_ing": "стальной слиток",
       "subtitles.scrudriver": "звук звуковой отвёртки",
       "block.worlds_mod.dublikator": "дубликатор",
@@ -1378,6 +1404,7 @@
       "item.worlds_mod.atalonearmer_leggings": "Atalonearmer Leggings",
       "block.worlds_mod.moongrunt": "лунный грунт",
       "block.worlds_mod.lblock": "источник света ",
+      "item.worlds_mod.p_1dw": "P 1dw Portal Igniter",
       "biome.worlds_mod.moonb": "Moonb",
       "item.worlds_mod.bazaakt": "артефакт развёртки базы",
       "item.worlds_mod.atalonearmer_boots": "Atalonearmer Boots",

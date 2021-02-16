@@ -30,6 +30,7 @@ import net.minecraft.client.gui.ScreenManager;
 import net.minecraft.client.Minecraft;
 
 import net.mcreator.worldsmod.procedures.TpcardRightClickedInAirProcedure;
+import net.mcreator.worldsmod.procedures.TpP1dwProcedure;
 import net.mcreator.worldsmod.procedures.OverteleportProcedure;
 import net.mcreator.worldsmod.procedures.MoonteleportProcedure;
 import net.mcreator.worldsmod.procedures.LtpProcedure;
@@ -181,6 +182,10 @@ public class TeleportintGui extends WorldsModModElements.ModElement {
 				WorldsModMod.PACKET_HANDLER.sendToServer(new ButtonPressedMessage(4, x, y, z));
 				handleButtonAction(entity, 4, x, y, z);
 			}));
+			this.addButton(new Button(this.guiLeft + 111, this.guiTop + 6, 45, 20, "маат", e -> {
+				WorldsModMod.PACKET_HANDLER.sendToServer(new ButtonPressedMessage(5, x, y, z));
+				handleButtonAction(entity, 5, x, y, z);
+			}));
 		}
 	}
 
@@ -310,6 +315,13 @@ public class TeleportintGui extends WorldsModModElements.ModElement {
 				Map<String, Object> $_dependencies = new HashMap<>();
 				$_dependencies.put("entity", entity);
 				LtpProcedure.executeProcedure($_dependencies);
+			}
+		}
+		if (buttonID == 5) {
+			{
+				Map<String, Object> $_dependencies = new HashMap<>();
+				$_dependencies.put("entity", entity);
+				TpP1dwProcedure.executeProcedure($_dependencies);
 			}
 		}
 	}

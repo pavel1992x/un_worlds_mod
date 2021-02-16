@@ -79,6 +79,20 @@
           "x": 62,
           "y": 41
         }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "маат",
+          "onClick": {
+            "name": "TpP1dw"
+          },
+          "width": 45,
+          "height": 20,
+          "name": "маат",
+          "x": 168,
+          "y": 17
+        }
       }
     ]
   }
