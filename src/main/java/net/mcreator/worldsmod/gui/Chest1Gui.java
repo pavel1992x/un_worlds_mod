@@ -36,6 +36,7 @@ import net.minecraft.client.gui.ScreenManager;
 import net.minecraft.client.Minecraft;
 
 import net.mcreator.worldsmod.procedures.TpintstartProcedure;
+import net.mcreator.worldsmod.procedures.Dch1Procedure;
 import net.mcreator.worldsmod.procedures.ComputerstartProcedure;
 import net.mcreator.worldsmod.WorldsModModElements;
 import net.mcreator.worldsmod.WorldsModMod;
@@ -439,6 +440,10 @@ public class Chest1Gui extends WorldsModModElements.ModElement {
 				WorldsModMod.PACKET_HANDLER.sendToServer(new ButtonPressedMessage(1, x, y, z));
 				handleButtonAction(entity, 1, x, y, z);
 			}));
+			this.addButton(new Button(this.guiLeft + 122, this.guiTop + 6, 55, 20, "память", e -> {
+				WorldsModMod.PACKET_HANDLER.sendToServer(new ButtonPressedMessage(2, x, y, z));
+				handleButtonAction(entity, 2, x, y, z);
+			}));
 		}
 	}
 
@@ -548,6 +553,14 @@ public class Chest1Gui extends WorldsModModElements.ModElement {
 				$_dependencies.put("z", z);
 				$_dependencies.put("world", world);
 				TpintstartProcedure.executeProcedure($_dependencies);
+			}
+		}
+		if (buttonID == 2) {
+			{
+				Map<String, Object> $_dependencies = new HashMap<>();
+				$_dependencies.put("entity", entity);
+				$_dependencies.put("world", world);
+				Dch1Procedure.executeProcedure($_dependencies);
 			}
 		}
 	}

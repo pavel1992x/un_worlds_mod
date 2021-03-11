@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "worlds_mod:blocks/mg",
+    "up": "worlds_mod:blocks/mg",
+    "north": "worlds_mod:blocks/mg",
+    "east": "worlds_mod:blocks/mg",
+    "south": "worlds_mod:blocks/mg",
+    "west": "worlds_mod:blocks/mg",
+    "particle": "worlds_mod:blocks/mg"
+  }
+}

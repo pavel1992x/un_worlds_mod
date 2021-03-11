@@ -1,0 +1,85 @@
+{
+  "_fv": 13,
+  "_type": "biome",
+  "definition": {
+    "name": "Maatb",
+    "groundBlock": {
+      "value": "Blocks.GRASS"
+    },
+    "undergroundBlock": {
+      "value": "CUSTOM:Maatgrase"
+    },
+    "treeType": 0,
+    "vanillaTreeType": "Big trees",
+    "minHeight": 7,
+    "spawnVines": false,
+    "treeVines": {
+      "value": ""
+    },
+    "treeStem": {
+      "value": ""
+    },
+    "treeBranch": {
+      "value": ""
+    },
+    "treeFruits": {
+      "value": ""
+    },
+    "airColor": {
+      "value": -5548278,
+      "falpha": 0.0
+    },
+    "grassColor": {
+      "value": -3538432,
+      "falpha": 0.0
+    },
+    "foliageColor": {
+      "value": -10016512,
+      "falpha": 0.0
+    },
+    "waterFogColor": {
+      "value": -4415211,
+      "falpha": 0.0
+    },
+    "treesPerChunk": 0,
+    "grassPerChunk": 4,
+    "seagrassPerChunk": 20,
+    "flowersPerChunk": 0,
+    "mushroomsPerChunk": 1,
+    "bigMushroomsChunk": 1,
+    "sandPathcesPerChunk": 0,
+    "gravelPatchesPerChunk": 0,
+    "reedsPerChunk": 0,
+    "cactiPerChunk": 0,
+    "rainingPossibility": 0.5,
+    "temperature": 0.5,
+    "baseHeight": 0.1,
+    "heightVariation": 0.2,
+    "spawnBiome": false,
+    "biomeWeight": 10,
+    "biomeType": "WARM",
+    "biomeCategory": "NONE",
+    "parent": {
+      "value": "No parent"
+    },
+    "spawnStronghold": true,
+    "spawnMineshaft": false,
+    "spawnPillagerOutpost": false,
+    "villageType": "plains",
+    "spawnWoodlandMansion": false,
+    "spawnJungleTemple": false,
+    "spawnDesertPyramid": false,
+    "spawnIgloo": false,
+    "spawnOceanMonument": false,
+    "spawnShipwreck": false,
+    "oceanRuinType": "NONE",
+    "biomeDictionaryTypes": [],
+    "defaultFeatures": [
+      "Caves",
+      "MonsterRooms",
+      "Structures",
+      "Ores"
+    ],
+    "spawnEntries": []
+  }
+}

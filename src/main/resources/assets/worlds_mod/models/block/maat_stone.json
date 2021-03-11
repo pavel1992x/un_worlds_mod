@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "worlds_mod:blocks/maat_stone",
+    "up": "worlds_mod:blocks/maat_stone",
+    "north": "worlds_mod:blocks/maat_stone",
+    "east": "worlds_mod:blocks/maat_stone",
+    "south": "worlds_mod:blocks/maat_stone",
+    "west": "worlds_mod:blocks/maat_stone",
+    "particle": "worlds_mod:blocks/maat_stone"
+  }
+}

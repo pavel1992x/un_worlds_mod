@@ -1279,6 +1279,72 @@
           }
         ]
       }
+    },
+    {
+      "name": "MaatStone",
+      "type": "block",
+      "sortid": 126,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "maat_stone"
+    },
+    {
+      "name": "YaBlock",
+      "type": "block",
+      "sortid": 127,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ya_block"
+    },
+    {
+      "name": "YanCraft",
+      "type": "recipe",
+      "sortid": 128,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "yan_craft"
+    },
+    {
+      "name": "Maatgrase",
+      "type": "block",
+      "sortid": 129,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "maatgrase"
+    },
+    {
+      "name": "Maatb",
+      "type": "biome",
+      "sortid": 130,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "maatb"
+    },
+    {
+      "name": "Dch1",
+      "type": "procedure",
+      "sortid": 131,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "dch_1",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [
@@ -1366,6 +1432,7 @@
       "item.worlds_mod.etalone_tools_sword": "этолонный мечь",
       "item.worlds_mod.still_pickaxe": "стальная кирка",
       "item.worlds_mod.still_shovel": "стальная лопата",
+      "biome.worlds_mod.maatb": "Maatb",
       "block.worlds_mod.stil_block": "стальной блок",
       "item.worlds_mod.etalone_tools_hoe": "Etalone_tools Hoe",
       "item.worlds_mod.tpcard": "tp карта",
@@ -1382,13 +1449,15 @@
       "item.worlds_mod.korpus": "корпус планшента",
       "item.worlds_mod.atalonearmer_chestplate": "эталонный нагрудник",
       "block.worlds_mod.sins_ore": "лунная руда",
-      "item.worlds_mod.coal_dust": "угольная пыль",
+      "block.worlds_mod.maat_stone": "Камень Маата",
       "item.worlds_mod.sinspanel": "пластина из лунного пластика",
+      "item.worlds_mod.coal_dust": "угольная пыль",
       "item.worlds_mod.still_ing": "стальной слиток",
       "subtitles.scrudriver": "звук звуковой отвёртки",
       "block.worlds_mod.dublikator": "дубликатор",
       "item.worlds_mod.display": "дисплей планшета",
       "advancements.tabletcraftunlock.title": "планшет",
+      "block.worlds_mod.maatgrase": "почва маата",
       "item.worlds_mod.scrudriver": "звуковая отвёртка",
       "block.worlds_mod.chest": "пространнственный сундук",
       "block.worlds_mod.teleportblock": "телепорт",
@@ -1398,6 +1467,7 @@
       "item.worlds_mod.etalonium": "эталониум",
       "item.worlds_mod.plata": "материнская плата планшета.",
       "item.worlds_mod.sins_dust": "лунная пыль",
+      "block.worlds_mod.ya_block": "янтарный светокамень",
       "advancements.tabletcraftunlock.descr": "устройство с трудом было созданно,  теперь боги знают что у тебя есть к нему доступ.",
       "item.worlds_mod.chestlink": "карта привязки ",
       "item.worlds_mod.still_axe": "стальной топор",

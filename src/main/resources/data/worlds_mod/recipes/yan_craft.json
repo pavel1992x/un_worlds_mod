@@ -1,0 +1,42 @@
+{
+  "group": "worlds_mod",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "345",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "worlds_mod:maat_stone"
+    },
+    "1": {
+      "item": "worlds_mod:maat_stone"
+    },
+    "2": {
+      "item": "worlds_mod:maat_stone"
+    },
+    "3": {
+      "item": "worlds_mod:maat_stone"
+    },
+    "4": {
+      "item": "worlds_mod:scrudriver"
+    },
+    "5": {
+      "item": "worlds_mod:maat_stone"
+    },
+    "6": {
+      "item": "worlds_mod:maat_stone"
+    },
+    "7": {
+      "item": "worlds_mod:maat_stone"
+    },
+    "8": {
+      "item": "worlds_mod:maat_stone"
+    }
+  },
+  "result": {
+    "item": "worlds_mod:ya_block",
+    "count": 1
+  }
+}

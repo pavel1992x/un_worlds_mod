@@ -18,6 +18,7 @@ import net.minecraft.entity.Entity;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.Block;
 
+import net.mcreator.worldsmod.block.MaatStoneBlock;
 import net.mcreator.worldsmod.WorldsModModElements;
 
 import java.util.Map;
@@ -145,6 +146,15 @@ public class ScrudriverRightClickedOnBlockProcedure extends WorldsModModElements
 				entityToSpawn.setPickupDelay((int) 10);
 				world.addEntity(entityToSpawn);
 			}
+		} else if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == MaatStoneBlock.block.getDefaultState().getBlock())) {
+			world.setBlockState(new BlockPos((int) x, (int) y, (int) z), Blocks.AIR.getDefaultState(), 3);
+			if (world instanceof World && !world.getWorld().isRemote) {
+				ItemEntity entityToSpawn = new ItemEntity(world.getWorld(), x, y, z, new ItemStack(Items.GOLD_NUGGET, (int) (1)));
+				entityToSpawn.setPickupDelay((int) 10);
+				world.addEntity(entityToSpawn);
+			}
 		}
+		Block.spawnDrops(world.getBlockState(new BlockPos((int) x, (int) y, (int) z)), world.getWorld(), new BlockPos((int) x, (int) y, (int) z));
+		world.destroyBlock(new BlockPos((int) x, (int) y, (int) z), false);
 	}
 }

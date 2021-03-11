@@ -25,14 +25,17 @@
       },
       {
         "value": "forest"
+      },
+      {
+        "value": "CUSTOM:Maatb"
       }
     ],
     "worldGenType": "Normal world gen",
     "mainFillerBlock": {
-      "value": "Blocks.STONE#0"
+      "value": "CUSTOM:MaatStone"
     },
     "fluidBlock": {
-      "value": "Blocks.MAGMA"
+      "value": "Blocks.WATER"
     },
     "airColor": {
       "value": -3368704,
@@ -41,7 +44,7 @@
     "canRespawnHere": true,
     "hasFog": true,
     "hasWeather": true,
-    "isDark": false,
+    "isDark": true,
     "doesWaterVaporize": false,
     "sleepResult": "ALLOW",
     "hasSkyLight": true,

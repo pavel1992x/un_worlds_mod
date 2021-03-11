@@ -48,6 +48,7 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.BlockState;
 
+import net.mcreator.worldsmod.block.MaatStoneBlock;
 import net.mcreator.worldsmod.WorldsModModElements;
 
 import javax.annotation.Nullable;
@@ -90,7 +91,8 @@ public class P1dwDimension extends WorldsModModElements.ModElement {
 	@Override
 	public void init(FMLCommonSetupEvent event) {
 		dimensionBiomes = new Biome[]{ForgeRegistries.BIOMES.getValue(new ResourceLocation("plains")),
-				ForgeRegistries.BIOMES.getValue(new ResourceLocation("forest")),};
+				ForgeRegistries.BIOMES.getValue(new ResourceLocation("forest")),
+				ForgeRegistries.BIOMES.getValue(new ResourceLocation("worlds_mod:maatb")),};
 	}
 	public static class CustomModDimension extends ModDimension {
 		@Override
@@ -152,15 +154,6 @@ public class P1dwDimension extends WorldsModModElements.ModElement {
 		}
 
 		@Override
-		protected void generateLightBrightnessTable() {
-			float f = 0.5f;
-			for (int i = 0; i <= 15; ++i) {
-				float f1 = 1 - (float) i / 15f;
-				this.lightBrightnessTable[i] = (1 - f1) / (f1 * 3 + 1) * (1 - f) + f;
-			}
-		}
-
-		@Override
 		public boolean doesWaterVaporize() {
 			return false;
 		}
@@ -180,11 +173,11 @@ public class P1dwDimension extends WorldsModModElements.ModElement {
 		public ChunkProviderModded(IWorld world, BiomeProvider provider) {
 			super(world, provider, new OverworldGenSettings() {
 				public BlockState getDefaultBlock() {
-					return Blocks.STONE.getDefaultState();
+					return MaatStoneBlock.block.getDefaultState();
 				}
 
 				public BlockState getDefaultFluid() {
-					return Blocks.MAGMA_BLOCK.getDefaultState();
+					return Blocks.WATER.getDefaultState();
 				}
 			});
 			this.randomSeed.skip(5349);
@@ -216,7 +209,7 @@ public class P1dwDimension extends WorldsModModElements.ModElement {
 				for (Biome biome : this.biomes) {
 					biome.addCarver(GenerationStage.Carving.AIR, Biome.createCarver(new CaveWorldCarver(ProbabilityConfig::deserialize, 256) {
 						{
-							carvableBlocks = ImmutableSet.of(Blocks.STONE.getDefaultState().getBlock(),
+							carvableBlocks = ImmutableSet.of(MaatStoneBlock.block.getDefaultState().getBlock(),
 									biome.getSurfaceBuilder().getConfig().getTop().getBlock(),
 									biome.getSurfaceBuilder().getConfig().getUnder().getBlock());
 						}
