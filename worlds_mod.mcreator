@@ -1363,6 +1363,78 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "wood_wol_s"
+    },
+    {
+      "name": "R1",
+      "type": "recipe",
+      "sortid": 134,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "r_1"
+    },
+    {
+      "name": "Rs1",
+      "type": "recipe",
+      "sortid": 135,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "rs_1"
+    },
+    {
+      "name": "Rs2",
+      "type": "recipe",
+      "sortid": 136,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "rs_2"
+    },
+    {
+      "name": "Rs3",
+      "type": "recipe",
+      "sortid": 137,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "rs_3"
+    },
+    {
+      "name": "Rs4",
+      "type": "recipe",
+      "sortid": 138,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "rs_4"
+    },
+    {
+      "name": "Rs5",
+      "type": "recipe",
+      "sortid": 139,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "rs_5"
+    },
+    {
+      "name": "Rs6",
+      "type": "recipe",
+      "sortid": 140,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "rs_6"
+    },
+    {
+      "name": "Rs7",
+      "type": "recipe",
+      "sortid": 141,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "rs_7"
     }
   ],
   "variable_elements": [
