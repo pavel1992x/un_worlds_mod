@@ -1345,6 +1345,24 @@
           }
         ]
       }
+    },
+    {
+      "name": "WoodWol",
+      "type": "block",
+      "sortid": 132,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "wood_wol"
+    },
+    {
+      "name": "WoodWolS",
+      "type": "structure",
+      "sortid": 133,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "wood_wol_s"
     }
   ],
   "variable_elements": [
@@ -1431,8 +1449,8 @@
       "item.worlds_mod.iron_dust": "железная пыль",
       "item.worlds_mod.etalone_tools_sword": "этолонный мечь",
       "item.worlds_mod.still_pickaxe": "стальная кирка",
-      "item.worlds_mod.still_shovel": "стальная лопата",
       "biome.worlds_mod.maatb": "Maatb",
+      "item.worlds_mod.still_shovel": "стальная лопата",
       "block.worlds_mod.stil_block": "стальной блок",
       "item.worlds_mod.etalone_tools_hoe": "Etalone_tools Hoe",
       "item.worlds_mod.tpcard": "tp карта",
@@ -1450,8 +1468,9 @@
       "item.worlds_mod.atalonearmer_chestplate": "эталонный нагрудник",
       "block.worlds_mod.sins_ore": "лунная руда",
       "block.worlds_mod.maat_stone": "Камень Маата",
-      "item.worlds_mod.sinspanel": "пластина из лунного пластика",
+      "block.worlds_mod.wood_wol": "древесина woodwol",
       "item.worlds_mod.coal_dust": "угольная пыль",
+      "item.worlds_mod.sinspanel": "пластина из лунного пластика",
       "item.worlds_mod.still_ing": "стальной слиток",
       "subtitles.scrudriver": "звук звуковой отвёртки",
       "block.worlds_mod.dublikator": "дубликатор",
