@@ -523,10 +523,6 @@
       "metadata": {
         "dependencies": [
           {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
             "name": "x",
             "type": "number"
           },
@@ -537,6 +533,10 @@
           {
             "name": "z",
             "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       }
@@ -554,6 +554,10 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       }
@@ -1374,86 +1378,175 @@
       "registry_name": "r_1"
     },
     {
-      "name": "Rs1",
-      "type": "recipe",
-      "sortid": 135,
+      "name": "Diamondmaat",
+      "type": "block",
+      "sortid": 142,
       "compiles": true,
       "locked_code": false,
       "ids": {},
-      "registry_name": "rs_1"
+      "registry_name": "diamondmaat"
     },
     {
-      "name": "Rs2",
-      "type": "recipe",
-      "sortid": 136,
+      "name": "Ironmaat",
+      "type": "block",
+      "sortid": 143,
       "compiles": true,
       "locked_code": false,
       "ids": {},
-      "registry_name": "rs_2"
+      "registry_name": "ironmaat"
     },
     {
-      "name": "Rs3",
-      "type": "recipe",
-      "sortid": 137,
+      "name": "GoldMaat",
+      "type": "block",
+      "sortid": 144,
       "compiles": true,
       "locked_code": false,
       "ids": {},
-      "registry_name": "rs_3"
+      "registry_name": "gold_maat"
     },
     {
-      "name": "Rs4",
-      "type": "recipe",
-      "sortid": 138,
+      "name": "OrelouhStone",
+      "type": "block",
+      "sortid": 145,
       "compiles": true,
       "locked_code": false,
       "ids": {},
-      "registry_name": "rs_4"
+      "registry_name": "orelouh_stone"
     },
     {
-      "name": "Rs5",
-      "type": "recipe",
-      "sortid": 139,
+      "name": "OrelouhFluid",
+      "type": "fluid",
+      "sortid": 146,
       "compiles": true,
       "locked_code": false,
       "ids": {},
-      "registry_name": "rs_5"
+      "registry_name": "orelouh_fluid"
     },
     {
-      "name": "Rs6",
-      "type": "recipe",
-      "sortid": 140,
+      "name": "Ordirt",
+      "type": "block",
+      "sortid": 147,
       "compiles": true,
       "locked_code": false,
       "ids": {},
-      "registry_name": "rs_6"
+      "registry_name": "ordirt"
     },
     {
-      "name": "Rs7",
-      "type": "recipe",
-      "sortid": 141,
+      "name": "OrelouhB",
+      "type": "biome",
+      "sortid": 148,
       "compiles": true,
       "locked_code": false,
       "ids": {},
-      "registry_name": "rs_7"
+      "registry_name": "orelouh_b"
+    },
+    {
+      "name": "Orelouh",
+      "type": "dimension",
+      "sortid": 149,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "orelouh"
+    },
+    {
+      "name": "TpOrelouh",
+      "type": "procedure",
+      "sortid": 150,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "tp_orelouh",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Oriron",
+      "type": "block",
+      "sortid": 151,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "oriron"
+    },
+    {
+      "name": "OrelGold",
+      "type": "block",
+      "sortid": 152,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "orel_gold"
+    },
+    {
+      "name": "OrelDiamond",
+      "type": "block",
+      "sortid": 153,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "orel_diamond"
+    },
+    {
+      "name": "OreIron",
+      "type": "recipe",
+      "sortid": 154,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ore_iron"
+    },
+    {
+      "name": "OreGold",
+      "type": "recipe",
+      "sortid": 155,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ore_gold"
+    },
+    {
+      "name": "MaatIron",
+      "type": "recipe",
+      "sortid": 156,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "maat_iron"
+    },
+    {
+      "name": "Maatgold",
+      "type": "recipe",
+      "sortid": 157,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "maatgold"
     }
   ],
   "variable_elements": [
     {
       "name": "x",
       "type": "number",
-      "scope": "player_persistent",
+      "scope": "world",
       "value": "0"
     },
     {
       "name": "y",
       "type": "number",
-      "scope": "player_persistent",
+      "scope": "world",
       "value": "0"
     },
     {
       "name": "z",
       "type": "number",
-      "scope": "player_persistent",
+      "scope": "world",
       "value": "0"
     },
     {
@@ -1521,7 +1614,7 @@
       "item.worlds_mod.iron_dust": "железная пыль",
       "item.worlds_mod.etalone_tools_sword": "этолонный мечь",
       "item.worlds_mod.still_pickaxe": "стальная кирка",
-      "biome.worlds_mod.maatb": "Maatb",
+      "biome.worlds_mod.maatb": "маатанские ровнины",
       "item.worlds_mod.still_shovel": "стальная лопата",
       "block.worlds_mod.stil_block": "стальной блок",
       "item.worlds_mod.etalone_tools_hoe": "Etalone_tools Hoe",
@@ -1530,6 +1623,7 @@
       "item.worlds_mod.ltpakt": "бластер",
       "item.worlds_mod.still_hoe": "стальная матыга",
       "item.worlds_mod.etalone_tools_pickaxe": "эталонная кирка",
+      "block.worlds_mod.orel_diamond": "алмазная орелоухская руда",
       "item.worlds_mod.moon": "Moonworld Portal Igniter",
       "item.worlds_mod.smartmod": "планшет",
       "block.worlds_mod.trashbox": "уничтожитель",
@@ -1539,7 +1633,10 @@
       "item.worlds_mod.korpus": "корпус планшента",
       "item.worlds_mod.atalonearmer_chestplate": "эталонный нагрудник",
       "block.worlds_mod.sins_ore": "лунная руда",
+      "block.worlds_mod.ironmaat": "железная маатанская руда",
       "block.worlds_mod.maat_stone": "Камень Маата",
+      "block.worlds_mod.ordirt": "почва орелоуха",
+      "block.worlds_mod.diamondmaat": "маатанская алмазная руда",
       "block.worlds_mod.wood_wol": "древесина woodwol",
       "item.worlds_mod.coal_dust": "угольная пыль",
       "item.worlds_mod.sinspanel": "пластина из лунного пластика",
@@ -1550,20 +1647,27 @@
       "advancements.tabletcraftunlock.title": "планшет",
       "block.worlds_mod.maatgrase": "почва маата",
       "item.worlds_mod.scrudriver": "звуковая отвёртка",
+      "biome.worlds_mod.orelouh_b": "орелоухские ровнины",
       "block.worlds_mod.chest": "пространнственный сундук",
       "block.worlds_mod.teleportblock": "телепорт",
       "block.worlds_mod.transmutatar": "трансмутатор",
       "item.worlds_mod.hamer": "дробящая кувалда",
+      "block.worlds_mod.orel_gold": "золотая орелоухская руда",
       "item.worlds_mod.cpu": "процессор",
       "item.worlds_mod.etalonium": "эталониум",
+      "item.worlds_mod.orelouh": "Orelouh Portal Igniter",
       "item.worlds_mod.plata": "материнская плата планшета.",
       "item.worlds_mod.sins_dust": "лунная пыль",
+      "item.worlds_mod.orelouh_fluid_bucket": "OrelouhFluid Bucket",
       "block.worlds_mod.ya_block": "янтарный светокамень",
+      "block.worlds_mod.orelouh_stone": "орелоух камень",
       "advancements.tabletcraftunlock.descr": "устройство с трудом было созданно,  теперь боги знают что у тебя есть к нему доступ.",
       "item.worlds_mod.chestlink": "карта привязки ",
       "item.worlds_mod.still_axe": "стальной топор",
+      "block.worlds_mod.gold_maat": "золотая маатанская руда",
       "item.worlds_mod.atalonearmer_leggings": "Atalonearmer Leggings",
       "block.worlds_mod.moongrunt": "лунный грунт",
+      "block.worlds_mod.oriron": "железная орелоухская руда",
       "block.worlds_mod.lblock": "источник света ",
       "item.worlds_mod.p_1dw": "P 1dw Portal Igniter",
       "biome.worlds_mod.moonb": "Moonb",
@@ -1572,7 +1676,8 @@
       "block.worlds_mod.sosmodul": "sos модуль",
       "item.worlds_mod.etalone_tools_axe": "эталонный топор",
       "itemGroup.tabunmodtec": "un mod приборы",
-      "block.worlds_mod.tiekhnolampa": "техно лампа"
+      "block.worlds_mod.tiekhnolampa": "техно лампа",
+      "fluid.orelouh_fluid": "OrelouhFluid"
     }
   },
   "workspaceSettings": {

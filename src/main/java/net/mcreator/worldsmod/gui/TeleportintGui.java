@@ -31,6 +31,7 @@ import net.minecraft.client.Minecraft;
 
 import net.mcreator.worldsmod.procedures.TpcardRightClickedInAirProcedure;
 import net.mcreator.worldsmod.procedures.TpP1dwProcedure;
+import net.mcreator.worldsmod.procedures.TpOrelouhProcedure;
 import net.mcreator.worldsmod.procedures.OverteleportProcedure;
 import net.mcreator.worldsmod.procedures.MoonteleportProcedure;
 import net.mcreator.worldsmod.procedures.LtpProcedure;
@@ -186,6 +187,10 @@ public class TeleportintGui extends WorldsModModElements.ModElement {
 				WorldsModMod.PACKET_HANDLER.sendToServer(new ButtonPressedMessage(5, x, y, z));
 				handleButtonAction(entity, 5, x, y, z);
 			}));
+			this.addButton(new Button(this.guiLeft + 165, this.guiTop + 6, 60, 20, "орелоух", e -> {
+				WorldsModMod.PACKET_HANDLER.sendToServer(new ButtonPressedMessage(6, x, y, z));
+				handleButtonAction(entity, 6, x, y, z);
+			}));
 		}
 	}
 
@@ -292,10 +297,10 @@ public class TeleportintGui extends WorldsModModElements.ModElement {
 		if (buttonID == 2) {
 			{
 				Map<String, Object> $_dependencies = new HashMap<>();
-				$_dependencies.put("entity", entity);
 				$_dependencies.put("x", x);
 				$_dependencies.put("y", y);
 				$_dependencies.put("z", z);
+				$_dependencies.put("world", world);
 				TpcardRightClickedInAirProcedure.executeProcedure($_dependencies);
 			}
 		}
@@ -314,6 +319,7 @@ public class TeleportintGui extends WorldsModModElements.ModElement {
 			{
 				Map<String, Object> $_dependencies = new HashMap<>();
 				$_dependencies.put("entity", entity);
+				$_dependencies.put("world", world);
 				LtpProcedure.executeProcedure($_dependencies);
 			}
 		}
@@ -322,6 +328,13 @@ public class TeleportintGui extends WorldsModModElements.ModElement {
 				Map<String, Object> $_dependencies = new HashMap<>();
 				$_dependencies.put("entity", entity);
 				TpP1dwProcedure.executeProcedure($_dependencies);
+			}
+		}
+		if (buttonID == 6) {
+			{
+				Map<String, Object> $_dependencies = new HashMap<>();
+				$_dependencies.put("entity", entity);
+				TpOrelouhProcedure.executeProcedure($_dependencies);
 			}
 		}
 	}

@@ -25,6 +25,7 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.Mirror;
 
 import net.mcreator.worldsmod.world.dimension.P1dwDimension;
+import net.mcreator.worldsmod.world.dimension.OrelouhDimension;
 import net.mcreator.worldsmod.WorldsModModElements;
 
 import java.util.Random;
@@ -45,6 +46,8 @@ public class WoodWolSStructure extends WorldsModModElements.ModElement {
 				DimensionType dimensionType = world.getDimension().getType();
 				boolean dimensionCriteria = false;
 				if (dimensionType == P1dwDimension.type)
+					dimensionCriteria = true;
+				if (dimensionType == OrelouhDimension.type)
 					dimensionCriteria = true;
 				if (!dimensionCriteria)
 					return false;

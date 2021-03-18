@@ -93,6 +93,20 @@
           "x": 168,
           "y": 17
         }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "орелоух",
+          "onClick": {
+            "name": "TpOrelouh"
+          },
+          "width": 60,
+          "height": 20,
+          "name": "орелоух",
+          "x": 222,
+          "y": 17
+        }
       }
     ]
   }

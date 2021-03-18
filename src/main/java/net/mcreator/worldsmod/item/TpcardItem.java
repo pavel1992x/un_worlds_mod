@@ -79,10 +79,10 @@ public class TpcardItem extends WorldsModModElements.ModElement {
 			double z = entity.posZ;
 			{
 				Map<String, Object> $_dependencies = new HashMap<>();
-				$_dependencies.put("entity", entity);
 				$_dependencies.put("x", x);
 				$_dependencies.put("y", y);
 				$_dependencies.put("z", z);
+				$_dependencies.put("world", world);
 				TpcardRightClickedInAirProcedure.executeProcedure($_dependencies);
 			}
 			return ar;

@@ -13,7 +13,8 @@
     "spawnXOffset": 0,
     "spawnZOffset": 0,
     "spawnWorldTypes": [
-      "CUSTOM:P1dw"
+      "CUSTOM:P1dw",
+      "CUSTOM:Orelouh"
     ],
     "restrictionBlocks": [],
     "restrictionBiomes": [],

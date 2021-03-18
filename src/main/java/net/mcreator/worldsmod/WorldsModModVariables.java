@@ -69,6 +69,9 @@ public class WorldsModModVariables {
 	}
 	public static class WorldVariables extends WorldSavedData {
 		public static final String DATA_NAME = "worlds_mod_worldvars";
+		public double x = 0;
+		public double y = 0;
+		public double z = 0;
 		public double chx = 0;
 		public double chy = 0;
 		public double chz = 0;
@@ -82,6 +85,9 @@ public class WorldsModModVariables {
 
 		@Override
 		public void read(CompoundNBT nbt) {
+			x = nbt.getDouble("x");
+			y = nbt.getDouble("y");
+			z = nbt.getDouble("z");
 			chx = nbt.getDouble("chx");
 			chy = nbt.getDouble("chy");
 			chz = nbt.getDouble("chz");
@@ -89,6 +95,9 @@ public class WorldsModModVariables {
 
 		@Override
 		public CompoundNBT write(CompoundNBT nbt) {
+			nbt.putDouble("x", x);
+			nbt.putDouble("y", y);
+			nbt.putDouble("z", z);
 			nbt.putDouble("chx", chx);
 			nbt.putDouble("chy", chy);
 			nbt.putDouble("chz", chz);
@@ -208,9 +217,6 @@ public class WorldsModModVariables {
 		@Override
 		public INBT writeNBT(Capability<PlayerVariables> capability, PlayerVariables instance, Direction side) {
 			CompoundNBT nbt = new CompoundNBT();
-			nbt.putDouble("x", instance.x);
-			nbt.putDouble("y", instance.y);
-			nbt.putDouble("z", instance.z);
 			nbt.putDouble("bcx", instance.bcx);
 			nbt.putDouble("bcy", instance.bcy);
 			nbt.putDouble("bcz", instance.bcz);
@@ -222,9 +228,6 @@ public class WorldsModModVariables {
 		@Override
 		public void readNBT(Capability<PlayerVariables> capability, PlayerVariables instance, Direction side, INBT inbt) {
 			CompoundNBT nbt = (CompoundNBT) inbt;
-			instance.x = nbt.getDouble("x");
-			instance.y = nbt.getDouble("y");
-			instance.z = nbt.getDouble("z");
 			instance.bcx = nbt.getDouble("bcx");
 			instance.bcy = nbt.getDouble("bcy");
 			instance.bcz = nbt.getDouble("bcz");
@@ -234,9 +237,6 @@ public class WorldsModModVariables {
 	}
 
 	public static class PlayerVariables {
-		public double x = 0;
-		public double y = 0;
-		public double z = 0;
 		public double bcx = 0;
 		public double bcy = 0;
 		public double bcz = 0;
@@ -274,9 +274,6 @@ public class WorldsModModVariables {
 		PlayerVariables original = ((PlayerVariables) event.getOriginal().getCapability(PLAYER_VARIABLES_CAPABILITY, null)
 				.orElse(new PlayerVariables()));
 		PlayerVariables clone = ((PlayerVariables) event.getEntity().getCapability(PLAYER_VARIABLES_CAPABILITY, null).orElse(new PlayerVariables()));
-		clone.x = original.x;
-		clone.y = original.y;
-		clone.z = original.z;
 		clone.bcx = original.bcx;
 		clone.bcy = original.bcy;
 		clone.bcz = original.bcz;
@@ -306,9 +303,6 @@ public class WorldsModModVariables {
 				if (!context.getDirection().getReceptionSide().isServer()) {
 					PlayerVariables variables = ((PlayerVariables) Minecraft.getInstance().player.getCapability(PLAYER_VARIABLES_CAPABILITY, null)
 							.orElse(new PlayerVariables()));
-					variables.x = message.data.x;
-					variables.y = message.data.y;
-					variables.z = message.data.z;
 					variables.bcx = message.data.bcx;
 					variables.bcy = message.data.bcy;
 					variables.bcz = message.data.bcz;

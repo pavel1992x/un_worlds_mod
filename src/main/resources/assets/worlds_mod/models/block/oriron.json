@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "worlds_mod:blocks/ore_iron",
+    "up": "worlds_mod:blocks/ore_iron",
+    "north": "worlds_mod:blocks/ore_iron",
+    "east": "worlds_mod:blocks/ore_iron",
+    "south": "worlds_mod:blocks/ore_iron",
+    "west": "worlds_mod:blocks/ore_iron",
+    "particle": "worlds_mod:blocks/ore_iron"
+  }
+}

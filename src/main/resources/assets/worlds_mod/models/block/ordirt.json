@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "worlds_mod:blocks/ordirt",
+    "up": "worlds_mod:blocks/ordirt",
+    "north": "worlds_mod:blocks/ordirt",
+    "east": "worlds_mod:blocks/ordirt",
+    "south": "worlds_mod:blocks/ordirt",
+    "west": "worlds_mod:blocks/ordirt",
+    "particle": "worlds_mod:blocks/ordirt"
+  }
+}
