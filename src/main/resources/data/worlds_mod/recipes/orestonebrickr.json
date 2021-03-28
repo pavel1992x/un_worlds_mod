@@ -1,0 +1,22 @@
+{
+  "group": "worlds_mod",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "worlds_mod:orelouh_stone"
+    },
+    {
+      "item": "worlds_mod:orelouh_stone"
+    },
+    {
+      "item": "worlds_mod:orelouh_stone"
+    },
+    {
+      "item": "worlds_mod:orelouh_stone"
+    }
+  ],
+  "result": {
+    "item": "worlds_mod:orstonebrick",
+    "count": 1
+  }
+}

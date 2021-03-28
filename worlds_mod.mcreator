@@ -1528,6 +1528,24 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "maatgold"
+    },
+    {
+      "name": "Orstonebrick",
+      "type": "block",
+      "sortid": 158,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "orstonebrick"
+    },
+    {
+      "name": "Orestonebrickr",
+      "type": "recipe",
+      "sortid": 159,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "orestonebrickr"
     }
   ],
   "variable_elements": [
@@ -1614,8 +1632,8 @@
       "item.worlds_mod.iron_dust": "железная пыль",
       "item.worlds_mod.etalone_tools_sword": "этолонный мечь",
       "item.worlds_mod.still_pickaxe": "стальная кирка",
-      "biome.worlds_mod.maatb": "маатанские ровнины",
       "item.worlds_mod.still_shovel": "стальная лопата",
+      "biome.worlds_mod.maatb": "маатанские ровнины",
       "block.worlds_mod.stil_block": "стальной блок",
       "item.worlds_mod.etalone_tools_hoe": "Etalone_tools Hoe",
       "item.worlds_mod.tpcard": "tp карта",
@@ -1648,6 +1666,7 @@
       "block.worlds_mod.maatgrase": "почва маата",
       "item.worlds_mod.scrudriver": "звуковая отвёртка",
       "biome.worlds_mod.orelouh_b": "орелоухские ровнины",
+      "block.worlds_mod.orstonebrick": "белые кирпичи",
       "block.worlds_mod.chest": "пространнственный сундук",
       "block.worlds_mod.teleportblock": "телепорт",
       "block.worlds_mod.transmutatar": "трансмутатор",

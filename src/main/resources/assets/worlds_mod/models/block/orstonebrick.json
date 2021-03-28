@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "worlds_mod:blocks/or_brick",
+    "up": "worlds_mod:blocks/or_brick",
+    "north": "worlds_mod:blocks/or_brick",
+    "east": "worlds_mod:blocks/or_brick",
+    "south": "worlds_mod:blocks/or_brick",
+    "west": "worlds_mod:blocks/or_brick",
+    "particle": "worlds_mod:blocks/or_brick"
+  }
+}
