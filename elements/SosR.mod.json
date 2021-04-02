@@ -10,13 +10,13 @@
     "recipeShapeless": false,
     "recipeSlots": [
       {
-        "value": "Items.ENDER_PEARL"
+        "value": "CUSTOM:EnderitIng"
       },
       {
-        "value": "Items.ENDER_PEARL"
+        "value": "CUSTOM:EnderitIng"
       },
       {
-        "value": "Items.ENDER_PEARL"
+        "value": "CUSTOM:EnderitIng"
       },
       {
         "value": "CUSTOM:StillIng"

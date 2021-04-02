@@ -5,7 +5,7 @@
     "structure": "sp",
     "randomlyRotateStructure": true,
     "surfaceDetectionType": "First motion blocking block",
-    "spawnProbability": 10,
+    "spawnProbability": 1000,
     "minCountPerChunk": 1,
     "maxCountPerChunk": 1,
     "spawnLocation": "Ground",
@@ -13,8 +13,8 @@
     "spawnXOffset": 1,
     "spawnZOffset": 1,
     "spawnWorldTypes": [
-      "Surface",
-      "CUSTOM:Moonworld"
+      "CUSTOM:Moonworld",
+      "CUSTOM:Orelouh"
     ],
     "restrictionBlocks": [],
     "restrictionBiomes": [],

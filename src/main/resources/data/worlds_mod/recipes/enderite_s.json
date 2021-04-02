@@ -1,0 +1,12 @@
+{
+  "group": "worlds_mod",
+  "type": "minecraft:smelting",
+  "experience": 256,
+  "cookingtime": 10,
+  "ingredient": {
+    "item": "worlds_mod:ender_ore"
+  },
+  "result": {
+    "item": "worlds_mod:enderit_ing"
+  }
+}

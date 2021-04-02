@@ -1546,6 +1546,42 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "orestonebrickr"
+    },
+    {
+      "name": "StoneCraft",
+      "type": "recipe",
+      "sortid": 160,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "stone_craft"
+    },
+    {
+      "name": "EnderOre",
+      "type": "block",
+      "sortid": 161,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ender_ore"
+    },
+    {
+      "name": "EnderitIng",
+      "type": "item",
+      "sortid": 162,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "enderit_ing"
+    },
+    {
+      "name": "EnderiteS",
+      "type": "recipe",
+      "sortid": 163,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "enderite_s"
     }
   ],
   "variable_elements": [
@@ -1640,6 +1676,7 @@
       "item.worlds_mod.still_sword": "стальной меч",
       "item.worlds_mod.ltpakt": "бластер",
       "item.worlds_mod.still_hoe": "стальная матыга",
+      "block.worlds_mod.ender_ore": "эндеритовая руда",
       "item.worlds_mod.etalone_tools_pickaxe": "эталонная кирка",
       "block.worlds_mod.orel_diamond": "алмазная орелоухская руда",
       "item.worlds_mod.moon": "Moonworld Portal Igniter",
@@ -1667,6 +1704,7 @@
       "item.worlds_mod.scrudriver": "звуковая отвёртка",
       "biome.worlds_mod.orelouh_b": "орелоухские ровнины",
       "block.worlds_mod.orstonebrick": "белые кирпичи",
+      "item.worlds_mod.enderit_ing": "эндеритовый слиток",
       "block.worlds_mod.chest": "пространнственный сундук",
       "block.worlds_mod.teleportblock": "телепорт",
       "block.worlds_mod.transmutatar": "трансмутатор",

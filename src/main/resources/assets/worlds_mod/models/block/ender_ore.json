@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "worlds_mod:blocks/ender_ore",
+    "up": "worlds_mod:blocks/ender_ore",
+    "north": "worlds_mod:blocks/ender_ore",
+    "east": "worlds_mod:blocks/ender_ore",
+    "south": "worlds_mod:blocks/ender_ore",
+    "west": "worlds_mod:blocks/ender_ore",
+    "particle": "worlds_mod:blocks/ender_ore"
+  }
+}

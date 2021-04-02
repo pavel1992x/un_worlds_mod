@@ -1,0 +1,20 @@
+{
+  "_fv": 13,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Smelting",
+    "xpReward": 256.0,
+    "cookingTime": 10,
+    "recipeRetstackSize": 1,
+    "group": "",
+    "recipeShapeless": false,
+    "smeltingInputStack": {
+      "value": "CUSTOM:EnderOre"
+    },
+    "smeltingReturnStack": {
+      "value": "CUSTOM:EnderitIng"
+    },
+    "name": "enderite_s",
+    "namespace": "mod"
+  }
+}
