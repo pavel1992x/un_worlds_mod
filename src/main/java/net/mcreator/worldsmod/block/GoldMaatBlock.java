@@ -80,7 +80,7 @@ public class GoldMaatBlock extends WorldsModModElements.ModElement {
 				if (blockAt.getBlock() == MaatStoneBlock.block.getDefaultState().getBlock())
 					blockCriteria = true;
 				return blockCriteria;
-			}), block.getDefaultState(), 15), Placement.COUNT_RANGE, new CountRangeConfig(15, 32, 32, 81)));
+			}), block.getDefaultState(), 20), Placement.COUNT_RANGE, new CountRangeConfig(1, 32, 32, 81)));
 		}
 	}
 }

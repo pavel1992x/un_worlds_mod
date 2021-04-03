@@ -1,0 +1,39 @@
+{
+  "group": "worlds_mod",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "3 5",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "worlds_mod:orelouh_stone"
+    },
+    "1": {
+      "item": "worlds_mod:orelouh_stone"
+    },
+    "2": {
+      "item": "worlds_mod:orelouh_stone"
+    },
+    "3": {
+      "item": "worlds_mod:orelouh_stone"
+    },
+    "5": {
+      "item": "worlds_mod:orelouh_stone"
+    },
+    "6": {
+      "item": "worlds_mod:orelouh_stone"
+    },
+    "7": {
+      "item": "worlds_mod:orelouh_stone"
+    },
+    "8": {
+      "item": "worlds_mod:orelouh_stone"
+    }
+  },
+  "result": {
+    "item": "minecraft:furnace",
+    "count": 1
+  }
+}

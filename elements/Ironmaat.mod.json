@@ -101,8 +101,8 @@
         "value": "CUSTOM:MaatStone"
       }
     ],
-    "frequencyPerChunks": 20,
-    "frequencyOnChunk": 30,
+    "frequencyPerChunks": 5,
+    "frequencyOnChunk": 10,
     "minGenerateHeight": 32,
     "maxGenerateHeight": 81
   }

@@ -80,7 +80,7 @@ public class DiamondmaatBlock extends WorldsModModElements.ModElement {
 				if (blockAt.getBlock() == MaatStoneBlock.block.getDefaultState().getBlock())
 					blockCriteria = true;
 				return blockCriteria;
-			}), block.getDefaultState(), 20), Placement.COUNT_RANGE, new CountRangeConfig(15, 0, 0, 30)));
+			}), block.getDefaultState(), 15), Placement.COUNT_RANGE, new CountRangeConfig(1, 0, 0, 30)));
 		}
 	}
 }
