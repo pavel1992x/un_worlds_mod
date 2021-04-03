@@ -1,12 +1,12 @@
 {
   "parent": "block/cube",
   "textures": {
-    "down": "worlds_mod:blocks/odiamond",
-    "up": "worlds_mod:blocks/odiamond",
-    "north": "worlds_mod:blocks/odiamond",
-    "east": "worlds_mod:blocks/odiamond",
-    "south": "worlds_mod:blocks/odiamond",
-    "west": "worlds_mod:blocks/odiamond",
-    "particle": "worlds_mod:blocks/odiamond"
+    "down": "worlds_mod:blocks/diamond_ore_or",
+    "up": "worlds_mod:blocks/diamond_ore_or",
+    "north": "worlds_mod:blocks/diamond_ore_or",
+    "east": "worlds_mod:blocks/diamond_ore_or",
+    "south": "worlds_mod:blocks/diamond_ore_or",
+    "west": "worlds_mod:blocks/diamond_ore_or",
+    "particle": "worlds_mod:blocks/diamond_ore_or"
   }
 }

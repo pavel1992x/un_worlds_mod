@@ -81,7 +81,7 @@ public class OrelGoldBlock extends WorldsModModElements.ModElement {
 				if (blockAt.getBlock() == OrelouhStoneBlock.block.getDefaultState().getBlock())
 					blockCriteria = true;
 				return blockCriteria;
-			}), block.getDefaultState(), 30), Placement.COUNT_RANGE, new CountRangeConfig(20, 32, 32, 81)));
+			}), block.getDefaultState(), 15), Placement.COUNT_RANGE, new CountRangeConfig(1, 32, 32, 81)));
 		}
 	}
 }

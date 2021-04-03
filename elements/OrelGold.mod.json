@@ -2,12 +2,12 @@
   "_fv": 13,
   "_type": "block",
   "definition": {
-    "texture": "ore_gold",
-    "textureTop": "ore_gold",
-    "textureLeft": "ore_gold",
-    "textureFront": "ore_gold",
-    "textureRight": "ore_gold",
-    "textureBack": "ore_gold",
+    "texture": "gold_ore_or",
+    "textureTop": "gold_ore_or",
+    "textureLeft": "gold_ore_or",
+    "textureFront": "gold_ore_or",
+    "textureRight": "gold_ore_or",
+    "textureBack": "gold_ore_or",
     "renderType": 10,
     "customModelName": "Normal",
     "rotationMode": 0,
@@ -101,8 +101,8 @@
         "value": "CUSTOM:OrelouhStone"
       }
     ],
-    "frequencyPerChunks": 20,
-    "frequencyOnChunk": 30,
+    "frequencyPerChunks": 1,
+    "frequencyOnChunk": 15,
     "minGenerateHeight": 32,
     "maxGenerateHeight": 81
   }

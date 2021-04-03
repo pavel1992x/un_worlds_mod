@@ -2,12 +2,12 @@
   "_fv": 13,
   "_type": "block",
   "definition": {
-    "texture": "odiamond",
-    "textureTop": "odiamond",
-    "textureLeft": "odiamond",
-    "textureFront": "odiamond",
-    "textureRight": "odiamond",
-    "textureBack": "odiamond",
+    "texture": "diamond_ore_or",
+    "textureTop": "diamond_ore_or",
+    "textureLeft": "diamond_ore_or",
+    "textureFront": "diamond_ore_or",
+    "textureRight": "diamond_ore_or",
+    "textureBack": "diamond_ore_or",
     "renderType": 10,
     "customModelName": "Normal",
     "rotationMode": 0,
@@ -101,8 +101,8 @@
         "value": "CUSTOM:OrelouhStone"
       }
     ],
-    "frequencyPerChunks": 20,
-    "frequencyOnChunk": 30,
+    "frequencyPerChunks": 1,
+    "frequencyOnChunk": 10,
     "minGenerateHeight": 32,
     "maxGenerateHeight": 81
   }
