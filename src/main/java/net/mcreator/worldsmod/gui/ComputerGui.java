@@ -25,13 +25,10 @@ import net.minecraft.inventory.container.Container;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.client.gui.widget.button.Button;
-import net.minecraft.client.gui.widget.TextFieldWidget;
 import net.minecraft.client.gui.screen.inventory.ContainerScreen;
 import net.minecraft.client.gui.ScreenManager;
 import net.minecraft.client.Minecraft;
 
-import net.mcreator.worldsmod.procedures.TpintstartProcedure;
-import net.mcreator.worldsmod.procedures.TestProcedure;
 import net.mcreator.worldsmod.procedures.TabletrecawariProcedure;
 import net.mcreator.worldsmod.procedures.CreativeProcedure;
 import net.mcreator.worldsmod.WorldsModModElements;
@@ -106,7 +103,6 @@ public class ComputerGui extends WorldsModModElements.ModElement {
 		private World world;
 		private int x, y, z;
 		private PlayerEntity entity;
-		TextFieldWidget term;
 		public GuiWindow(GuiContainerMod container, PlayerInventory inventory, ITextComponent text) {
 			super(container, inventory, text);
 			this.world = container.world;
@@ -114,8 +110,8 @@ public class ComputerGui extends WorldsModModElements.ModElement {
 			this.y = container.y;
 			this.z = container.z;
 			this.entity = container.entity;
-			this.xSize = 176;
-			this.ySize = 166;
+			this.xSize = 351;
+			this.ySize = 178;
 		}
 		private static final ResourceLocation texture = new ResourceLocation("worlds_mod:textures/computer.png");
 		@Override
@@ -123,7 +119,6 @@ public class ComputerGui extends WorldsModModElements.ModElement {
 			this.renderBackground();
 			super.render(mouseX, mouseY, partialTicks);
 			this.renderHoveredToolTip(mouseX, mouseY);
-			term.render(mouseX, mouseY, partialTicks);
 		}
 
 		@Override
@@ -138,7 +133,6 @@ public class ComputerGui extends WorldsModModElements.ModElement {
 		@Override
 		public void tick() {
 			super.tick();
-			term.tick();
 		}
 
 		@Override
@@ -151,8 +145,6 @@ public class ComputerGui extends WorldsModModElements.ModElement {
 				this.minecraft.player.closeScreen();
 				return true;
 			}
-			if (term.isFocused())
-				return term.keyPressed(key, b, c);
 			return super.keyPressed(key, b, c);
 		}
 
@@ -166,46 +158,13 @@ public class ComputerGui extends WorldsModModElements.ModElement {
 		public void init(Minecraft minecraft, int width, int height) {
 			super.init(minecraft, width, height);
 			minecraft.keyboardListener.enableRepeatEvents(true);
-			term = new TextFieldWidget(this.font, this.guiLeft + 6, this.guiTop + 7, 120, 20, "место для ввода команд") {
-				{
-					setSuggestion("место для ввода команд");
-				}
-				@Override
-				public void writeText(String text) {
-					super.writeText(text);
-					if (getText().isEmpty())
-						setSuggestion("место для ввода команд");
-					else
-						setSuggestion(null);
-				}
-
-				@Override
-				public void setCursorPosition(int pos) {
-					super.setCursorPosition(pos);
-					if (getText().isEmpty())
-						setSuggestion("место для ввода команд");
-					else
-						setSuggestion(null);
-				}
-			};
-			guistate.put("text:term", term);
-			term.setMaxStringLength(32767);
-			this.children.add(this.term);
-			this.addButton(new Button(this.guiLeft + 132, this.guiTop + 7, 20, 20, "ок", e -> {
+			this.addButton(new Button(this.guiLeft + 76, this.guiTop + 13, 60, 20, "планшет", e -> {
 				WorldsModMod.PACKET_HANDLER.sendToServer(new ButtonPressedMessage(0, x, y, z));
 				handleButtonAction(entity, 0, x, y, z);
 			}));
-			this.addButton(new Button(this.guiLeft + 6, this.guiTop + 34, 35, 20, "tp", e -> {
+			this.addButton(new Button(this.guiLeft + 13, this.guiTop + 13, 60, 20, "криатив", e -> {
 				WorldsModMod.PACKET_HANDLER.sendToServer(new ButtonPressedMessage(1, x, y, z));
 				handleButtonAction(entity, 1, x, y, z);
-			}));
-			this.addButton(new Button(this.guiLeft + 42, this.guiTop + 34, 60, 20, "планшет", e -> {
-				WorldsModMod.PACKET_HANDLER.sendToServer(new ButtonPressedMessage(2, x, y, z));
-				handleButtonAction(entity, 2, x, y, z);
-			}));
-			this.addButton(new Button(this.guiLeft + 6, this.guiTop + 61, 60, 20, "криатив", e -> {
-				WorldsModMod.PACKET_HANDLER.sendToServer(new ButtonPressedMessage(3, x, y, z));
-				handleButtonAction(entity, 3, x, y, z);
 			}));
 		}
 	}
@@ -300,33 +259,10 @@ public class ComputerGui extends WorldsModModElements.ModElement {
 			{
 				Map<String, Object> $_dependencies = new HashMap<>();
 				$_dependencies.put("entity", entity);
-				$_dependencies.put("guistate", guistate);
-				$_dependencies.put("x", x);
-				$_dependencies.put("y", y);
-				$_dependencies.put("z", z);
-				$_dependencies.put("world", world);
-				TestProcedure.executeProcedure($_dependencies);
-			}
-		}
-		if (buttonID == 1) {
-			{
-				Map<String, Object> $_dependencies = new HashMap<>();
-				$_dependencies.put("entity", entity);
-				$_dependencies.put("x", x);
-				$_dependencies.put("y", y);
-				$_dependencies.put("z", z);
-				$_dependencies.put("world", world);
-				TpintstartProcedure.executeProcedure($_dependencies);
-			}
-		}
-		if (buttonID == 2) {
-			{
-				Map<String, Object> $_dependencies = new HashMap<>();
-				$_dependencies.put("entity", entity);
 				TabletrecawariProcedure.executeProcedure($_dependencies);
 			}
 		}
-		if (buttonID == 3) {
+		if (buttonID == 1) {
 			{
 				Map<String, Object> $_dependencies = new HashMap<>();
 				$_dependencies.put("entity", entity);

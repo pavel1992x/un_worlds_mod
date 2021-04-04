@@ -3,52 +3,13 @@
   "_type": "gui",
   "definition": {
     "type": 0,
-    "width": 176,
-    "height": 166,
+    "width": 351,
+    "height": 178,
     "inventoryOffsetX": 0,
     "inventoryOffsetY": 0,
     "renderBgLayer": true,
     "doesPauseGame": false,
     "components": [
-      {
-        "type": "textfield",
-        "data": {
-          "placeholder": "место для ввода команд",
-          "width": 120,
-          "height": 20,
-          "name": "term",
-          "x": 132,
-          "y": 44
-        }
-      },
-      {
-        "type": "button",
-        "data": {
-          "text": "ок",
-          "onClick": {
-            "name": "Test"
-          },
-          "width": 20,
-          "height": 20,
-          "name": "ок",
-          "x": 258,
-          "y": 44
-        }
-      },
-      {
-        "type": "button",
-        "data": {
-          "text": "tp",
-          "onClick": {
-            "name": "Tpintstart"
-          },
-          "width": 35,
-          "height": 20,
-          "name": "tp",
-          "x": 132,
-          "y": 71
-        }
-      },
       {
         "type": "button",
         "data": {
@@ -59,8 +20,8 @@
           "width": 60,
           "height": 20,
           "name": "планшет",
-          "x": 168,
-          "y": 71
+          "x": 114,
+          "y": 44
         }
       },
       {
@@ -73,8 +34,8 @@
           "width": 60,
           "height": 20,
           "name": "криатив",
-          "x": 132,
-          "y": 98
+          "x": 51,
+          "y": 44
         }
       }
     ]

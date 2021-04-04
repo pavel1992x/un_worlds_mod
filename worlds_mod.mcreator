@@ -269,43 +269,6 @@
       }
     },
     {
-      "name": "Test",
-      "type": "procedure",
-      "sortid": 22,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "term",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "guistate",
-            "type": "map"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      }
-    },
-    {
       "name": "Lblock",
       "type": "block",
       "sortid": 23,
@@ -721,38 +684,6 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "ltpakt"
-    },
-    {
-      "name": "AtalonearmerBodyTickEvent",
-      "type": "procedure",
-      "sortid": 80,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "atalonearmer_body_tick_event",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      }
-    },
-    {
-      "name": "Atalonearmer",
-      "type": "armor",
-      "sortid": 80,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "atalonearmer",
-      "metadata": {
-        "eh": false,
-        "el": false,
-        "eb": false,
-        "ec": true
-      }
     },
     {
       "name": "Tabletcraftunlock",
@@ -1673,7 +1604,6 @@
   ],
   "language_map": {
     "en_us": {
-      "item.worlds_mod.atalonearmer_helmet": "Atalonearmer Helmet",
       "item.worlds_mod.iron_dust": "железная пыль",
       "item.worlds_mod.etalone_tools_sword": "этолонный мечь",
       "item.worlds_mod.still_pickaxe": "стальная кирка",
@@ -1695,7 +1625,6 @@
       "item.worlds_mod.etalone_tools_shovel": "этолонная лопата ",
       "item.worlds_mod.coal_iron_dust": "железноугольная пыль",
       "item.worlds_mod.korpus": "корпус планшента",
-      "item.worlds_mod.atalonearmer_chestplate": "эталонный нагрудник",
       "block.worlds_mod.sins_ore": "лунная руда",
       "block.worlds_mod.ironmaat": "железная маатанская руда",
       "block.worlds_mod.maat_stone": "Камень Маата",
@@ -1731,14 +1660,12 @@
       "item.worlds_mod.chestlink": "карта привязки ",
       "item.worlds_mod.still_axe": "стальной топор",
       "block.worlds_mod.gold_maat": "золотая маатанская руда",
-      "item.worlds_mod.atalonearmer_leggings": "Atalonearmer Leggings",
       "block.worlds_mod.moongrunt": "лунный грунт",
       "block.worlds_mod.oriron": "железная орелоухская руда",
       "block.worlds_mod.lblock": "источник света ",
       "item.worlds_mod.p_1dw": "P 1dw Portal Igniter",
       "biome.worlds_mod.moonb": "Moonb",
       "item.worlds_mod.bazaakt": "артефакт развёртки базы",
-      "item.worlds_mod.atalonearmer_boots": "Atalonearmer Boots",
       "block.worlds_mod.sosmodul": "sos модуль",
       "item.worlds_mod.etalone_tools_axe": "эталонный топор",
       "itemGroup.tabunmodtec": "un mod приборы",

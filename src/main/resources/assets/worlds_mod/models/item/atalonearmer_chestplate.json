@@ -1,6 +1,0 @@
-{
-  "parent": "item/generated",
-  "textures": {
-    "layer0": "worlds_mod:items/stone_1_body"
-  }
-}
