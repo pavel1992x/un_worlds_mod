@@ -30,6 +30,8 @@ import net.minecraft.client.gui.ScreenManager;
 import net.minecraft.client.Minecraft;
 
 import net.mcreator.worldsmod.procedures.TabletrecawariProcedure;
+import net.mcreator.worldsmod.procedures.FlyOnProcedure;
+import net.mcreator.worldsmod.procedures.FlyOffProcedure;
 import net.mcreator.worldsmod.procedures.CreativeProcedure;
 import net.mcreator.worldsmod.WorldsModModElements;
 import net.mcreator.worldsmod.WorldsModMod;
@@ -166,6 +168,14 @@ public class ComputerGui extends WorldsModModElements.ModElement {
 				WorldsModMod.PACKET_HANDLER.sendToServer(new ButtonPressedMessage(1, x, y, z));
 				handleButtonAction(entity, 1, x, y, z);
 			}));
+			this.addButton(new Button(this.guiLeft + 139, this.guiTop + 13, 60, 20, "вкл fly", e -> {
+				WorldsModMod.PACKET_HANDLER.sendToServer(new ButtonPressedMessage(2, x, y, z));
+				handleButtonAction(entity, 2, x, y, z);
+			}));
+			this.addButton(new Button(this.guiLeft + 202, this.guiTop + 13, 65, 20, "выкл fly", e -> {
+				WorldsModMod.PACKET_HANDLER.sendToServer(new ButtonPressedMessage(3, x, y, z));
+				handleButtonAction(entity, 3, x, y, z);
+			}));
 		}
 	}
 
@@ -267,6 +277,20 @@ public class ComputerGui extends WorldsModModElements.ModElement {
 				Map<String, Object> $_dependencies = new HashMap<>();
 				$_dependencies.put("entity", entity);
 				CreativeProcedure.executeProcedure($_dependencies);
+			}
+		}
+		if (buttonID == 2) {
+			{
+				Map<String, Object> $_dependencies = new HashMap<>();
+				$_dependencies.put("entity", entity);
+				FlyOnProcedure.executeProcedure($_dependencies);
+			}
+		}
+		if (buttonID == 3) {
+			{
+				Map<String, Object> $_dependencies = new HashMap<>();
+				$_dependencies.put("entity", entity);
+				FlyOffProcedure.executeProcedure($_dependencies);
 			}
 		}
 	}

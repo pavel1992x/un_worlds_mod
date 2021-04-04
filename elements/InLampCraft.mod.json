@@ -7,40 +7,40 @@
     "cookingTime": 200,
     "recipeRetstackSize": 1,
     "group": "",
-    "recipeShapeless": true,
+    "recipeShapeless": false,
     "recipeSlots": [
       {
-        "value": ""
-      },
-      {
-        "value": "Items.GOLD_NUGGET"
+        "value": "CUSTOM:OrelouhStone"
       },
       {
         "value": ""
       },
       {
-        "value": "Items.GOLD_NUGGET"
-      },
-      {
-        "value": "Items.FLINT"
-      },
-      {
-        "value": "Items.GOLD_NUGGET"
+        "value": "CUSTOM:OrelouhStone"
       },
       {
         "value": ""
       },
       {
-        "value": "Items.GOLD_NUGGET"
+        "value": "CUSTOM:OrelouhStone"
       },
       {
         "value": ""
+      },
+      {
+        "value": "CUSTOM:OrelouhStone"
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "CUSTOM:OrelouhStone"
       }
     ],
     "recipeReturnStack": {
-      "value": "CUSTOM:Cpu"
+      "value": "CUSTOM:Tiekhnolampa"
     },
-    "name": "cpucraft",
+    "name": "in_lamp_craft",
     "namespace": "mod"
   }
 }

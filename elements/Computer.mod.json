@@ -37,6 +37,34 @@
           "x": 51,
           "y": 44
         }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "вкл fly",
+          "onClick": {
+            "name": "FlyOn"
+          },
+          "width": 60,
+          "height": 20,
+          "name": "вкл fly",
+          "x": 177,
+          "y": 44
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "выкл fly",
+          "onClick": {
+            "name": "FlyOff"
+          },
+          "width": 65,
+          "height": 20,
+          "name": "выкл fly",
+          "x": 240,
+          "y": 44
+        }
       }
     ]
   }

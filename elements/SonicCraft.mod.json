@@ -7,40 +7,40 @@
     "cookingTime": 200,
     "recipeRetstackSize": 1,
     "group": "",
-    "recipeShapeless": true,
+    "recipeShapeless": false,
     "recipeSlots": [
       {
         "value": ""
       },
       {
-        "value": "Items.GOLD_NUGGET"
-      },
-      {
         "value": ""
       },
       {
-        "value": "Items.GOLD_NUGGET"
+        "value": "CUSTOM:Tiekhnolampa"
       },
       {
-        "value": "Items.FLINT"
+        "value": "CUSTOM:Cpu"
       },
       {
-        "value": "Items.GOLD_NUGGET"
+        "value": "CUSTOM:EnderitIng"
+      },
+      {
+        "value": "CUSTOM:Plata"
+      },
+      {
+        "value": "CUSTOM:StillIng"
       },
       {
         "value": ""
-      },
-      {
-        "value": "Items.GOLD_NUGGET"
       },
       {
         "value": ""
       }
     ],
     "recipeReturnStack": {
-      "value": "CUSTOM:Cpu"
+      "value": "CUSTOM:Scrudriver"
     },
-    "name": "cpucraft",
+    "name": "sonic_craft",
     "namespace": "mod"
   }
 }

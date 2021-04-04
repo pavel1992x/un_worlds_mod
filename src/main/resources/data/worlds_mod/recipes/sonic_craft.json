@@ -1,0 +1,30 @@
+{
+  "group": "worlds_mod",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "  2",
+    "345",
+    "6  "
+  ],
+  "key": {
+    "2": {
+      "item": "worlds_mod:tiekhnolampa"
+    },
+    "3": {
+      "item": "worlds_mod:cpu"
+    },
+    "4": {
+      "item": "worlds_mod:enderit_ing"
+    },
+    "5": {
+      "item": "worlds_mod:plata"
+    },
+    "6": {
+      "item": "worlds_mod:still_ing"
+    }
+  },
+  "result": {
+    "item": "worlds_mod:scrudriver",
+    "count": 1
+  }
+}

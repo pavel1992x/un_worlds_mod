@@ -7,40 +7,40 @@
     "cookingTime": 200,
     "recipeRetstackSize": 1,
     "group": "",
-    "recipeShapeless": true,
+    "recipeShapeless": false,
     "recipeSlots": [
       {
         "value": ""
       },
       {
-        "value": "Items.GOLD_NUGGET"
+        "value": "CUSTOM:StillIng"
       },
       {
         "value": ""
       },
       {
-        "value": "Items.GOLD_NUGGET"
+        "value": "CUSTOM:StillIng"
       },
       {
-        "value": "Items.FLINT"
+        "value": "CUSTOM:Cpu"
       },
       {
-        "value": "Items.GOLD_NUGGET"
+        "value": "CUSTOM:StillIng"
       },
       {
         "value": ""
       },
       {
-        "value": "Items.GOLD_NUGGET"
+        "value": "CUSTOM:StillIng"
       },
       {
         "value": ""
       }
     ],
     "recipeReturnStack": {
-      "value": "CUSTOM:Cpu"
+      "value": "CUSTOM:Bazaakt"
     },
-    "name": "cpucraft",
+    "name": "core_craft",
     "namespace": "mod"
   }
 }

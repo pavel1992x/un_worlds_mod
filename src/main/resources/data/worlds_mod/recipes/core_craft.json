@@ -8,23 +8,23 @@
   ],
   "key": {
     "1": {
-      "item": "minecraft:gold_ingot"
+      "item": "worlds_mod:still_ing"
     },
     "3": {
-      "item": "minecraft:gold_ingot"
+      "item": "worlds_mod:still_ing"
     },
     "4": {
-      "item": "worlds_mod:sinspanel"
+      "item": "worlds_mod:cpu"
     },
     "5": {
-      "item": "minecraft:gold_ingot"
+      "item": "worlds_mod:still_ing"
     },
     "7": {
-      "item": "minecraft:gold_ingot"
+      "item": "worlds_mod:still_ing"
     }
   },
   "result": {
-    "item": "worlds_mod:plata",
+    "item": "worlds_mod:bazaakt",
     "count": 1
   }
 }
