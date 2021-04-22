@@ -92,7 +92,8 @@ public class OrelouhDimension extends WorldsModModElements.ModElement {
 	@Override
 	public void init(FMLCommonSetupEvent event) {
 		dimensionBiomes = new Biome[]{ForgeRegistries.BIOMES.getValue(new ResourceLocation("worlds_mod:orelouh_b")),
-				ForgeRegistries.BIOMES.getValue(new ResourceLocation("ocean")),};
+				ForgeRegistries.BIOMES.getValue(new ResourceLocation("ocean")),
+				ForgeRegistries.BIOMES.getValue(new ResourceLocation("worlds_mod:orforest")),};
 	}
 	public static class CustomModDimension extends ModDimension {
 		@Override

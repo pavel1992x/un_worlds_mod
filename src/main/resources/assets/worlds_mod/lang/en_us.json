@@ -1,8 +1,8 @@
 {
   "item.worlds_mod.iron_dust": "железная пыль",
   "item.worlds_mod.still_pickaxe": "стальная кирка",
-  "biome.worlds_mod.maatb": "маатанские ровнины",
   "item.worlds_mod.still_shovel": "стальная лопата",
+  "biome.worlds_mod.maatb": "маатанские ровнины",
   "block.worlds_mod.stil_block": "стальной блок",
   "item.worlds_mod.tpcard": "tp карта",
   "item.worlds_mod.still_sword": "стальной меч",
@@ -42,6 +42,7 @@
   "item.worlds_mod.cpu": "процессор",
   "item.worlds_mod.etalonium": "эталониум",
   "item.worlds_mod.orelouh": "Orelouh Portal Igniter",
+  "biome.worlds_mod.orforest": "голубые леса",
   "item.worlds_mod.plata": "материнская плата планшета.",
   "item.worlds_mod.sins_dust": "лунная пыль",
   "item.worlds_mod.orelouh_fluid_bucket": "OrelouhFluid Bucket",

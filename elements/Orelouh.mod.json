@@ -25,6 +25,9 @@
       },
       {
         "value": "ocean"
+      },
+      {
+        "value": "CUSTOM:Orforest"
       }
     ],
     "worldGenType": "Normal world gen",
