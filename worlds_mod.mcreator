@@ -1544,37 +1544,37 @@
     {
       "name": "x",
       "type": "number",
-      "scope": "world",
+      "scope": "player_persistent",
       "value": "0"
     },
     {
       "name": "y",
       "type": "number",
-      "scope": "world",
+      "scope": "player_persistent",
       "value": "0"
     },
     {
       "name": "z",
       "type": "number",
-      "scope": "world",
+      "scope": "player_persistent",
       "value": "0"
     },
     {
       "name": "bcx",
       "type": "number",
-      "scope": "player_persistent",
+      "scope": "world",
       "value": "0"
     },
     {
       "name": "bcy",
       "type": "number",
-      "scope": "player_persistent",
+      "scope": "world",
       "value": "0"
     },
     {
       "name": "bcz",
       "type": "number",
-      "scope": "player_persistent",
+      "scope": "world",
       "value": "0"
     },
     {
@@ -1598,13 +1598,13 @@
     {
       "name": "dub",
       "type": "itemstack",
-      "scope": "player_persistent",
+      "scope": "world",
       "value": ""
     },
     {
       "name": "transmut",
       "type": "itemstack",
-      "scope": "player_persistent",
+      "scope": "world",
       "value": ""
     }
   ],

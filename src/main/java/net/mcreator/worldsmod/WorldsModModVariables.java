@@ -69,12 +69,14 @@ public class WorldsModModVariables {
 	}
 	public static class WorldVariables extends WorldSavedData {
 		public static final String DATA_NAME = "worlds_mod_worldvars";
-		public double x = 0;
-		public double y = 0;
-		public double z = 0;
+		public double bcx = 0;
+		public double bcy = 0;
+		public double bcz = 0;
 		public double chx = 0;
 		public double chy = 0;
 		public double chz = 0;
+		public ItemStack dub = ItemStack.EMPTY;
+		public ItemStack transmut = ItemStack.EMPTY;
 		public WorldVariables() {
 			super(DATA_NAME);
 		}
@@ -85,22 +87,26 @@ public class WorldsModModVariables {
 
 		@Override
 		public void read(CompoundNBT nbt) {
-			x = nbt.getDouble("x");
-			y = nbt.getDouble("y");
-			z = nbt.getDouble("z");
+			bcx = nbt.getDouble("bcx");
+			bcy = nbt.getDouble("bcy");
+			bcz = nbt.getDouble("bcz");
 			chx = nbt.getDouble("chx");
 			chy = nbt.getDouble("chy");
 			chz = nbt.getDouble("chz");
+			dub = ItemStack.read(nbt.getCompound("dub"));
+			transmut = ItemStack.read(nbt.getCompound("transmut"));
 		}
 
 		@Override
 		public CompoundNBT write(CompoundNBT nbt) {
-			nbt.putDouble("x", x);
-			nbt.putDouble("y", y);
-			nbt.putDouble("z", z);
+			nbt.putDouble("bcx", bcx);
+			nbt.putDouble("bcy", bcy);
+			nbt.putDouble("bcz", bcz);
 			nbt.putDouble("chx", chx);
 			nbt.putDouble("chy", chy);
 			nbt.putDouble("chz", chz);
+			nbt.put("dub", dub.write(new CompoundNBT()));
+			nbt.put("transmut", transmut.write(new CompoundNBT()));
 			return nbt;
 		}
 
@@ -217,31 +223,25 @@ public class WorldsModModVariables {
 		@Override
 		public INBT writeNBT(Capability<PlayerVariables> capability, PlayerVariables instance, Direction side) {
 			CompoundNBT nbt = new CompoundNBT();
-			nbt.putDouble("bcx", instance.bcx);
-			nbt.putDouble("bcy", instance.bcy);
-			nbt.putDouble("bcz", instance.bcz);
-			nbt.put("dub", instance.dub.write(new CompoundNBT()));
-			nbt.put("transmut", instance.transmut.write(new CompoundNBT()));
+			nbt.putDouble("x", instance.x);
+			nbt.putDouble("y", instance.y);
+			nbt.putDouble("z", instance.z);
 			return nbt;
 		}
 
 		@Override
 		public void readNBT(Capability<PlayerVariables> capability, PlayerVariables instance, Direction side, INBT inbt) {
 			CompoundNBT nbt = (CompoundNBT) inbt;
-			instance.bcx = nbt.getDouble("bcx");
-			instance.bcy = nbt.getDouble("bcy");
-			instance.bcz = nbt.getDouble("bcz");
-			instance.dub = ItemStack.read(nbt.getCompound("dub"));
-			instance.transmut = ItemStack.read(nbt.getCompound("transmut"));
+			instance.x = nbt.getDouble("x");
+			instance.y = nbt.getDouble("y");
+			instance.z = nbt.getDouble("z");
 		}
 	}
 
 	public static class PlayerVariables {
-		public double bcx = 0;
-		public double bcy = 0;
-		public double bcz = 0;
-		public ItemStack dub = ItemStack.EMPTY;
-		public ItemStack transmut = ItemStack.EMPTY;
+		public double x = 0;
+		public double y = 0;
+		public double z = 0;
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayerEntity)
 				WorldsModMod.PACKET_HANDLER.send(PacketDistributor.PLAYER.with(() -> (ServerPlayerEntity) entity),
@@ -274,11 +274,9 @@ public class WorldsModModVariables {
 		PlayerVariables original = ((PlayerVariables) event.getOriginal().getCapability(PLAYER_VARIABLES_CAPABILITY, null)
 				.orElse(new PlayerVariables()));
 		PlayerVariables clone = ((PlayerVariables) event.getEntity().getCapability(PLAYER_VARIABLES_CAPABILITY, null).orElse(new PlayerVariables()));
-		clone.bcx = original.bcx;
-		clone.bcy = original.bcy;
-		clone.bcz = original.bcz;
-		clone.dub = original.dub;
-		clone.transmut = original.transmut;
+		clone.x = original.x;
+		clone.y = original.y;
+		clone.z = original.z;
 		if (!event.isWasDeath()) {
 		}
 	}
@@ -303,11 +301,9 @@ public class WorldsModModVariables {
 				if (!context.getDirection().getReceptionSide().isServer()) {
 					PlayerVariables variables = ((PlayerVariables) Minecraft.getInstance().player.getCapability(PLAYER_VARIABLES_CAPABILITY, null)
 							.orElse(new PlayerVariables()));
-					variables.bcx = message.data.bcx;
-					variables.bcy = message.data.bcy;
-					variables.bcz = message.data.bcz;
-					variables.dub = message.data.dub;
-					variables.transmut = message.data.transmut;
+					variables.x = message.data.x;
+					variables.y = message.data.y;
+					variables.z = message.data.z;
 				}
 			});
 			context.setPacketHandled(true);
