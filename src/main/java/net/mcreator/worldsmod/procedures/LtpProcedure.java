@@ -1,6 +1,5 @@
 package net.mcreator.worldsmod.procedures;
 
-import net.minecraft.world.IWorld;
 import net.minecraft.entity.player.ServerPlayerEntity;
 import net.minecraft.entity.Entity;
 
@@ -22,21 +21,25 @@ public class LtpProcedure extends WorldsModModElements.ModElement {
 				System.err.println("Failed to load dependency entity for procedure Ltp!");
 			return;
 		}
-		if (dependencies.get("world") == null) {
-			if (!dependencies.containsKey("world"))
-				System.err.println("Failed to load dependency world for procedure Ltp!");
-			return;
-		}
 		Entity entity = (Entity) dependencies.get("entity");
-		IWorld world = (IWorld) dependencies.get("world");
 		{
 			Entity _ent = entity;
-			_ent.setPositionAndUpdate((WorldsModModVariables.WorldVariables.get(world).x), (WorldsModModVariables.WorldVariables.get(world).y),
-					(WorldsModModVariables.WorldVariables.get(world).z));
+			_ent.setPositionAndUpdate(
+					((entity.getCapability(WorldsModModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+							.orElse(new WorldsModModVariables.PlayerVariables())).x),
+					((entity.getCapability(WorldsModModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+							.orElse(new WorldsModModVariables.PlayerVariables())).y),
+					((entity.getCapability(WorldsModModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+							.orElse(new WorldsModModVariables.PlayerVariables())).z));
 			if (_ent instanceof ServerPlayerEntity) {
-				((ServerPlayerEntity) _ent).connection.setPlayerLocation((WorldsModModVariables.WorldVariables.get(world).x),
-						(WorldsModModVariables.WorldVariables.get(world).y), (WorldsModModVariables.WorldVariables.get(world).z), _ent.rotationYaw,
-						_ent.rotationPitch, Collections.emptySet());
+				((ServerPlayerEntity) _ent).connection.setPlayerLocation(
+						((entity.getCapability(WorldsModModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+								.orElse(new WorldsModModVariables.PlayerVariables())).x),
+						((entity.getCapability(WorldsModModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+								.orElse(new WorldsModModVariables.PlayerVariables())).y),
+						((entity.getCapability(WorldsModModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+								.orElse(new WorldsModModVariables.PlayerVariables())).z),
+						_ent.rotationYaw, _ent.rotationPitch, Collections.emptySet());
 			}
 		}
 	}

@@ -93,12 +93,21 @@
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
     "spawnWorldTypes": [
-      "Surface"
+      "Surface",
+      "CUSTOM:Orelouh",
+      "CUSTOM:Moonworld",
+      "CUSTOM:P1dw"
     ],
     "restrictionBiomes": [],
     "blocksToReplace": [
       {
         "value": "Blocks.STONE"
+      },
+      {
+        "value": "CUSTOM:OrelouhStone"
+      },
+      {
+        "value": "CUSTOM:MaatStone"
       }
     ],
     "frequencyPerChunks": 20,

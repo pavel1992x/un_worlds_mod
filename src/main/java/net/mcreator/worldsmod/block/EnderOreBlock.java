@@ -27,6 +27,9 @@ import net.minecraft.block.Blocks;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Block;
 
+import net.mcreator.worldsmod.world.dimension.P1dwDimension;
+import net.mcreator.worldsmod.world.dimension.OrelouhDimension;
+import net.mcreator.worldsmod.world.dimension.MoonworldDimension;
 import net.mcreator.worldsmod.WorldsModModElements;
 
 import java.util.Random;
@@ -72,6 +75,12 @@ public class EnderOreBlock extends WorldsModModElements.ModElement {
 					boolean dimensionCriteria = false;
 					if (dimensionType == DimensionType.OVERWORLD)
 						dimensionCriteria = true;
+					if (dimensionType == OrelouhDimension.type)
+						dimensionCriteria = true;
+					if (dimensionType == MoonworldDimension.type)
+						dimensionCriteria = true;
+					if (dimensionType == P1dwDimension.type)
+						dimensionCriteria = true;
 					if (!dimensionCriteria)
 						return false;
 					return super.place(world, generator, rand, pos, config);
@@ -79,6 +88,10 @@ public class EnderOreBlock extends WorldsModModElements.ModElement {
 			}, new OreFeatureConfig(OreFeatureConfig.FillerBlockType.create("ender_ore", "ender_ore", blockAt -> {
 				boolean blockCriteria = false;
 				if (blockAt.getBlock() == Blocks.STONE.getDefaultState().getBlock())
+					blockCriteria = true;
+				if (blockAt.getBlock() == OrelouhStoneBlock.block.getDefaultState().getBlock())
+					blockCriteria = true;
+				if (blockAt.getBlock() == MaatStoneBlock.block.getDefaultState().getBlock())
 					blockCriteria = true;
 				return blockCriteria;
 			}), block.getDefaultState(), 10), Placement.COUNT_RANGE, new CountRangeConfig(20, 0, 0, 64)));
